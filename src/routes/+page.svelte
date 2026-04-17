@@ -1,93 +1,59 @@
 <script>
 	import { LayerCake, Svg } from 'layercake';
 	import StackedBar from '$lib/charts/StackedBar.svelte';
+	import ScatterDots from '$lib/charts/ScatterDots.svelte';
+	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import squads from '../data/squads.json';
+	import results from '../data/results.json';
 	import teams from '../data/teams.json';
 
 	/** @param {{ start: number }} d */
 	const xAccessor = (d) => d.start;
 
-	/** @param {Record<string, Array<{ club_nation: string }>>} squads */
-	function getSquadClubNationStats(squads) {
-		// Create a map of nation to confederation
-		const nationToConfederation = Object.fromEntries(
-			teams.map((team) => [team.nation, team.confederation])
-		);
-
-		// Get the confederation of the squad
-		const getSquadConfederation = (squadName) => nationToConfederation[squadName];
-
-		return Object.fromEntries(
-			Object.entries(squads).map(([squad, players]) => {
-				/** @type {Record<string, number>} */
-				const counts = {};
-				for (const player of players) {
-					counts[player.club_nation] = (counts[player.club_nation] ?? 0) + 1;
-				}
-				const total = players.length;
-				const squadConfederation = getSquadConfederation(squad);
-				let cursor = 0;
-				const entries = Object.entries(counts).map(([club_nation, count]) => ({
-						label: club_nation,
-						value: count,
-						club_nation,
-						count,
-						proportion: total > 0 ? count / total : 0,
-						percentage: total > 0 ? (count / total) * 100 : 0,
-						confederation: nationToConfederation[club_nation],
-					}));
-
-				// Pre-compute max value per non-squad confederation so they sort as groups
-				/** @type {Record<string, number>} */
-				const confedMaxValue = {};
-				for (const entry of entries) {
-					if (entry.confederation !== squadConfederation) {
-						confedMaxValue[entry.confederation] = Math.max(
-							confedMaxValue[entry.confederation] ?? 0,
-							entry.count
-						);
-					}
-				}
-
-				const stats = entries
-					.sort((a, b) => {
-						// 1. club_nation matching the squad name comes first
-						if (a.club_nation === squad) return -1;
-						if (b.club_nation === squad) return 1;
-
-						// 2. Other club_nations in the squad's confederation, ordered by value
-						const aMatchesConfed = a.confederation === squadConfederation;
-						const bMatchesConfed = b.confederation === squadConfederation;
-						if (aMatchesConfed && !bMatchesConfed) return -1;
-						if (!aMatchesConfed && bMatchesConfed) return 1;
-
-						// 3. Within the same confederation, order by value descending
-						if (a.confederation === b.confederation) return b.count - a.count;
-
-						// 4. Across different non-squad confederations, keep confederations grouped
-						//    by ordering each confederation by its highest value
-						return (confedMaxValue[b.confederation] ?? 0) - (confedMaxValue[a.confederation] ?? 0);
-					})
-					.map((item, index) => {
-						const start = cursor;
-						const end = cursor + item.percentage;
-						cursor = end;
-						return {
-							...item,
-							start,
-							end,
-							index
-						};
-					});
-				return [squad, stats];
-			})
-		);
-	}
-
 	const squadStats = getSquadClubNationStats(squads);
+
+	// Map results.json team names → squads.json keys where they differ
+	/** @type {Record<string, string>} */
+	const resultToSquadName = { USA: 'United States' };
+
+	/** @type {Record<string, string>} */
+	const nationToConfederation = Object.fromEntries(teams.map((t) => [t.nation, t.confederation]));
+
+	const scatterData = results.map((result) => {
+		const squadKey = resultToSquadName[result.team] ?? result.team;
+		/** @type {Record<string, Array<{club_nation: string}>>} */
+		const squadsByName = /** @type {any} */ (squads);
+		const players = squadsByName[squadKey] ?? [];
+		const total = players.length;
+		const domestic = players.filter((/** @type {{club_nation: string}} */ p) => p.club_nation === squadKey).length;
+		const domesticPct = total > 0 ? (domestic / total) * 100 : 0;
+		const confederation = nationToConfederation[squadKey] ?? null;
+		return { team: result.team, rank: result.rank, stage: result.stage, domesticPct, confederation };
+	});
+
+	/** @param {{ rank: number }} d */
+	const scatterX = (d) => d.rank;
+	/** @param {{ domesticPct: number }} d */
+	const scatterY = (d) => d.domesticPct;
 </script>
 
 <h1>Club vs Country Statistics</h1>
+
+<div class="scatter-container">
+	<h2>Domestic league share vs. World Cup ranking</h2>
+	<LayerCake
+		data={scatterData}
+		x={scatterX}
+		y={scatterY}
+		xDomain={[32, 1]}
+		yDomain={[0, 100]}
+		padding={{ top: 20, bottom: 50, left: 50, right: 20 }}
+	>
+		<Svg>
+			<ScatterDots data={scatterData} />
+		</Svg>
+	</LayerCake>
+</div>
 
 {#each Object.entries(squadStats).sort((a, b) => b[1][0].value - a[1][0].value) as [squadName, squadData] (squadName)}
 	<div class="chart-container">
@@ -105,6 +71,16 @@
 {/each}
 
 <style>
+	.scatter-container {
+		width: 100%;
+		max-width: 800px;
+		margin-bottom: 2.5rem;
+	}
+
+	:global(.scatter-container .layercake-container) {
+		height: 400px !important;
+	}
+
 	.chart-container {
 		width: 100%;
 		max-width: 800px;
