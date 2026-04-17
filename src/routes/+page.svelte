@@ -2,6 +2,8 @@
 	import { LayerCake, Svg } from 'layercake';
 	import StackedBar from '$lib/charts/StackedBar.svelte';
 	import ScatterDots from '$lib/charts/ScatterDots.svelte';
+	import WorldMap from '$lib/charts/WorldMap.svelte';
+	import FlowLayer from '$lib/charts/FlowLayer.svelte';
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
@@ -18,6 +20,11 @@
 </script>
 
 <h1>Club vs Country Statistics</h1>
+
+<div style="position: relative;">
+  <WorldMap />
+  <FlowLayer {squads} nation="Australia" />
+</div>
 
 <div class="scatter-container">
 	<h2>Domestic league share vs. World Cup ranking</h2>
