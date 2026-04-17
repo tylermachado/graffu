@@ -3,38 +3,18 @@
 	import StackedBar from '$lib/charts/StackedBar.svelte';
 	import ScatterDots from '$lib/charts/ScatterDots.svelte';
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
+	import { getConfederationStats } from '$lib/getConfederationStats.js';
+	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
 	import squads from '../data/squads.json';
-	import results from '../data/results.json';
-	import teams from '../data/teams.json';
 
 	/** @param {{ start: number }} d */
 	const xAccessor = (d) => d.start;
 
 	const squadStats = getSquadClubNationStats(squads);
+	const confederationStats = getConfederationStats(squads);
 
-	// Map results.json team names → squads.json keys where they differ
-	/** @type {Record<string, string>} */
-	const resultToSquadName = { USA: 'United States' };
-
-	/** @type {Record<string, string>} */
-	const nationToConfederation = Object.fromEntries(teams.map((t) => [t.nation, t.confederation]));
-
-	const scatterData = results.map((result) => {
-		const squadKey = resultToSquadName[result.team] ?? result.team;
-		/** @type {Record<string, Array<{club_nation: string}>>} */
-		const squadsByName = /** @type {any} */ (squads);
-		const players = squadsByName[squadKey] ?? [];
-		const total = players.length;
-		const domestic = players.filter((/** @type {{club_nation: string}} */ p) => p.club_nation === squadKey).length;
-		const domesticPct = total > 0 ? (domestic / total) * 100 : 0;
-		const confederation = nationToConfederation[squadKey] ?? null;
-		return { team: result.team, rank: result.rank, stage: result.stage, domesticPct, confederation };
-	});
-
-	/** @param {{ rank: number }} d */
-	const scatterX = (d) => d.rank;
-	/** @param {{ domesticPct: number }} d */
-	const scatterY = (d) => d.domesticPct;
+	/** @param {{ start: number }} d */
+	const confedXAccessor = (d) => d.start;
 </script>
 
 <h1>Club vs Country Statistics</h1>
@@ -53,6 +33,35 @@
 			<ScatterDots data={scatterData} />
 		</Svg>
 	</LayerCake>
+</div>
+
+<div class="confederation-section">
+	<h2>Where do players play? By squad confederation</h2>
+	<div class="confed-header-row">
+		<div class="confed-axis-label-left">Players from</div>
+		<div class="confed-axis-label-right">Play club football in →</div>
+		<div></div>
+	</div>
+	{#each confederationStats as row (row.name)}
+		<div class="confed-row">
+			<div class="confed-label">
+				{row.name}
+				<span class="confed-arrow">→</span>
+			</div>
+			<div class="confed-bar-wrap">
+				<LayerCake
+					data={row.segments}
+					x={confedXAccessor}
+					xDomain={[0, 100]}
+				>
+					<Svg>
+						<StackedBar stackedData={row.segments} />
+					</Svg>
+				</LayerCake>
+			</div>
+			<div class="confed-count">{row.totalPlayers} players</div>
+		</div>
+	{/each}
 </div>
 
 {#each Object.entries(squadStats).sort((a, b) => b[1][0].value - a[1][0].value) as [squadName, squadData] (squadName)}
@@ -96,5 +105,74 @@
 		margin-top: 0;
 		font-size: 1.5rem;
 		margin-bottom: 0.25rem;
+	}
+
+	.confederation-section {
+		width: 100%;
+		max-width: 800px;
+		margin-bottom: 2.5rem;
+	}
+
+	.confederation-section h2 {
+		margin-bottom: 0.5rem;
+	}
+
+	.confed-row {
+		display: grid;
+		grid-template-columns: 100px 1fr 90px;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.confed-header-row {
+		display: grid;
+		grid-template-columns: 100px 1fr 90px;
+		align-items: baseline;
+		gap: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.confed-axis-label-left {
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #999;
+		text-align: right;
+	}
+
+	.confed-axis-label-right {
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #999;
+	}
+
+	.confed-label {
+		font-size: 0.85rem;
+		font-weight: 600;
+		text-align: right;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		gap: 0.25rem;
+	}
+
+	.confed-arrow {
+		color: #bbb;
+		font-weight: 400;
+	}
+
+	.confed-bar-wrap {
+		height: 40px;
+	}
+
+	:global(.confed-bar-wrap .layercake-container) {
+		height: 40px !important;
+	}
+
+	.confed-count {
+		font-size: 0.75rem;
+		color: #888;
 	}
 </style>
