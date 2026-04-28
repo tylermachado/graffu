@@ -1,7 +1,13 @@
 import { load } from "cheerio";
 import fs from "fs/promises";
 
-const URL = "https://en.wikipedia.org/wiki/2022_FIFA_World_Cup_squads";
+const year = process.argv[2];
+if (!year) {
+  console.error("Usage: node scrape-wiki.js <year>  (e.g. node scrape-wiki.js 2022)");
+  process.exit(1);
+}
+
+const URL = `https://en.wikipedia.org/wiki/${year}_FIFA_World_Cup_squads`;
 
 // Maps the flag alt text (e.g. "German Football Association") to a clean country name
 function parseCountryFromAlt(altText) {
@@ -97,7 +103,9 @@ async function scrape() {
   const countryCount = Object.keys(filteredResult).length;
   const playerCount  = Object.values(filteredResult).reduce((sum, p) => sum + p.length, 0);
 
-  await fs.writeFile("src/data/2022/squads.json", JSON.stringify(filteredResult, null, 2));
+  const outDir = `src/data/${year}`;
+  await fs.mkdir(outDir, { recursive: true });
+  await fs.writeFile(`${outDir}/squads.json`, JSON.stringify(filteredResult, null, 2));
   console.log(`Done! ${countryCount} countries, ${playerCount} players → squads.json`);
 }
 
