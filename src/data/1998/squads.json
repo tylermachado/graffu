@@ -1,0 +1,7116 @@
+{
+  "Brazil": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Cláudio Taffarel",
+      "dob": "1966-05-08",
+      "caps": 94,
+      "goals": null,
+      "club": "Atlético Mineiro",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Cafu",
+      "dob": "1970-06-07",
+      "caps": 64,
+      "goals": null,
+      "club": "Roma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Aldair",
+      "dob": "1965-11-30",
+      "caps": 66,
+      "goals": null,
+      "club": "Roma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Júnior Baiano",
+      "dob": "1970-03-14",
+      "caps": 17,
+      "goals": null,
+      "club": "Flamengo",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 5,
+      "position": "MF",
+      "name": "César Sampaio",
+      "dob": "1968-03-31",
+      "caps": 34,
+      "goals": null,
+      "club": "Yokohama Flügels",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Roberto Carlos",
+      "dob": "1973-04-10",
+      "caps": 46,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Giovanni",
+      "dob": "1972-02-04",
+      "caps": 14,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Dunga (captain)",
+      "dob": "1963-10-31",
+      "caps": 84,
+      "goals": null,
+      "club": "Júbilo Iwata",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Ronaldo",
+      "dob": "1976-09-22",
+      "caps": 37,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Rivaldo",
+      "dob": "1972-04-19",
+      "caps": 15,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Emerson",
+      "dob": "1976-04-04",
+      "caps": 3,
+      "goals": null,
+      "club": "Bayer Leverkusen",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Carlos Germano",
+      "dob": "1970-08-14",
+      "caps": 9,
+      "goals": null,
+      "club": "Vasco da Gama",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Zé Carlos",
+      "dob": "1968-11-14",
+      "caps": 0,
+      "goals": null,
+      "club": "São Paulo",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Marcelo Gonçalves",
+      "dob": "1966-02-22",
+      "caps": 22,
+      "goals": null,
+      "club": "Botafogo",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "André Cruz",
+      "dob": "1968-09-20",
+      "caps": 31,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Zé Roberto",
+      "dob": "1974-07-06",
+      "caps": 20,
+      "goals": null,
+      "club": "Flamengo",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Doriva",
+      "dob": "1972-05-28",
+      "caps": 11,
+      "goals": null,
+      "club": "Porto",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Leonardo",
+      "dob": "1969-09-05",
+      "caps": 45,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Denílson",
+      "dob": "1977-08-24",
+      "caps": 26,
+      "goals": null,
+      "club": "São Paulo",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Bebeto",
+      "dob": "1964-02-16",
+      "caps": 68,
+      "goals": null,
+      "club": "Botafogo",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Edmundo",
+      "dob": "1971-04-02",
+      "caps": 33,
+      "goals": null,
+      "club": "Fiorentina",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Dida",
+      "dob": "1973-10-07",
+      "caps": 15,
+      "goals": null,
+      "club": "Cruzeiro",
+      "club_nation": "Brazil"
+    }
+  ],
+  "Morocco": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Abdelkader El Brazi",
+      "dob": "1964-11-05",
+      "caps": 37,
+      "goals": null,
+      "club": "FAR Rabat",
+      "club_nation": "Morocco"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Abdelilah Saber",
+      "dob": "1974-04-21",
+      "caps": 25,
+      "goals": null,
+      "club": "Sporting CP",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Abdelkrim El Hadrioui",
+      "dob": "1972-03-06",
+      "caps": 59,
+      "goals": null,
+      "club": "Benfica",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Youssef Rossi",
+      "dob": "1973-06-28",
+      "caps": 20,
+      "goals": null,
+      "club": "Rennes",
+      "club_nation": "France"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Smahi Triki",
+      "dob": "1967-08-01",
+      "caps": 16,
+      "goals": null,
+      "club": "Lausanne",
+      "club_nation": "Switzerland"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Noureddine Naybet (captain)",
+      "dob": "1970-02-10",
+      "caps": 91,
+      "goals": null,
+      "club": "Deportivo La Coruña",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Mustapha Hadji",
+      "dob": "1971-11-16",
+      "caps": 42,
+      "goals": null,
+      "club": "Deportivo La Coruña",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Saïd Chiba",
+      "dob": "1970-09-18",
+      "caps": 23,
+      "goals": null,
+      "club": "Compostela",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Abdeljalil Hadda",
+      "dob": "1972-03-21",
+      "caps": 11,
+      "goals": null,
+      "club": "Club Africain",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Abderrahim Ouakili",
+      "dob": "1970-12-11",
+      "caps": 8,
+      "goals": null,
+      "club": "1860 Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Ali Elkhattabi",
+      "dob": "1977-01-17",
+      "caps": 6,
+      "goals": null,
+      "club": "Heerenveen",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Driss Benzekri",
+      "dob": "1970-12-31",
+      "caps": 6,
+      "goals": null,
+      "club": "RS Settat",
+      "club_nation": "Morocco"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Rachid Neqrouz",
+      "dob": "1972-04-10",
+      "caps": 13,
+      "goals": null,
+      "club": "Bari",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 14,
+      "position": "FW",
+      "name": "Salaheddine Bassir",
+      "dob": "1972-09-05",
+      "caps": 26,
+      "goals": null,
+      "club": "Deportivo La Coruña",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Lahcen Abrami",
+      "dob": "1969-12-31",
+      "caps": 41,
+      "goals": null,
+      "club": "Wydad Casablanca",
+      "club_nation": "Morocco"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Rachid Azzouzi",
+      "dob": "1971-01-10",
+      "caps": 35,
+      "goals": null,
+      "club": "Greuther Fürth",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Gharib Amzine",
+      "dob": "1973-05-03",
+      "caps": 2,
+      "goals": null,
+      "club": "Mulhouse",
+      "club_nation": "France"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Youssef Chippo",
+      "dob": "1973-05-10",
+      "caps": 20,
+      "goals": null,
+      "club": "Porto",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Jamal Sellami",
+      "dob": "1970-10-06",
+      "caps": 0,
+      "goals": null,
+      "club": "Raja Casablanca",
+      "club_nation": "Morocco"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Tahar El Khalej",
+      "dob": "1968-06-16",
+      "caps": 54,
+      "goals": null,
+      "club": "Benfica",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Rachid Rokki",
+      "dob": "1974-11-08",
+      "caps": 2,
+      "goals": null,
+      "club": "Chabab Mohammédia",
+      "club_nation": "Morocco"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Mustapha Chadili",
+      "dob": "1973-02-14",
+      "caps": 0,
+      "goals": null,
+      "club": "Raja Casablanca",
+      "club_nation": "Morocco"
+    }
+  ],
+  "Norway": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Frode Grodås (captain)",
+      "dob": "1964-10-24",
+      "caps": 39,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Gunnar Halle",
+      "dob": "1965-08-11",
+      "caps": 60,
+      "goals": null,
+      "club": "Leeds United",
+      "club_nation": "England"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Ronny Johnsen",
+      "dob": "1969-06-10",
+      "caps": 33,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Henning Berg",
+      "dob": "1969-09-01",
+      "caps": 52,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Stig Inge Bjørnebye",
+      "dob": "1969-12-11",
+      "caps": 62,
+      "goals": null,
+      "club": "Liverpool",
+      "club_nation": "England"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Ståle Solbakken",
+      "dob": "1968-02-27",
+      "caps": 34,
+      "goals": null,
+      "club": "AaB",
+      "club_nation": "Denmark"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Erik Mykland",
+      "dob": "1971-07-21",
+      "caps": 54,
+      "goals": null,
+      "club": "Panathinaikos",
+      "club_nation": "Greece"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Øyvind Leonhardsen",
+      "dob": "1970-08-17",
+      "caps": 55,
+      "goals": null,
+      "club": "Liverpool",
+      "club_nation": "England"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Tore André Flo",
+      "dob": "1973-06-15",
+      "caps": 25,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Kjetil Rekdal",
+      "dob": "1968-11-06",
+      "caps": 66,
+      "goals": null,
+      "club": "Hertha BSC",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Mini Jakobsen",
+      "dob": "1965-11-08",
+      "caps": 64,
+      "goals": null,
+      "club": "Rosenborg",
+      "club_nation": "Norway"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Thomas Myhre",
+      "dob": "1973-10-16",
+      "caps": 1,
+      "goals": null,
+      "club": "Everton",
+      "club_nation": "England"
+    },
+    {
+      "number": 13,
+      "position": "GK",
+      "name": "Espen Baardsen",
+      "dob": "1977-12-07",
+      "caps": 1,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Vegard Heggem",
+      "dob": "1975-07-13",
+      "caps": 1,
+      "goals": null,
+      "club": "Rosenborg",
+      "club_nation": "Norway"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Dan Eggen",
+      "dob": "1970-01-13",
+      "caps": 13,
+      "goals": null,
+      "club": "Celta Vigo",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 16,
+      "position": "FW",
+      "name": "Jostein Flo",
+      "dob": "1964-10-03",
+      "caps": 44,
+      "goals": null,
+      "club": "Strømsgodset",
+      "club_nation": "Norway"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Håvard Flo",
+      "dob": "1970-04-04",
+      "caps": 9,
+      "goals": null,
+      "club": "Werder Bremen",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Egil Østenstad",
+      "dob": "1972-01-02",
+      "caps": 14,
+      "goals": null,
+      "club": "Southampton",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Erik Hoftun",
+      "dob": "1969-03-03",
+      "caps": 1,
+      "goals": null,
+      "club": "Rosenborg",
+      "club_nation": "Norway"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Ole Gunnar Solskjær",
+      "dob": "1973-02-26",
+      "caps": 14,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Vidar Riseth",
+      "dob": "1972-04-21",
+      "caps": 4,
+      "goals": null,
+      "club": "LASK",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 22,
+      "position": "MF",
+      "name": "Roar Strand",
+      "dob": "1970-02-02",
+      "caps": 5,
+      "goals": null,
+      "club": "Rosenborg",
+      "club_nation": "Norway"
+    }
+  ],
+  "Scotland": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Jim Leighton",
+      "dob": "1958-07-24",
+      "caps": 86,
+      "goals": null,
+      "club": "Aberdeen",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 2,
+      "position": "MF",
+      "name": "Jackie McNamara",
+      "dob": "1973-10-24",
+      "caps": 6,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Tom Boyd",
+      "dob": "1965-11-24",
+      "caps": 55,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Colin Calderwood",
+      "dob": "1965-01-20",
+      "caps": 28,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Colin Hendry (captain)",
+      "dob": "1965-12-07",
+      "caps": 32,
+      "goals": null,
+      "club": "Blackburn Rovers",
+      "club_nation": "England"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Tosh McKinlay",
+      "dob": "1964-12-03",
+      "caps": 19,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Kevin Gallacher",
+      "dob": "1966-11-23",
+      "caps": 36,
+      "goals": null,
+      "club": "Blackburn Rovers",
+      "club_nation": "England"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Craig Burley",
+      "dob": "1971-09-24",
+      "caps": 25,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Gordon Durie",
+      "dob": "1965-12-06",
+      "caps": 40,
+      "goals": null,
+      "club": "Rangers",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Darren Jackson",
+      "dob": "1966-07-25",
+      "caps": 24,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "John Collins",
+      "dob": "1968-01-31",
+      "caps": 49,
+      "goals": null,
+      "club": "Monaco",
+      "club_nation": "France"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Neil Sullivan",
+      "dob": "1970-02-24",
+      "caps": 3,
+      "goals": null,
+      "club": "Wimbledon",
+      "club_nation": "England"
+    },
+    {
+      "number": 13,
+      "position": "FW",
+      "name": "Simon Donnelly",
+      "dob": "1974-12-01",
+      "caps": 8,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Paul Lambert",
+      "dob": "1969-08-07",
+      "caps": 12,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Scot Gemmill",
+      "dob": "1971-01-02",
+      "caps": 13,
+      "goals": null,
+      "club": "Nottingham Forest",
+      "club_nation": "England"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "David Weir",
+      "dob": "1970-05-10",
+      "caps": 5,
+      "goals": null,
+      "club": "Heart of Midlothian",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Billy McKinlay",
+      "dob": "1969-04-22",
+      "caps": 25,
+      "goals": null,
+      "club": "Blackburn Rovers",
+      "club_nation": "England"
+    },
+    {
+      "number": 18,
+      "position": "DF",
+      "name": "Matt Elliott",
+      "dob": "1968-11-01",
+      "caps": 3,
+      "goals": null,
+      "club": "Leicester City",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Derek Whyte",
+      "dob": "1968-08-31",
+      "caps": 11,
+      "goals": null,
+      "club": "Aberdeen",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Scott Booth",
+      "dob": "1971-12-16",
+      "caps": 16,
+      "goals": null,
+      "club": "FC Utrecht",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 21,
+      "position": "GK",
+      "name": "Jonathan Gould",
+      "dob": "1968-07-18",
+      "caps": 0,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 22,
+      "position": "DF",
+      "name": "Christian Dailly",
+      "dob": "1973-10-23",
+      "caps": 10,
+      "goals": null,
+      "club": "Derby County",
+      "club_nation": "England"
+    }
+  ],
+  "Austria": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Michael Konsel",
+      "dob": "1962-03-06",
+      "caps": 40,
+      "goals": null,
+      "club": "Roma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 2,
+      "position": "MF",
+      "name": "Markus Schopp",
+      "dob": "1974-02-22",
+      "caps": 18,
+      "goals": null,
+      "club": "Sturm Graz",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Peter Schöttel",
+      "dob": "1967-03-26",
+      "caps": 54,
+      "goals": null,
+      "club": "Rapid Wien",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Anton Pfeffer",
+      "dob": "1965-08-17",
+      "caps": 56,
+      "goals": null,
+      "club": "Austria Wien",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Wolfgang Feiersinger",
+      "dob": "1965-01-30",
+      "caps": 39,
+      "goals": null,
+      "club": "Borussia Dortmund",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Walter Kogler",
+      "dob": "1967-12-12",
+      "caps": 22,
+      "goals": null,
+      "club": "Cannes",
+      "club_nation": "France"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Mario Haas",
+      "dob": "1974-09-16",
+      "caps": 5,
+      "goals": null,
+      "club": "Sturm Graz",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Heimo Pfeifenberger",
+      "dob": "1966-12-29",
+      "caps": 37,
+      "goals": null,
+      "club": "Werder Bremen",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Ivica Vastić",
+      "dob": "1969-09-29",
+      "caps": 14,
+      "goals": null,
+      "club": "Sturm Graz",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Andi Herzog",
+      "dob": "1968-09-10",
+      "caps": 68,
+      "goals": null,
+      "club": "Werder Bremen",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Martin Amerhauser",
+      "dob": "1974-07-23",
+      "caps": 2,
+      "goals": null,
+      "club": "Austria Salzburg",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Martin Hiden",
+      "dob": "1973-03-11",
+      "caps": 4,
+      "goals": null,
+      "club": "Leeds United",
+      "club_nation": "England"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Harald Cerny",
+      "dob": "1973-09-13",
+      "caps": 23,
+      "goals": null,
+      "club": "1860 Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 14,
+      "position": "FW",
+      "name": "Hannes Reinmayr",
+      "dob": "1969-08-23",
+      "caps": 8,
+      "goals": null,
+      "club": "Sturm Graz",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Arnold Wetl",
+      "dob": "1970-02-02",
+      "caps": 15,
+      "goals": null,
+      "club": "Rapid Wien",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 16,
+      "position": "GK",
+      "name": "Franz Wohlfahrt",
+      "dob": "1964-07-01",
+      "caps": 37,
+      "goals": null,
+      "club": "VfB Stuttgart",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Roman Mählich",
+      "dob": "1971-09-17",
+      "caps": 10,
+      "goals": null,
+      "club": "Sturm Graz",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Peter Stöger",
+      "dob": "1966-04-11",
+      "caps": 59,
+      "goals": null,
+      "club": "LASK",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Toni Polster (captain)",
+      "dob": "1964-03-10",
+      "caps": 91,
+      "goals": null,
+      "club": "1. FC Köln",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Andreas Heraf",
+      "dob": "1967-09-10",
+      "caps": 10,
+      "goals": null,
+      "club": "Rapid Wien",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 21,
+      "position": "GK",
+      "name": "Wolfgang Knaller",
+      "dob": "1961-10-09",
+      "caps": 4,
+      "goals": null,
+      "club": "Austria Wien",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 22,
+      "position": "MF",
+      "name": "Dietmar Kühbauer",
+      "dob": "1971-04-04",
+      "caps": 28,
+      "goals": null,
+      "club": "Real Sociedad",
+      "club_nation": "Spain"
+    }
+  ],
+  "Cameroon": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Jacques Songo'o",
+      "dob": "1964-03-17",
+      "caps": 73,
+      "goals": null,
+      "club": "Deportivo La Coruña",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Joseph Elanga",
+      "dob": "1979-05-02",
+      "caps": 1,
+      "goals": null,
+      "club": "Tonnerre Yaoundé",
+      "club_nation": "Cameroon"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Pierre Womé",
+      "dob": "1979-03-26",
+      "caps": 28,
+      "goals": null,
+      "club": "Lucchese",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Rigobert Song",
+      "dob": "1976-07-01",
+      "caps": 30,
+      "goals": null,
+      "club": "Metz",
+      "club_nation": "France"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Raymond Kalla",
+      "dob": "1975-04-22",
+      "caps": 28,
+      "goals": null,
+      "club": "Panachaiki",
+      "club_nation": "Greece"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Pierre Njanka",
+      "dob": "1975-03-15",
+      "caps": 2,
+      "goals": null,
+      "club": "Olympic Mvolyé",
+      "club_nation": "Cameroon"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "François Omam-Biyik (captain)",
+      "dob": "1966-05-21",
+      "caps": 70,
+      "goals": null,
+      "club": "Sampdoria",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Didier Angibeaud",
+      "dob": "1974-10-08",
+      "caps": 3,
+      "goals": null,
+      "club": "Nice",
+      "club_nation": "France"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Alphonse Tchami",
+      "dob": "1971-09-14",
+      "caps": 38,
+      "goals": null,
+      "club": "Hertha BSC",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Patrick Mboma",
+      "dob": "1970-11-15",
+      "caps": 15,
+      "goals": null,
+      "club": "Gamba Osaka",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Samuel Eto'o",
+      "dob": "1981-03-10",
+      "caps": 6,
+      "goals": null,
+      "club": "Leganés",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Lauren",
+      "dob": "1977-01-19",
+      "caps": 1,
+      "goals": null,
+      "club": "Levante",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Patrice Abanda",
+      "dob": "1978-08-03",
+      "caps": 1,
+      "goals": null,
+      "club": "Tonnerre Yaoundé",
+      "club_nation": "Cameroon"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Augustine Simo",
+      "dob": "1978-09-18",
+      "caps": 14,
+      "goals": null,
+      "club": "Saint-Étienne",
+      "club_nation": "France"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Joseph Ndo",
+      "dob": "1976-04-28",
+      "caps": 2,
+      "goals": null,
+      "club": "Coton Sport",
+      "club_nation": "Cameroon"
+    },
+    {
+      "number": 16,
+      "position": "GK",
+      "name": "William Andem",
+      "dob": "1968-06-14",
+      "caps": 16,
+      "goals": null,
+      "club": "Boavista",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Michel Pensée",
+      "dob": "1973-06-16",
+      "caps": 2,
+      "goals": null,
+      "club": "Cheonan Ilhwa Chunma",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Samuel Ipoua",
+      "dob": "1973-03-01",
+      "caps": 7,
+      "goals": null,
+      "club": "Rapid Wien",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Marcel Mahouvé",
+      "dob": "1973-01-16",
+      "caps": 12,
+      "goals": null,
+      "club": "Montpellier",
+      "club_nation": "France"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Salomon Olembé",
+      "dob": "1980-12-08",
+      "caps": 8,
+      "goals": null,
+      "club": "Nantes",
+      "club_nation": "France"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Joseph-Désiré Job",
+      "dob": "1977-12-01",
+      "caps": 11,
+      "goals": null,
+      "club": "Lyon",
+      "club_nation": "France"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Alioum Boukar",
+      "dob": "1972-01-03",
+      "caps": 16,
+      "goals": null,
+      "club": "Samsunspor",
+      "club_nation": "Turkey"
+    }
+  ],
+  "Chile": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Nelson Tapia",
+      "dob": "1966-09-22",
+      "caps": 34,
+      "goals": null,
+      "club": "Universidad Católica",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Cristián Castañeda",
+      "dob": "1968-09-18",
+      "caps": 24,
+      "goals": null,
+      "club": "Universidad de Chile",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Ronald Fuentes",
+      "dob": "1969-06-22",
+      "caps": 41,
+      "goals": null,
+      "club": "Universidad de Chile",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Francisco Rojas",
+      "dob": "1974-07-22",
+      "caps": 12,
+      "goals": null,
+      "club": "Colo-Colo",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Javier Margas",
+      "dob": "1969-05-10",
+      "caps": 52,
+      "goals": null,
+      "club": "Universidad Católica",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Pedro Reyes",
+      "dob": "1972-11-13",
+      "caps": 24,
+      "goals": null,
+      "club": "Colo-Colo",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Nelson Parraguez",
+      "dob": "1971-04-05",
+      "caps": 37,
+      "goals": null,
+      "club": "Universidad Católica",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Clarence Acuña",
+      "dob": "1975-02-08",
+      "caps": 28,
+      "goals": null,
+      "club": "Universidad de Chile",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Iván Zamorano (captain)",
+      "dob": "1967-01-18",
+      "caps": 42,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "José Luis Sierra",
+      "dob": "1968-12-05",
+      "caps": 31,
+      "goals": null,
+      "club": "Colo-Colo",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Marcelo Salas",
+      "dob": "1974-12-24",
+      "caps": 39,
+      "goals": null,
+      "club": "River Plate",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Marcelo Ramírez",
+      "dob": "1965-05-29",
+      "caps": 19,
+      "goals": null,
+      "club": "Colo-Colo",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 13,
+      "position": "FW",
+      "name": "Manuel Neira",
+      "dob": "1977-10-12",
+      "caps": 5,
+      "goals": null,
+      "club": "Colo-Colo",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Miguel Ramírez",
+      "dob": "1970-06-11",
+      "caps": 38,
+      "goals": null,
+      "club": "Universidad Católica",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Moisés Villarroel",
+      "dob": "1976-02-12",
+      "caps": 10,
+      "goals": null,
+      "club": "Santiago Wanderers",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Mauricio Aros",
+      "dob": "1976-03-09",
+      "caps": 4,
+      "goals": null,
+      "club": "Universidad de Chile",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Marcelo Vega",
+      "dob": "1971-08-12",
+      "caps": 29,
+      "goals": null,
+      "club": "MetroStars",
+      "club_nation": "United States"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Luis Musrri",
+      "dob": "1969-12-24",
+      "caps": 27,
+      "goals": null,
+      "club": "Universidad de Chile",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Fernando Cornejo",
+      "dob": "1969-01-28",
+      "caps": 27,
+      "goals": null,
+      "club": "Universidad Católica",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Fabián Estay",
+      "dob": "1968-10-05",
+      "caps": 48,
+      "goals": null,
+      "club": "Toluca",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Rodrigo Barrera",
+      "dob": "1970-03-30",
+      "caps": 22,
+      "goals": null,
+      "club": "Universidad de Chile",
+      "club_nation": "Chile"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Carlos Tejas",
+      "dob": "1974-10-04",
+      "caps": 0,
+      "goals": null,
+      "club": "Coquimbo Unido",
+      "club_nation": "Chile"
+    }
+  ],
+  "Italy": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Francesco Toldo",
+      "dob": "1971-12-02",
+      "caps": 6,
+      "goals": null,
+      "club": "Fiorentina",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Giuseppe Bergomi",
+      "dob": "1963-12-22",
+      "caps": 78,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Paolo Maldini (captain)",
+      "dob": "1968-06-26",
+      "caps": 88,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Fabio Cannavaro",
+      "dob": "1973-09-13",
+      "caps": 14,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Alessandro Costacurta",
+      "dob": "1966-04-24",
+      "caps": 54,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Alessandro Nesta",
+      "dob": "1976-03-19",
+      "caps": 12,
+      "goals": null,
+      "club": "Lazio",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 7,
+      "position": "DF",
+      "name": "Gianluca Pessotto",
+      "dob": "1970-08-11",
+      "caps": 4,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 8,
+      "position": "DF",
+      "name": "Moreno Torricelli",
+      "dob": "1970-01-23",
+      "caps": 6,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 9,
+      "position": "MF",
+      "name": "Demetrio Albertini",
+      "dob": "1971-08-23",
+      "caps": 57,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Alessandro Del Piero",
+      "dob": "1974-11-09",
+      "caps": 19,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Dino Baggio",
+      "dob": "1971-07-24",
+      "caps": 46,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Gianluca Pagliuca",
+      "dob": "1966-12-18",
+      "caps": 34,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Sandro Cois",
+      "dob": "1972-06-09",
+      "caps": 1,
+      "goals": null,
+      "club": "Fiorentina",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Luigi Di Biagio",
+      "dob": "1971-06-03",
+      "caps": 13,
+      "goals": null,
+      "club": "Roma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Angelo Di Livio",
+      "dob": "1966-07-26",
+      "caps": 21,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Roberto Di Matteo",
+      "dob": "1970-05-29",
+      "caps": 32,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Francesco Moriero",
+      "dob": "1969-03-31",
+      "caps": 3,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Roberto Baggio",
+      "dob": "1967-02-18",
+      "caps": 48,
+      "goals": null,
+      "club": "Bologna",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Filippo Inzaghi",
+      "dob": "1973-08-09",
+      "caps": 4,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Enrico Chiesa",
+      "dob": "1970-12-29",
+      "caps": 6,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Christian Vieri",
+      "dob": "1973-07-12",
+      "caps": 8,
+      "goals": null,
+      "club": "Atlético Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Gianluigi Buffon",
+      "dob": "1978-01-28",
+      "caps": 2,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    }
+  ],
+  "Denmark": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Peter Schmeichel",
+      "dob": "1963-11-18",
+      "caps": 100,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Michael Schjønberg",
+      "dob": "1967-01-19",
+      "caps": 28,
+      "goals": null,
+      "club": "Kaiserslautern",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Marc Rieper",
+      "dob": "1968-06-05",
+      "caps": 53,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Jes Høgh",
+      "dob": "1966-05-07",
+      "caps": 37,
+      "goals": null,
+      "club": "Fenerbahçe",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Jan Heintze",
+      "dob": "1963-08-17",
+      "caps": 39,
+      "goals": null,
+      "club": "Bayer Leverkusen",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Thomas Helveg",
+      "dob": "1971-06-24",
+      "caps": 30,
+      "goals": null,
+      "club": "Udinese",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Allan Nielsen",
+      "dob": "1971-03-13",
+      "caps": 18,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Per Frandsen",
+      "dob": "1970-02-06",
+      "caps": 12,
+      "goals": null,
+      "club": "Bolton Wanderers",
+      "club_nation": "England"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Miklos Molnar",
+      "dob": "1970-04-10",
+      "caps": 9,
+      "goals": null,
+      "club": "Sevilla",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Michael Laudrup (captain)",
+      "dob": "1964-06-15",
+      "caps": 99,
+      "goals": null,
+      "club": "Ajax",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Brian Laudrup",
+      "dob": "1969-02-22",
+      "caps": 77,
+      "goals": null,
+      "club": "Rangers",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Søren Colding",
+      "dob": "1972-09-02",
+      "caps": 4,
+      "goals": null,
+      "club": "Brøndby",
+      "club_nation": "Denmark"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Jacob Laursen",
+      "dob": "1971-10-06",
+      "caps": 22,
+      "goals": null,
+      "club": "Derby County",
+      "club_nation": "England"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Morten Wieghorst",
+      "dob": "1971-02-25",
+      "caps": 11,
+      "goals": null,
+      "club": "Celtic",
+      "club_nation": "Scotland"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Stig Tøfting",
+      "dob": "1969-08-14",
+      "caps": 4,
+      "goals": null,
+      "club": "Duisburg",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 16,
+      "position": "GK",
+      "name": "Mogens Krogh",
+      "dob": "1963-10-31",
+      "caps": 8,
+      "goals": null,
+      "club": "Brøndby",
+      "club_nation": "Denmark"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Bjarne Goldbæk",
+      "dob": "1968-10-06",
+      "caps": 11,
+      "goals": null,
+      "club": "Copenhagen",
+      "club_nation": "Denmark"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Peter Møller",
+      "dob": "1972-03-23",
+      "caps": 11,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Ebbe Sand",
+      "dob": "1972-07-19",
+      "caps": 2,
+      "goals": null,
+      "club": "Brøndby",
+      "club_nation": "Denmark"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "René Henriksen",
+      "dob": "1969-08-27",
+      "caps": 2,
+      "goals": null,
+      "club": "AB",
+      "club_nation": "Denmark"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Martin Jørgensen",
+      "dob": "1975-10-06",
+      "caps": 4,
+      "goals": null,
+      "club": "Udinese",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Peter Kjær",
+      "dob": "1965-11-05",
+      "caps": 0,
+      "goals": null,
+      "club": "Silkeborg",
+      "club_nation": "Denmark"
+    }
+  ],
+  "France": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Bernard Lama",
+      "dob": "1963-04-07",
+      "caps": 37,
+      "goals": null,
+      "club": "West Ham United",
+      "club_nation": "England"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Vincent Candela",
+      "dob": "1973-10-24",
+      "caps": 10,
+      "goals": null,
+      "club": "Roma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Bixente Lizarazu",
+      "dob": "1969-12-09",
+      "caps": 32,
+      "goals": null,
+      "club": "Bayern Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 4,
+      "position": "MF",
+      "name": "Patrick Vieira",
+      "dob": "1976-06-23",
+      "caps": 7,
+      "goals": null,
+      "club": "Arsenal",
+      "club_nation": "England"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Laurent Blanc",
+      "dob": "1965-11-19",
+      "caps": 68,
+      "goals": null,
+      "club": "Marseille",
+      "club_nation": "France"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Youri Djorkaeff",
+      "dob": "1968-03-09",
+      "caps": 37,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Didier Deschamps (captain)",
+      "dob": "1968-10-15",
+      "caps": 69,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 8,
+      "position": "DF",
+      "name": "Marcel Desailly",
+      "dob": "1968-09-07",
+      "caps": 41,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Stéphane Guivarc'h",
+      "dob": "1970-09-06",
+      "caps": 6,
+      "goals": null,
+      "club": "Auxerre",
+      "club_nation": "France"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Zinedine Zidane",
+      "dob": "1972-06-23",
+      "caps": 33,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Robert Pires",
+      "dob": "1973-10-29",
+      "caps": 14,
+      "goals": null,
+      "club": "Metz",
+      "club_nation": "France"
+    },
+    {
+      "number": 12,
+      "position": "FW",
+      "name": "Thierry Henry",
+      "dob": "1977-08-17",
+      "caps": 3,
+      "goals": null,
+      "club": "Monaco",
+      "club_nation": "France"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Bernard Diomède",
+      "dob": "1974-01-23",
+      "caps": 6,
+      "goals": null,
+      "club": "Auxerre",
+      "club_nation": "France"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Alain Boghossian",
+      "dob": "1970-10-27",
+      "caps": 6,
+      "goals": null,
+      "club": "Sampdoria",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Lilian Thuram",
+      "dob": "1972-01-01",
+      "caps": 32,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 16,
+      "position": "GK",
+      "name": "Fabien Barthez",
+      "dob": "1971-06-28",
+      "caps": 12,
+      "goals": null,
+      "club": "Monaco",
+      "club_nation": "France"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Emmanuel Petit",
+      "dob": "1970-09-22",
+      "caps": 17,
+      "goals": null,
+      "club": "Arsenal",
+      "club_nation": "England"
+    },
+    {
+      "number": 18,
+      "position": "DF",
+      "name": "Frank Leboeuf",
+      "dob": "1968-01-22",
+      "caps": 14,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Christian Karembeu",
+      "dob": "1970-12-03",
+      "caps": 31,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "David Trezeguet",
+      "dob": "1977-10-15",
+      "caps": 4,
+      "goals": null,
+      "club": "Monaco",
+      "club_nation": "France"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Christophe Dugarry",
+      "dob": "1972-03-24",
+      "caps": 23,
+      "goals": null,
+      "club": "Marseille",
+      "club_nation": "France"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Lionel Charbonnier",
+      "dob": "1966-10-25",
+      "caps": 1,
+      "goals": null,
+      "club": "Auxerre",
+      "club_nation": "France"
+    }
+  ],
+  "Saudi Arabia": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Mohamed Al-Deayea",
+      "dob": "1972-08-02",
+      "caps": 94,
+      "goals": null,
+      "club": "Al-Ta'ee",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Mohammed Sheliah",
+      "dob": "1974-09-28",
+      "caps": 64,
+      "goals": null,
+      "club": "Al-Ahli",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Mohammed Al-Khilaiwi",
+      "dob": "1971-09-01",
+      "caps": 86,
+      "goals": null,
+      "club": "Al-Ittihad",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 4,
+      "position": "MF",
+      "name": "Abdullah Sulaiman Zubromawi",
+      "dob": "1973-11-15",
+      "caps": 83,
+      "goals": null,
+      "club": "Al-Ahli",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Ahmed Jamil",
+      "dob": "1970-01-06",
+      "caps": 94,
+      "goals": null,
+      "club": "Al-Ittihad",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Fuad Anwar",
+      "dob": "1972-10-13",
+      "caps": 95,
+      "goals": null,
+      "club": "Al-Shabab",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Ibrahim Suwayed",
+      "dob": "1974-07-21",
+      "caps": 19,
+      "goals": null,
+      "club": "Al-Ahli",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 8,
+      "position": "FW",
+      "name": "Obeid Al-Dosari",
+      "dob": "1975-10-02",
+      "caps": 61,
+      "goals": null,
+      "club": "Al-Wehda",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Sami Al-Jaber",
+      "dob": "1972-12-11",
+      "caps": 85,
+      "goals": null,
+      "club": "Al-Hilal",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Saeed Al-Owairan",
+      "dob": "1967-08-19",
+      "caps": 55,
+      "goals": null,
+      "club": "Al-Shabab",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Fahd Al-Mehallel",
+      "dob": "1970-11-11",
+      "caps": 85,
+      "goals": null,
+      "club": "Al-Shabab",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 12,
+      "position": "MF",
+      "name": "Ibrahim Mater",
+      "dob": "1975-07-10",
+      "caps": 47,
+      "goals": null,
+      "club": "Al-Nassr",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Hussein Abdulghani",
+      "dob": "1977-01-23",
+      "caps": 40,
+      "goals": null,
+      "club": "Al-Ahli",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Khaled Massad",
+      "dob": "1971-11-23",
+      "caps": 91,
+      "goals": null,
+      "club": "Al-Ahli",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Yousuf Al-Thunayan (captain)",
+      "dob": "1963-11-18",
+      "caps": 86,
+      "goals": null,
+      "club": "Al-Hilal",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Khamis Al-Owairan",
+      "dob": "1973-09-08",
+      "caps": 48,
+      "goals": null,
+      "club": "Al-Hilal",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Ahmed Al-Dokhi",
+      "dob": "1976-10-25",
+      "caps": 12,
+      "goals": null,
+      "club": "Al-Hilal",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Nawaf Al-Temyat",
+      "dob": "1976-06-26",
+      "caps": 0,
+      "goals": null,
+      "club": "Al-Hilal",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Abdulaziz Al-Janoubi",
+      "dob": "1974-07-21",
+      "caps": 3,
+      "goals": null,
+      "club": "Al-Nassr",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Hamzah Saleh",
+      "dob": "1967-04-19",
+      "caps": 38,
+      "goals": null,
+      "club": "Al-Ahli",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 21,
+      "position": "GK",
+      "name": "Hussein Al-Sadiq",
+      "dob": "1973-10-15",
+      "caps": 64,
+      "goals": null,
+      "club": "Al-Qadsiah",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Tisir Al-Antaif",
+      "dob": "1974-02-16",
+      "caps": 0,
+      "goals": null,
+      "club": "Al-Ettifaq",
+      "club_nation": "Saudi Arabia"
+    }
+  ],
+  "South Africa": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Hans Vonk",
+      "dob": "1970-01-30",
+      "caps": 0,
+      "goals": null,
+      "club": "Heerenveen",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Themba Mnguni",
+      "dob": "1973-12-16",
+      "caps": 3,
+      "goals": null,
+      "club": "Mamelodi Sundowns",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "David Nyathi",
+      "dob": "1969-03-22",
+      "caps": 35,
+      "goals": null,
+      "club": "St. Gallen",
+      "club_nation": "Switzerland"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Willem Jackson",
+      "dob": "1972-03-26",
+      "caps": 12,
+      "goals": null,
+      "club": "Orlando Pirates",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Mark Fish",
+      "dob": "1974-03-14",
+      "caps": 37,
+      "goals": null,
+      "club": "Bolton Wanderers",
+      "club_nation": "England"
+    },
+    {
+      "number": 6,
+      "position": "FW",
+      "name": "Phil Masinga",
+      "dob": "1969-06-28",
+      "caps": 41,
+      "goals": null,
+      "club": "Bari",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Quinton Fortune",
+      "dob": "1977-05-21",
+      "caps": 6,
+      "goals": null,
+      "club": "Atlético Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Alfred Phiri",
+      "dob": "1974-06-22",
+      "caps": 2,
+      "goals": null,
+      "club": "Vanspor",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Shaun Bartlett",
+      "dob": "1972-10-31",
+      "caps": 29,
+      "goals": null,
+      "club": "Cape Town Spurs",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "John Moshoeu",
+      "dob": "1965-12-18",
+      "caps": 44,
+      "goals": null,
+      "club": "Fenerbahçe",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Helman Mkhalele",
+      "dob": "1969-10-20",
+      "caps": 35,
+      "goals": null,
+      "club": "Kayserispor",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 12,
+      "position": "FW",
+      "name": "Brendan Augustine",
+      "dob": "1971-10-26",
+      "caps": 26,
+      "goals": null,
+      "club": "LASK",
+      "club_nation": "Austria"
+    },
+    {
+      "number": 13,
+      "position": "FW",
+      "name": "Delron Buckley",
+      "dob": "1977-12-07",
+      "caps": 0,
+      "goals": null,
+      "club": "VfL Bochum",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 14,
+      "position": "FW",
+      "name": "Jerry Sikhosana",
+      "dob": "1969-06-08",
+      "caps": 9,
+      "goals": null,
+      "club": "Orlando Pirates",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Doctor Khumalo",
+      "dob": "1967-06-26",
+      "caps": 43,
+      "goals": null,
+      "club": "Kaizer Chiefs",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 16,
+      "position": "GK",
+      "name": "Brian Baloyi",
+      "dob": "1974-03-16",
+      "caps": 8,
+      "goals": null,
+      "club": "Kaizer Chiefs",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Benni McCarthy",
+      "dob": "1977-11-12",
+      "caps": 10,
+      "goals": null,
+      "club": "Ajax",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Lebogang Morula",
+      "dob": "1968-12-22",
+      "caps": 0,
+      "goals": null,
+      "club": "Vanspor",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Lucas Radebe (captain)",
+      "dob": "1969-04-12",
+      "caps": 41,
+      "goals": null,
+      "club": "Leeds United",
+      "club_nation": "England"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "William Mokoena",
+      "dob": "1975-03-31",
+      "caps": 0,
+      "goals": null,
+      "club": "Manning Rangers",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Pierre Issa",
+      "dob": "1975-09-12",
+      "caps": 1,
+      "goals": null,
+      "club": "Marseille",
+      "club_nation": "France"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Paul Evans*",
+      "dob": "1973-12-28",
+      "caps": 0,
+      "goals": null,
+      "club": "Supersport United",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 23,
+      "position": "GK",
+      "name": "Simon Gopane*",
+      "dob": "1970-12-26",
+      "caps": 1,
+      "goals": null,
+      "club": "Bloemfontein Celtic",
+      "club_nation": "South Africa"
+    }
+  ],
+  "Bulgaria": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Zdravko Zdravkov",
+      "dob": "1970-10-04",
+      "caps": 16,
+      "goals": null,
+      "club": "İstanbulspor",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Radostin Kishishev",
+      "dob": "1974-07-30",
+      "caps": 22,
+      "goals": null,
+      "club": "Litex Lovech",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Trifon Ivanov (captain)",
+      "dob": "1965-07-27",
+      "caps": 72,
+      "goals": null,
+      "club": "CSKA Sofia",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Ivaylo Petkov",
+      "dob": "1976-03-24",
+      "caps": 10,
+      "goals": null,
+      "club": "Litex Lovech",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 5,
+      "position": "MF",
+      "name": "Ivaylo Yordanov",
+      "dob": "1968-04-22",
+      "caps": 38,
+      "goals": null,
+      "club": "Sporting CP",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Zlatko Yankov",
+      "dob": "1966-06-07",
+      "caps": 67,
+      "goals": null,
+      "club": "Beşiktaş",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Emil Kostadinov",
+      "dob": "1967-08-12",
+      "caps": 67,
+      "goals": null,
+      "club": "CSKA Sofia",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 8,
+      "position": "FW",
+      "name": "Hristo Stoichkov",
+      "dob": "1966-02-08",
+      "caps": 70,
+      "goals": null,
+      "club": "Al-Nassr",
+      "club_nation": "Saudi Arabia"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Lyuboslav Penev",
+      "dob": "1966-08-31",
+      "caps": 58,
+      "goals": null,
+      "club": "Compostela",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Krasimir Balakov",
+      "dob": "1966-03-29",
+      "caps": 66,
+      "goals": null,
+      "club": "VfB Stuttgart",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Ilian Iliev",
+      "dob": "1968-07-02",
+      "caps": 15,
+      "goals": null,
+      "club": "Bursaspor",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Borislav Mihaylov",
+      "dob": "1963-02-12",
+      "caps": 96,
+      "goals": null,
+      "club": "Slavia Sofia",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Gosho Ginchev",
+      "dob": "1969-02-02",
+      "caps": 15,
+      "goals": null,
+      "club": "Antalyaspor",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Marian Hristov",
+      "dob": "1973-07-29",
+      "caps": 9,
+      "goals": null,
+      "club": "1. FC Kaiserslautern",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Adalbert Zafirov",
+      "dob": "1969-09-29",
+      "caps": 6,
+      "goals": null,
+      "club": "Arminia Bielefeld",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Anatoli Nankov",
+      "dob": "1969-07-15",
+      "caps": 15,
+      "goals": null,
+      "club": "Lokomotiv Sofia",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Stoycho Stoilov",
+      "dob": "1971-10-15",
+      "caps": 1,
+      "goals": null,
+      "club": "Litex Lovech",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Daniel Borimirov",
+      "dob": "1970-01-15",
+      "caps": 36,
+      "goals": null,
+      "club": "1860 Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Georgi Bachev",
+      "dob": "1977-04-18",
+      "caps": 4,
+      "goals": null,
+      "club": "Slavia Sofia",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Georgi Ivanov",
+      "dob": "1976-07-02",
+      "caps": 4,
+      "goals": null,
+      "club": "Levski Sofia",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Rosen Kirilov",
+      "dob": "1973-01-04",
+      "caps": 3,
+      "goals": null,
+      "club": "Litex Lovech",
+      "club_nation": "Bulgaria"
+    },
+    {
+      "number": 22,
+      "position": "MF",
+      "name": "Milen Petkov",
+      "dob": "1974-01-12",
+      "caps": 5,
+      "goals": null,
+      "club": "CSKA Sofia",
+      "club_nation": "Bulgaria"
+    }
+  ],
+  "Nigeria": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Peter Rufai",
+      "dob": "1963-08-24",
+      "caps": 62,
+      "goals": null,
+      "club": "Deportivo La Coruña",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Mobi Oparaku",
+      "dob": "1976-12-01",
+      "caps": 3,
+      "goals": null,
+      "club": "Royal Cappellen",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Celestine Babayaro",
+      "dob": "1978-08-29",
+      "caps": 6,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 4,
+      "position": "FW",
+      "name": "Nwankwo Kanu",
+      "dob": "1976-08-01",
+      "caps": 7,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Uche Okechukwu (captain)",
+      "dob": "1967-09-27",
+      "caps": 41,
+      "goals": null,
+      "club": "Fenerbahçe",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Taribo West",
+      "dob": "1974-03-26",
+      "caps": 8,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Finidi George",
+      "dob": "1971-04-15",
+      "caps": 36,
+      "goals": null,
+      "club": "Real Betis",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Mutiu Adepoju",
+      "dob": "1970-12-22",
+      "caps": 35,
+      "goals": null,
+      "club": "Real Sociedad",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Rashidi Yekini",
+      "dob": "1963-10-23",
+      "caps": 58,
+      "goals": null,
+      "club": "Zürich",
+      "club_nation": "Switzerland"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Jay-Jay Okocha",
+      "dob": "1973-08-14",
+      "caps": 26,
+      "goals": null,
+      "club": "Fenerbahçe",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Garba Lawal",
+      "dob": "1974-05-22",
+      "caps": 3,
+      "goals": null,
+      "club": "Roda JC",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Willy Okpara",
+      "dob": "1968-05-07",
+      "caps": 5,
+      "goals": null,
+      "club": "Orlando Pirates",
+      "club_nation": "South Africa"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Tijani Babangida",
+      "dob": "1973-09-25",
+      "caps": 4,
+      "goals": null,
+      "club": "Ajax",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 14,
+      "position": "FW",
+      "name": "Daniel Amokachi",
+      "dob": "1972-12-30",
+      "caps": 43,
+      "goals": null,
+      "club": "Beşiktaş",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Sunday Oliseh",
+      "dob": "1974-09-14",
+      "caps": 22,
+      "goals": null,
+      "club": "Ajax",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Uche Okafor",
+      "dob": "1967-08-08",
+      "caps": 33,
+      "goals": null,
+      "club": "Kansas City Wizards",
+      "club_nation": "United States"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Augustine Eguavoen",
+      "dob": "1965-08-19",
+      "caps": 52,
+      "goals": null,
+      "club": "Torpedo Moscow",
+      "club_nation": "Russia"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Wilson Oruma",
+      "dob": "1976-12-30",
+      "caps": 4,
+      "goals": null,
+      "club": "Lens",
+      "club_nation": "France"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Benedict Iroha",
+      "dob": "1969-11-29",
+      "caps": 33,
+      "goals": null,
+      "club": "Elche",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Victor Ikpeba",
+      "dob": "1973-06-12",
+      "caps": 15,
+      "goals": null,
+      "club": "Monaco",
+      "club_nation": "France"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Godwin Okpara",
+      "dob": "1972-09-20",
+      "caps": 6,
+      "goals": null,
+      "club": "Strasbourg",
+      "club_nation": "France"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Abiodun Baruwa",
+      "dob": "1974-11-16",
+      "caps": 3,
+      "goals": null,
+      "club": "Sion",
+      "club_nation": "Switzerland"
+    }
+  ],
+  "Paraguay": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "José Luis Chilavert (captain)",
+      "dob": "1965-07-27",
+      "caps": 40,
+      "goals": null,
+      "club": "Vélez Sarsfield",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Francisco Arce",
+      "dob": "1971-04-02",
+      "caps": 28,
+      "goals": null,
+      "club": "Palmeiras",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Catalino Rivarola",
+      "dob": "1965-04-30",
+      "caps": 49,
+      "goals": null,
+      "club": "Grêmio",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Carlos Gamarra",
+      "dob": "1971-02-17",
+      "caps": 48,
+      "goals": null,
+      "club": "Corinthians",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Celso Ayala",
+      "dob": "1970-08-20",
+      "caps": 42,
+      "goals": null,
+      "club": "River Plate",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Edgar Aguilera",
+      "dob": "1975-07-28",
+      "caps": 1,
+      "goals": null,
+      "club": "Cerro Corá",
+      "club_nation": "Paraguay"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Julio César Yegros",
+      "dob": "1971-01-31",
+      "caps": 6,
+      "goals": null,
+      "club": "Cruz Azul",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 8,
+      "position": "FW",
+      "name": "Arístides Rojas",
+      "dob": "1968-08-12",
+      "caps": 5,
+      "goals": null,
+      "club": "Unión de Santa Fe",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "José Cardozo",
+      "dob": "1971-03-19",
+      "caps": 12,
+      "goals": null,
+      "club": "Toluca",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Roberto Acuña",
+      "dob": "1972-03-25",
+      "caps": 40,
+      "goals": null,
+      "club": "Zaragoza",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 11,
+      "position": "DF",
+      "name": "Pedro Sarabia",
+      "dob": "1975-07-05",
+      "caps": 20,
+      "goals": null,
+      "club": "River Plate",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Danilo Aceval",
+      "dob": "1975-09-15",
+      "caps": 3,
+      "goals": null,
+      "club": "Unión de Santa Fe",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Carlos Paredes",
+      "dob": "1976-07-16",
+      "caps": 3,
+      "goals": null,
+      "club": "Olimpia",
+      "club_nation": "Paraguay"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Ricardo Rojas",
+      "dob": "1971-01-26",
+      "caps": 6,
+      "goals": null,
+      "club": "Estudiantes",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 15,
+      "position": "FW",
+      "name": "Miguel Ángel Benítez",
+      "dob": "1970-05-19",
+      "caps": 32,
+      "goals": null,
+      "club": "Espanyol",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Julio César Enciso",
+      "dob": "1974-08-05",
+      "caps": 4,
+      "goals": null,
+      "club": "Internacional",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Hugo Brizuela",
+      "dob": "1969-02-08",
+      "caps": 11,
+      "goals": null,
+      "club": "Argentinos Juniors",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "César Ramírez",
+      "dob": "1977-03-21",
+      "caps": 3,
+      "goals": null,
+      "club": "Sporting CP",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Carlos Morales",
+      "dob": "1968-11-04",
+      "caps": 0,
+      "goals": null,
+      "club": "Gimnasia de Jujuy",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Denis Caniza",
+      "dob": "1974-08-29",
+      "caps": 8,
+      "goals": null,
+      "club": "Olimpia",
+      "club_nation": "Paraguay"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Jorge Luis Campos",
+      "dob": "1970-08-11",
+      "caps": 10,
+      "goals": null,
+      "club": "Beijing Guoan",
+      "club_nation": "China"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Rubén Ruiz Díaz",
+      "dob": "1969-11-11",
+      "caps": 12,
+      "goals": null,
+      "club": "Monterrey",
+      "club_nation": "Mexico"
+    }
+  ],
+  "Spain": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Andoni Zubizarreta (captain)",
+      "dob": "1961-10-23",
+      "caps": 123,
+      "goals": null,
+      "club": "Valencia",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Albert Ferrer",
+      "dob": "1970-06-06",
+      "caps": 34,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Agustín Aranzábal",
+      "dob": "1973-03-15",
+      "caps": 6,
+      "goals": null,
+      "club": "Real Sociedad",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Rafael Alkorta",
+      "dob": "1968-09-16",
+      "caps": 48,
+      "goals": null,
+      "club": "Athletic Bilbao",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Abelardo",
+      "dob": "1970-03-19",
+      "caps": 40,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Fernando Hierro",
+      "dob": "1968-03-23",
+      "caps": 55,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Fernando Morientes",
+      "dob": "1976-04-05",
+      "caps": 2,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Julen Guerrero",
+      "dob": "1974-01-07",
+      "caps": 31,
+      "goals": null,
+      "club": "Athletic Bilbao",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Juan Antonio Pizzi",
+      "dob": "1968-06-07",
+      "caps": 21,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Raúl",
+      "dob": "1977-06-27",
+      "caps": 13,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Alfonso",
+      "dob": "1972-09-26",
+      "caps": 26,
+      "goals": null,
+      "club": "Real Betis",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Sergi",
+      "dob": "1971-12-28",
+      "caps": 33,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 13,
+      "position": "GK",
+      "name": "Santiago Cañizares",
+      "dob": "1969-12-18",
+      "caps": 10,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Iván Campo",
+      "dob": "1974-02-21",
+      "caps": 2,
+      "goals": null,
+      "club": "Mallorca",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Carlos Aguilera",
+      "dob": "1969-05-22",
+      "caps": 4,
+      "goals": null,
+      "club": "Atlético Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Albert Celades",
+      "dob": "1975-09-29",
+      "caps": 1,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Joseba Etxeberria",
+      "dob": "1977-09-05",
+      "caps": 4,
+      "goals": null,
+      "club": "Athletic Bilbao",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Guillermo Amor",
+      "dob": "1967-12-04",
+      "caps": 33,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Kiko",
+      "dob": "1972-04-26",
+      "caps": 21,
+      "goals": null,
+      "club": "Atlético Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Miguel Ángel Nadal",
+      "dob": "1966-07-28",
+      "caps": 43,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Luis Enrique",
+      "dob": "1970-05-08",
+      "caps": 35,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "José Molina",
+      "dob": "1970-08-08",
+      "caps": 1,
+      "goals": null,
+      "club": "Atlético Madrid",
+      "club_nation": "Spain"
+    }
+  ],
+  "Belgium": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Filip De Wilde",
+      "dob": "1964-07-05",
+      "caps": 25,
+      "goals": null,
+      "club": "Anderlecht",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Bertrand Crasson",
+      "dob": "1971-10-05",
+      "caps": 19,
+      "goals": null,
+      "club": "Napoli",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Lorenzo Staelens",
+      "dob": "1964-04-30",
+      "caps": 52,
+      "goals": null,
+      "club": "Club Brugge",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Gordan Vidović",
+      "dob": "1968-06-23",
+      "caps": 11,
+      "goals": null,
+      "club": "Mouscron",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Vital Borkelmans",
+      "dob": "1963-06-01",
+      "caps": 22,
+      "goals": null,
+      "club": "Club Brugge",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Franky Van der Elst (captain)",
+      "dob": "1961-04-30",
+      "caps": 86,
+      "goals": null,
+      "club": "Club Brugge",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Marc Wilmots",
+      "dob": "1969-02-22",
+      "caps": 37,
+      "goals": null,
+      "club": "Schalke 04",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 8,
+      "position": "FW",
+      "name": "Luís Oliveira",
+      "dob": "1969-03-24",
+      "caps": 29,
+      "goals": null,
+      "club": "Fiorentina",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Mbo Mpenza",
+      "dob": "1976-12-04",
+      "caps": 8,
+      "goals": null,
+      "club": "Standard Liège",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Luc Nilis",
+      "dob": "1967-05-25",
+      "caps": 51,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Nico Van Kerckhoven",
+      "dob": "1970-12-14",
+      "caps": 17,
+      "goals": null,
+      "club": "Lierse",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Philippe Vande Walle",
+      "dob": "1961-12-22",
+      "caps": 4,
+      "goals": null,
+      "club": "Eendracht Aalst",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 13,
+      "position": "GK",
+      "name": "Dany Verlinden",
+      "dob": "1963-08-15",
+      "caps": 1,
+      "goals": null,
+      "club": "Club Brugge",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Enzo Scifo",
+      "dob": "1966-02-19",
+      "caps": 84,
+      "goals": null,
+      "club": "Anderlecht",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Philippe Clement",
+      "dob": "1974-03-22",
+      "caps": 8,
+      "goals": null,
+      "club": "Genk",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Glen De Boeck",
+      "dob": "1971-08-22",
+      "caps": 12,
+      "goals": null,
+      "club": "Anderlecht",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Mike Verstraeten",
+      "dob": "1967-08-12",
+      "caps": 6,
+      "goals": null,
+      "club": "Germinal Ekeren",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Gert Verheyen",
+      "dob": "1970-09-20",
+      "caps": 17,
+      "goals": null,
+      "club": "Club Brugge",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Eric Van Meir",
+      "dob": "1968-02-28",
+      "caps": 14,
+      "goals": null,
+      "club": "Lierse",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Émile Mpenza",
+      "dob": "1978-07-04",
+      "caps": 13,
+      "goals": null,
+      "club": "Standard Liège",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Danny Boffin",
+      "dob": "1965-07-10",
+      "caps": 40,
+      "goals": null,
+      "club": "Metz",
+      "club_nation": "France"
+    },
+    {
+      "number": 22,
+      "position": "DF",
+      "name": "Éric Deflandre",
+      "dob": "1973-08-02",
+      "caps": 12,
+      "goals": null,
+      "club": "Club Brugge",
+      "club_nation": "Belgium"
+    }
+  ],
+  "Mexico": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Jorge Campos",
+      "dob": "1966-10-15",
+      "caps": 106,
+      "goals": null,
+      "club": "Chicago Fire",
+      "club_nation": "United States"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Claudio Suárez",
+      "dob": "1968-12-17",
+      "caps": 121,
+      "goals": null,
+      "club": "Guadalajara",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Joel Sánchez",
+      "dob": "1974-08-17",
+      "caps": 20,
+      "goals": null,
+      "club": "Guadalajara",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 4,
+      "position": "MF",
+      "name": "Germán Villa",
+      "dob": "1973-04-02",
+      "caps": 36,
+      "goals": null,
+      "club": "América",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Duilio Davino",
+      "dob": "1976-03-21",
+      "caps": 48,
+      "goals": null,
+      "club": "América",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Marcelino Bernal",
+      "dob": "1962-05-27",
+      "caps": 72,
+      "goals": null,
+      "club": "Monterrey",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Ramón Ramírez",
+      "dob": "1969-12-05",
+      "caps": 92,
+      "goals": null,
+      "club": "Guadalajara",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Alberto García Aspe (captain)",
+      "dob": "1967-05-11",
+      "caps": 82,
+      "goals": null,
+      "club": "América",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Ricardo Peláez",
+      "dob": "1963-03-14",
+      "caps": 41,
+      "goals": null,
+      "club": "América",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Luis García",
+      "dob": "1969-06-01",
+      "caps": 89,
+      "goals": null,
+      "club": "Atlante",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Cuauhtémoc Blanco",
+      "dob": "1973-01-17",
+      "caps": 42,
+      "goals": null,
+      "club": "Necaxa",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Oswaldo Sánchez",
+      "dob": "1973-09-21",
+      "caps": 9,
+      "goals": null,
+      "club": "América",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Pável Pardo",
+      "dob": "1976-07-26",
+      "caps": 43,
+      "goals": null,
+      "club": "Atlas",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Raúl Lara",
+      "dob": "1973-02-28",
+      "caps": 24,
+      "goals": null,
+      "club": "América",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 15,
+      "position": "FW",
+      "name": "Luis Hernández",
+      "dob": "1968-12-22",
+      "caps": 46,
+      "goals": null,
+      "club": "Necaxa",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Isaac Terrazas",
+      "dob": "1975-04-17",
+      "caps": 7,
+      "goals": null,
+      "club": "América",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Francisco Palencia",
+      "dob": "1973-04-28",
+      "caps": 27,
+      "goals": null,
+      "club": "Cruz Azul",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 18,
+      "position": "DF",
+      "name": "Salvador Carmona",
+      "dob": "1975-08-22",
+      "caps": 16,
+      "goals": null,
+      "club": "Toluca",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Braulio Luna",
+      "dob": "1974-09-08",
+      "caps": 15,
+      "goals": null,
+      "club": "UNAM",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Jaime Ordiales",
+      "dob": "1963-12-23",
+      "caps": 21,
+      "goals": null,
+      "club": "Toluca",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Jesús Arellano",
+      "dob": "1973-05-08",
+      "caps": 7,
+      "goals": null,
+      "club": "Guadalajara",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Óscar Pérez",
+      "dob": "1973-02-01",
+      "caps": 8,
+      "goals": null,
+      "club": "Cruz Azul",
+      "club_nation": "Mexico"
+    }
+  ],
+  "Netherlands": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Edwin van der Sar",
+      "dob": "1970-10-29",
+      "caps": 25,
+      "goals": null,
+      "club": "Ajax",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Michael Reiziger",
+      "dob": "1973-05-03",
+      "caps": 26,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Jaap Stam",
+      "dob": "1972-07-17",
+      "caps": 14,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Frank de Boer (captain)",
+      "dob": "1970-05-15",
+      "caps": 55,
+      "goals": null,
+      "club": "Ajax",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Arthur Numan",
+      "dob": "1969-12-14",
+      "caps": 29,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Wim Jonk",
+      "dob": "1966-10-12",
+      "caps": 42,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Ronald de Boer",
+      "dob": "1970-05-15",
+      "caps": 41,
+      "goals": null,
+      "club": "Ajax",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 8,
+      "position": "FW",
+      "name": "Dennis Bergkamp",
+      "dob": "1969-05-10",
+      "caps": 57,
+      "goals": null,
+      "club": "Arsenal",
+      "club_nation": "England"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Patrick Kluivert",
+      "dob": "1976-07-01",
+      "caps": 19,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Clarence Seedorf",
+      "dob": "1976-04-01",
+      "caps": 31,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Phillip Cocu",
+      "dob": "1970-10-29",
+      "caps": 20,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 12,
+      "position": "MF",
+      "name": "Boudewijn Zenden",
+      "dob": "1976-08-15",
+      "caps": 6,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "André Ooijer",
+      "dob": "1974-07-11",
+      "caps": 0,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Marc Overmars",
+      "dob": "1973-03-29",
+      "caps": 40,
+      "goals": null,
+      "club": "Arsenal",
+      "club_nation": "England"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Winston Bogarde",
+      "dob": "1970-10-22",
+      "caps": 14,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Edgar Davids",
+      "dob": "1973-03-13",
+      "caps": 12,
+      "goals": null,
+      "club": "Juventus",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Pierre van Hooijdonk",
+      "dob": "1969-11-29",
+      "caps": 12,
+      "goals": null,
+      "club": "Nottingham Forest",
+      "club_nation": "England"
+    },
+    {
+      "number": 18,
+      "position": "GK",
+      "name": "Ed de Goey",
+      "dob": "1966-12-20",
+      "caps": 31,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Giovanni van Bronckhorst",
+      "dob": "1975-02-05",
+      "caps": 8,
+      "goals": null,
+      "club": "Feyenoord",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Aron Winter",
+      "dob": "1967-03-01",
+      "caps": 72,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Jimmy Floyd Hasselbaink",
+      "dob": "1972-03-27",
+      "caps": 3,
+      "goals": null,
+      "club": "Leeds United",
+      "club_nation": "England"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Ruud Hesp",
+      "dob": "1965-10-31",
+      "caps": 0,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Spain"
+    }
+  ],
+  "South Korea": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Kim Byung-ji",
+      "dob": "1970-04-08",
+      "caps": 34,
+      "goals": null,
+      "club": "Ulsan Hyundai Horangi",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 2,
+      "position": "MF",
+      "name": "Choi Sung-yong",
+      "dob": "1975-12-25",
+      "caps": 27,
+      "goals": null,
+      "club": "Sangmu",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Lee Lim-saeng",
+      "dob": "1971-11-18",
+      "caps": 17,
+      "goals": null,
+      "club": "Bucheon SK",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Choi Young-il (captain)",
+      "dob": "1966-04-25",
+      "caps": 54,
+      "goals": null,
+      "club": "Busan Daewoo Royals",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Lee Min-sung",
+      "dob": "1973-06-23",
+      "caps": 29,
+      "goals": null,
+      "club": "Busan Daewoo Royals",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Yoo Sang-chul",
+      "dob": "1971-10-18",
+      "caps": 57,
+      "goals": null,
+      "club": "Ulsan Hyundai Horangi",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Kim Do-keun",
+      "dob": "1972-03-02",
+      "caps": 13,
+      "goals": null,
+      "club": "Jeonnam Dragons",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Noh Jung-yoon",
+      "dob": "1971-03-28",
+      "caps": 36,
+      "goals": null,
+      "club": "NAC Breda",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Kim Do-hoon",
+      "dob": "1970-07-21",
+      "caps": 37,
+      "goals": null,
+      "club": "Vissel Kobe",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Choi Yong-soo",
+      "dob": "1973-09-10",
+      "caps": 33,
+      "goals": null,
+      "club": "Sangmu",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Seo Jung-won",
+      "dob": "1970-12-17",
+      "caps": 73,
+      "goals": null,
+      "club": "Strasbourg",
+      "club_nation": "France"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Lee Sang-hun",
+      "dob": "1975-10-11",
+      "caps": 13,
+      "goals": null,
+      "club": "Anyang LG Cheetahs",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Kim Tae-young",
+      "dob": "1970-11-08",
+      "caps": 35,
+      "goals": null,
+      "club": "Jeonnam Dragons",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Ko Jong-soo",
+      "dob": "1978-10-30",
+      "caps": 22,
+      "goals": null,
+      "club": "Suwon Samsung Bluewings",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Lee Sang-yoon",
+      "dob": "1969-04-10",
+      "caps": 28,
+      "goals": null,
+      "club": "Cheonan Ilhwa Chunma",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Jang Hyung-seok",
+      "dob": "1972-07-07",
+      "caps": 7,
+      "goals": null,
+      "club": "Ulsan Hyundai Horangi",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Ha Seok-ju",
+      "dob": "1968-02-20",
+      "caps": 82,
+      "goals": null,
+      "club": "Cerezo Osaka",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Hwang Sun-hong",
+      "dob": "1968-07-14",
+      "caps": 78,
+      "goals": null,
+      "club": "Pohang Steelers",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Jang Dae-il",
+      "dob": "1975-03-09",
+      "caps": 14,
+      "goals": null,
+      "club": "Cheonan Ilhwa Chunma",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Hong Myung-bo",
+      "dob": "1969-02-12",
+      "caps": 94,
+      "goals": null,
+      "club": "Bellmare Hiratsuka",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Lee Dong-gook",
+      "dob": "1979-04-29",
+      "caps": 0,
+      "goals": null,
+      "club": "Pohang Steelers",
+      "club_nation": "South Korea"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Seo Dong-myung",
+      "dob": "1974-05-04",
+      "caps": 21,
+      "goals": null,
+      "club": "Sangmu",
+      "club_nation": "South Korea"
+    }
+  ],
+  "Germany": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Andreas Köpke",
+      "dob": "1962-03-12",
+      "caps": 54,
+      "goals": null,
+      "club": "Marseille",
+      "club_nation": "France"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Christian Wörns",
+      "dob": "1972-05-10",
+      "caps": 17,
+      "goals": null,
+      "club": "Bayer Leverkusen",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Jörg Heinrich",
+      "dob": "1969-12-06",
+      "caps": 15,
+      "goals": null,
+      "club": "Borussia Dortmund",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Jürgen Kohler",
+      "dob": "1965-10-06",
+      "caps": 101,
+      "goals": null,
+      "club": "Borussia Dortmund",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Thomas Helmer",
+      "dob": "1965-04-21",
+      "caps": 66,
+      "goals": null,
+      "club": "Bayern Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Olaf Thon",
+      "dob": "1966-05-01",
+      "caps": 48,
+      "goals": null,
+      "club": "Schalke 04",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Andreas Möller",
+      "dob": "1967-09-02",
+      "caps": 79,
+      "goals": null,
+      "club": "Borussia Dortmund",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 8,
+      "position": "DF",
+      "name": "Lothar Matthäus",
+      "dob": "1961-03-21",
+      "caps": 125,
+      "goals": null,
+      "club": "Bayern Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Ulf Kirsten",
+      "dob": "1965-12-04",
+      "caps": 32,
+      "goals": null,
+      "club": "Bayer Leverkusen",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Thomas Häßler",
+      "dob": "1966-05-30",
+      "caps": 93,
+      "goals": null,
+      "club": "Karlsruher SC",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Olaf Marschall",
+      "dob": "1966-03-19",
+      "caps": 7,
+      "goals": null,
+      "club": "1. FC Kaiserslautern",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Oliver Kahn",
+      "dob": "1969-06-15",
+      "caps": 10,
+      "goals": null,
+      "club": "Bayern Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Jens Jeremies",
+      "dob": "1974-03-05",
+      "caps": 5,
+      "goals": null,
+      "club": "1860 Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Markus Babbel",
+      "dob": "1972-09-08",
+      "caps": 30,
+      "goals": null,
+      "club": "Bayern Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Steffen Freund",
+      "dob": "1970-01-19",
+      "caps": 21,
+      "goals": null,
+      "club": "Borussia Dortmund",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Dietmar Hamann",
+      "dob": "1973-08-27",
+      "caps": 7,
+      "goals": null,
+      "club": "Bayern Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Christian Ziege",
+      "dob": "1972-02-01",
+      "caps": 37,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Jürgen Klinsmann (captain)",
+      "dob": "1964-07-30",
+      "caps": 103,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Stefan Reuter",
+      "dob": "1966-10-16",
+      "caps": 68,
+      "goals": null,
+      "club": "Borussia Dortmund",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Oliver Bierhoff",
+      "dob": "1968-05-01",
+      "caps": 26,
+      "goals": null,
+      "club": "Udinese",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Michael Tarnat",
+      "dob": "1969-10-27",
+      "caps": 12,
+      "goals": null,
+      "club": "Bayern Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Jens Lehmann",
+      "dob": "1969-11-10",
+      "caps": 2,
+      "goals": null,
+      "club": "Schalke 04",
+      "club_nation": "Germany"
+    }
+  ],
+  "Iran": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Ahmad Reza Abedzadeh (captain)",
+      "dob": "1966-05-25",
+      "caps": 77,
+      "goals": null,
+      "club": "Persepolis",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 2,
+      "position": "MF",
+      "name": "Mehdi Mahdavikia",
+      "dob": "1977-07-24",
+      "caps": 29,
+      "goals": null,
+      "club": "Persepolis",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Naeim Saadavi",
+      "dob": "1969-06-16",
+      "caps": 8,
+      "goals": null,
+      "club": "Persepolis",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Mohammad Khakpour",
+      "dob": "1969-02-20",
+      "caps": 41,
+      "goals": null,
+      "club": "Bahman",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Afshin Peyrovani",
+      "dob": "1970-02-06",
+      "caps": 40,
+      "goals": null,
+      "club": "Persepolis",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Karim Bagheri",
+      "dob": "1974-02-20",
+      "caps": 46,
+      "goals": null,
+      "club": "Arminia Bielefeld",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Alireza Mansourian",
+      "dob": "1971-12-12",
+      "caps": 33,
+      "goals": null,
+      "club": "Esteghlal",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Sirous Dinmohammadi",
+      "dob": "1970-07-02",
+      "caps": 16,
+      "goals": null,
+      "club": "Shahrdari Tabriz",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 9,
+      "position": "MF",
+      "name": "Hamid Estili",
+      "dob": "1967-04-01",
+      "caps": 52,
+      "goals": null,
+      "club": "Bahman",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Ali Daei",
+      "dob": "1969-03-21",
+      "caps": 53,
+      "goals": null,
+      "club": "Arminia Bielefeld",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Khodadad Azizi",
+      "dob": "1971-06-22",
+      "caps": 27,
+      "goals": null,
+      "club": "1. FC Köln",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Nima Nakisa",
+      "dob": "1975-05-01",
+      "caps": 6,
+      "goals": null,
+      "club": "Persepolis",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 13,
+      "position": "FW",
+      "name": "Ali Latifi",
+      "dob": "1976-02-20",
+      "caps": 0,
+      "goals": null,
+      "club": "Bahman",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Nader Mohammadkhani",
+      "dob": "1963-08-23",
+      "caps": 52,
+      "goals": null,
+      "club": "Polyacryl",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Ali Akbar Ostad-Asadi",
+      "dob": "1965-09-17",
+      "caps": 29,
+      "goals": null,
+      "club": "Zob Ahan",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Reza Shahroudi",
+      "dob": "1972-02-21",
+      "caps": 34,
+      "goals": null,
+      "club": "Persepolis",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Javad Zarincheh",
+      "dob": "1966-07-23",
+      "caps": 61,
+      "goals": null,
+      "club": "Esteghlal",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Sattar Hamedani",
+      "dob": "1974-06-06",
+      "caps": 3,
+      "goals": null,
+      "club": "Bahman",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Behnam Seraj",
+      "dob": "1971-06-19",
+      "caps": 0,
+      "goals": null,
+      "club": "Sanat Naft",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Mehdi Pashazadeh",
+      "dob": "1973-12-27",
+      "caps": 4,
+      "goals": null,
+      "club": "Esteghlal",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Mehrdad Minavand",
+      "dob": "1975-11-30",
+      "caps": 27,
+      "goals": null,
+      "club": "Persepolis",
+      "club_nation": "Iran"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Parviz Boroumand",
+      "dob": "1972-09-11",
+      "caps": 0,
+      "goals": null,
+      "club": "Esteghlal",
+      "club_nation": "Iran"
+    }
+  ],
+  "United States": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Brad Friedel",
+      "dob": "1971-05-18",
+      "caps": 56,
+      "goals": null,
+      "club": "Liverpool",
+      "club_nation": "England"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Frankie Hejduk",
+      "dob": "1974-08-05",
+      "caps": 11,
+      "goals": null,
+      "club": "Tampa Bay Mutiny",
+      "club_nation": "United States"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Eddie Pope",
+      "dob": "1973-12-24",
+      "caps": 23,
+      "goals": null,
+      "club": "D.C. United",
+      "club_nation": "United States"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Mike Burns",
+      "dob": "1970-09-14",
+      "caps": 73,
+      "goals": null,
+      "club": "New England Revolution",
+      "club_nation": "United States"
+    },
+    {
+      "number": 5,
+      "position": "MF",
+      "name": "Thomas Dooley (captain)",
+      "dob": "1961-12-05",
+      "caps": 77,
+      "goals": null,
+      "club": "Columbus Crew",
+      "club_nation": "United States"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "David Regis",
+      "dob": "1968-12-02",
+      "caps": 2,
+      "goals": null,
+      "club": "Karlsruher SC",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Roy Wegerle",
+      "dob": "1964-03-19",
+      "caps": 39,
+      "goals": null,
+      "club": "Tampa Bay Mutiny",
+      "club_nation": "United States"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Earnie Stewart",
+      "dob": "1969-03-28",
+      "caps": 47,
+      "goals": null,
+      "club": "NAC Breda",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Joe-Max Moore",
+      "dob": "1971-02-23",
+      "caps": 68,
+      "goals": null,
+      "club": "New England Revolution",
+      "club_nation": "United States"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Tab Ramos",
+      "dob": "1966-09-21",
+      "caps": 80,
+      "goals": null,
+      "club": "MetroStars",
+      "club_nation": "United States"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Eric Wynalda",
+      "dob": "1969-06-09",
+      "caps": 100,
+      "goals": null,
+      "club": "San Jose Clash",
+      "club_nation": "United States"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Jeff Agoos",
+      "dob": "1968-05-02",
+      "caps": 87,
+      "goals": null,
+      "club": "D.C. United",
+      "club_nation": "United States"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Cobi Jones",
+      "dob": "1970-06-16",
+      "caps": 107,
+      "goals": null,
+      "club": "LA Galaxy",
+      "club_nation": "United States"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Predrag Radosavljević",
+      "dob": "1963-06-24",
+      "caps": 24,
+      "goals": null,
+      "club": "Kansas City Wizards",
+      "club_nation": "United States"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Chad Deering",
+      "dob": "1970-09-02",
+      "caps": 10,
+      "goals": null,
+      "club": "VfL Wolfsburg",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 16,
+      "position": "GK",
+      "name": "Juergen Sommer",
+      "dob": "1969-02-27",
+      "caps": 8,
+      "goals": null,
+      "club": "Columbus Crew",
+      "club_nation": "United States"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Marcelo Balboa",
+      "dob": "1967-08-08",
+      "caps": 126,
+      "goals": null,
+      "club": "Colorado Rapids",
+      "club_nation": "United States"
+    },
+    {
+      "number": 18,
+      "position": "GK",
+      "name": "Kasey Keller",
+      "dob": "1969-11-29",
+      "caps": 33,
+      "goals": null,
+      "club": "Leicester City",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Brian Maisonneuve",
+      "dob": "1973-06-28",
+      "caps": 7,
+      "goals": null,
+      "club": "Columbus Crew",
+      "club_nation": "United States"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Brian McBride",
+      "dob": "1972-06-19",
+      "caps": 21,
+      "goals": null,
+      "club": "Columbus Crew",
+      "club_nation": "United States"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Claudio Reyna",
+      "dob": "1973-07-20",
+      "caps": 59,
+      "goals": null,
+      "club": "VfL Wolfsburg",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 22,
+      "position": "DF",
+      "name": "Alexi Lalas",
+      "dob": "1970-06-01",
+      "caps": 98,
+      "goals": null,
+      "club": "MetroStars",
+      "club_nation": "United States"
+    }
+  ],
+  "FR Yugoslavia": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Ivica Kralj",
+      "dob": "1973-03-26",
+      "caps": 15,
+      "goals": null,
+      "club": "Partizan",
+      "club_nation": "Federal Republic Yugoslavia"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Zoran Mirković",
+      "dob": "1971-09-21",
+      "caps": 28,
+      "goals": null,
+      "club": "Atalanta",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Goran Đorović",
+      "dob": "1971-11-11",
+      "caps": 26,
+      "goals": null,
+      "club": "Celta Vigo",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 4,
+      "position": "MF",
+      "name": "Slaviša Jokanović",
+      "dob": "1968-08-16",
+      "caps": 33,
+      "goals": null,
+      "club": "Tenerife",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Miroslav Đukić",
+      "dob": "1966-02-19",
+      "caps": 23,
+      "goals": null,
+      "club": "Valencia",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Branko Brnović",
+      "dob": "1967-08-08",
+      "caps": 22,
+      "goals": null,
+      "club": "Espanyol",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Vladimir Jugović",
+      "dob": "1969-08-30",
+      "caps": 24,
+      "goals": null,
+      "club": "Lazio",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Dejan Savićević",
+      "dob": "1966-09-15",
+      "caps": 49,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Predrag Mijatović",
+      "dob": "1969-01-19",
+      "caps": 28,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Dragan Stojković (captain)",
+      "dob": "1965-03-03",
+      "caps": 64,
+      "goals": null,
+      "club": "Nagoya Grampus Eight",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 11,
+      "position": "DF",
+      "name": "Siniša Mihajlović",
+      "dob": "1969-02-20",
+      "caps": 30,
+      "goals": null,
+      "club": "Sampdoria",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Dragoje Leković",
+      "dob": "1967-11-21",
+      "caps": 14,
+      "goals": null,
+      "club": "Sporting Gijón",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Slobodan Komljenović",
+      "dob": "1971-01-02",
+      "caps": 8,
+      "goals": null,
+      "club": "MSV Duisburg",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Niša Saveljić",
+      "dob": "1970-02-23",
+      "caps": 20,
+      "goals": null,
+      "club": "Bordeaux",
+      "club_nation": "France"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Ljubinko Drulović",
+      "dob": "1968-09-11",
+      "caps": 16,
+      "goals": null,
+      "club": "Porto",
+      "club_nation": "Portugal"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Željko Petrović",
+      "dob": "1965-11-13",
+      "caps": 12,
+      "goals": null,
+      "club": "Urawa Red Diamonds",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Savo Milošević",
+      "dob": "1973-09-02",
+      "caps": 28,
+      "goals": null,
+      "club": "Aston Villa",
+      "club_nation": "England"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Dejan Govedarica",
+      "dob": "1969-10-02",
+      "caps": 20,
+      "goals": null,
+      "club": "Lecce",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Miroslav Stević",
+      "dob": "1970-01-07",
+      "caps": 5,
+      "goals": null,
+      "club": "1860 Munich",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Dejan Stanković",
+      "dob": "1978-09-11",
+      "caps": 3,
+      "goals": null,
+      "club": "Red Star Belgrade",
+      "club_nation": "Federal Republic Yugoslavia"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Perica Ognjenović",
+      "dob": "1977-02-24",
+      "caps": 5,
+      "goals": null,
+      "club": "Red Star Belgrade",
+      "club_nation": "Federal Republic Yugoslavia"
+    },
+    {
+      "number": 22,
+      "position": "FW",
+      "name": "Darko Kovačević",
+      "dob": "1973-11-18",
+      "caps": 19,
+      "goals": null,
+      "club": "Real Sociedad",
+      "club_nation": "Spain"
+    }
+  ],
+  "Colombia": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Óscar Córdoba",
+      "dob": "1970-02-03",
+      "caps": 38,
+      "goals": null,
+      "club": "Boca Juniors",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Iván Córdoba",
+      "dob": "1976-08-11",
+      "caps": 14,
+      "goals": null,
+      "club": "San Lorenzo",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Ever Palacios",
+      "dob": "1969-01-18",
+      "caps": 1,
+      "goals": null,
+      "club": "Deportivo Cali",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "José Santa",
+      "dob": "1970-11-12",
+      "caps": 26,
+      "goals": null,
+      "club": "Atlético Nacional",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Jorge Bermúdez",
+      "dob": "1971-06-18",
+      "caps": 15,
+      "goals": null,
+      "club": "Boca Juniors",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Mauricio Serna",
+      "dob": "1968-01-22",
+      "caps": 2,
+      "goals": null,
+      "club": "Boca Juniors",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Antony de Ávila",
+      "dob": "1962-12-21",
+      "caps": 52,
+      "goals": null,
+      "club": "Barcelona",
+      "club_nation": "Ecuador"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Harold Lozano",
+      "dob": "1972-03-30",
+      "caps": 13,
+      "goals": null,
+      "club": "Valladolid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Adolfo Valencia",
+      "dob": "1968-02-06",
+      "caps": 34,
+      "goals": null,
+      "club": "Independiente Medellín",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Carlos Valderrama (captain)",
+      "dob": "1961-09-02",
+      "caps": 108,
+      "goals": null,
+      "club": "Miami Fusion",
+      "club_nation": "United States"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Faustino Asprilla",
+      "dob": "1969-11-10",
+      "caps": 44,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Miguel Calero",
+      "dob": "1971-04-14",
+      "caps": 5,
+      "goals": null,
+      "club": "Atlético Nacional",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Wílmer Cabrera",
+      "dob": "1967-09-15",
+      "caps": 45,
+      "goals": null,
+      "club": "Millonarios",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Jorge Bolaño",
+      "dob": "1977-04-28",
+      "caps": 0,
+      "goals": null,
+      "club": "Atlético Junior",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 15,
+      "position": "FW",
+      "name": "Víctor Aristizábal",
+      "dob": "1971-12-09",
+      "caps": 18,
+      "goals": null,
+      "club": "São Paulo",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Luis Antonio Moreno",
+      "dob": "1970-12-25",
+      "caps": 19,
+      "goals": null,
+      "club": "Deportes Tolima",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Andrés Estrada",
+      "dob": "1967-11-12",
+      "caps": 2,
+      "goals": null,
+      "club": "Atlético Nacional",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "John Wilmar Pérez",
+      "dob": "1970-02-02",
+      "caps": 5,
+      "goals": null,
+      "club": "Deportivo Cali",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Freddy Rincón",
+      "dob": "1966-08-14",
+      "caps": 75,
+      "goals": null,
+      "club": "Corinthians",
+      "club_nation": "Brazil"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Hámilton Ricard",
+      "dob": "1974-01-12",
+      "caps": 5,
+      "goals": null,
+      "club": "Middlesbrough",
+      "club_nation": "England"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Léider Preciado",
+      "dob": "1977-02-26",
+      "caps": 0,
+      "goals": null,
+      "club": "Santa Fe",
+      "club_nation": "Colombia"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Faryd Mondragón",
+      "dob": "1971-06-21",
+      "caps": 5,
+      "goals": null,
+      "club": "Independiente",
+      "club_nation": "Argentina"
+    }
+  ],
+  "England": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "David Seaman",
+      "dob": "1963-09-19",
+      "caps": 40,
+      "goals": null,
+      "club": "Arsenal",
+      "club_nation": "England"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Sol Campbell",
+      "dob": "1974-09-18",
+      "caps": 16,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Graeme Le Saux",
+      "dob": "1968-10-17",
+      "caps": 25,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 4,
+      "position": "MF",
+      "name": "Paul Ince",
+      "dob": "1967-10-21",
+      "caps": 39,
+      "goals": null,
+      "club": "Liverpool",
+      "club_nation": "England"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Tony Adams",
+      "dob": "1966-10-10",
+      "caps": 51,
+      "goals": null,
+      "club": "Arsenal",
+      "club_nation": "England"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Gareth Southgate",
+      "dob": "1970-09-03",
+      "caps": 25,
+      "goals": null,
+      "club": "Aston Villa",
+      "club_nation": "England"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "David Beckham",
+      "dob": "1975-05-02",
+      "caps": 15,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "David Batty",
+      "dob": "1968-12-02",
+      "caps": 31,
+      "goals": null,
+      "club": "Newcastle United",
+      "club_nation": "England"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Alan Shearer (captain)",
+      "dob": "1970-08-13",
+      "caps": 39,
+      "goals": null,
+      "club": "Newcastle United",
+      "club_nation": "England"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Teddy Sheringham",
+      "dob": "1966-04-02",
+      "caps": 33,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Steve McManaman",
+      "dob": "1972-02-11",
+      "caps": 21,
+      "goals": null,
+      "club": "Liverpool",
+      "club_nation": "England"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Gary Neville",
+      "dob": "1975-02-18",
+      "caps": 27,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 13,
+      "position": "GK",
+      "name": "Nigel Martyn",
+      "dob": "1966-08-11",
+      "caps": 7,
+      "goals": null,
+      "club": "Leeds United",
+      "club_nation": "England"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Darren Anderton",
+      "dob": "1972-03-03",
+      "caps": 18,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Paul Merson",
+      "dob": "1968-03-20",
+      "caps": 18,
+      "goals": null,
+      "club": "Middlesbrough",
+      "club_nation": "England"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Paul Scholes",
+      "dob": "1974-11-16",
+      "caps": 7,
+      "goals": null,
+      "club": "Manchester United",
+      "club_nation": "England"
+    },
+    {
+      "number": 17,
+      "position": "MF",
+      "name": "Rob Lee",
+      "dob": "1966-02-01",
+      "caps": 17,
+      "goals": null,
+      "club": "Newcastle United",
+      "club_nation": "England"
+    },
+    {
+      "number": 18,
+      "position": "DF",
+      "name": "Martin Keown",
+      "dob": "1966-07-24",
+      "caps": 18,
+      "goals": null,
+      "club": "Arsenal",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Les Ferdinand",
+      "dob": "1966-12-08",
+      "caps": 17,
+      "goals": null,
+      "club": "Tottenham Hotspur",
+      "club_nation": "England"
+    },
+    {
+      "number": 20,
+      "position": "FW",
+      "name": "Michael Owen",
+      "dob": "1979-12-14",
+      "caps": 5,
+      "goals": null,
+      "club": "Liverpool",
+      "club_nation": "England"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Rio Ferdinand",
+      "dob": "1978-11-07",
+      "caps": 3,
+      "goals": null,
+      "club": "West Ham United",
+      "club_nation": "England"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Tim Flowers",
+      "dob": "1967-02-03",
+      "caps": 11,
+      "goals": null,
+      "club": "Blackburn Rovers",
+      "club_nation": "England"
+    }
+  ],
+  "Romania": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Dumitru Stângaciu",
+      "dob": "1964-08-09",
+      "caps": 5,
+      "goals": null,
+      "club": "Kocaelispor",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Dan Petrescu",
+      "dob": "1967-12-22",
+      "caps": 68,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Cristian Dulca",
+      "dob": "1972-09-25",
+      "caps": 5,
+      "goals": null,
+      "club": "Rapid București",
+      "club_nation": "Romania"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Anton Doboș",
+      "dob": "1965-10-13",
+      "caps": 21,
+      "goals": null,
+      "club": "AEK Athens",
+      "club_nation": "Greece"
+    },
+    {
+      "number": 5,
+      "position": "MF",
+      "name": "Constantin Gâlcă",
+      "dob": "1972-03-08",
+      "caps": 32,
+      "goals": null,
+      "club": "Espanyol",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Gheorghe Popescu",
+      "dob": "1967-10-09",
+      "caps": 78,
+      "goals": null,
+      "club": "Galatasaray",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Marius Lăcătuș",
+      "dob": "1964-04-05",
+      "caps": 81,
+      "goals": null,
+      "club": "Steaua București",
+      "club_nation": "Romania"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Dorinel Munteanu",
+      "dob": "1968-06-25",
+      "caps": 63,
+      "goals": null,
+      "club": "1. FC Köln",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Viorel Moldovan",
+      "dob": "1972-07-08",
+      "caps": 24,
+      "goals": null,
+      "club": "Coventry City",
+      "club_nation": "England"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Gheorghe Hagi (captain)",
+      "dob": "1965-02-05",
+      "caps": 111,
+      "goals": null,
+      "club": "Galatasaray",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Adrian Ilie",
+      "dob": "1974-04-20",
+      "caps": 20,
+      "goals": null,
+      "club": "Valencia",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Bogdan Stelea",
+      "dob": "1967-12-05",
+      "caps": 46,
+      "goals": null,
+      "club": "Salamanca",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Liviu Ciobotariu",
+      "dob": "1971-03-26",
+      "caps": 4,
+      "goals": null,
+      "club": "Național București",
+      "club_nation": "Romania"
+    },
+    {
+      "number": 14,
+      "position": "FW",
+      "name": "Radu Niculescu",
+      "dob": "1975-03-02",
+      "caps": 11,
+      "goals": null,
+      "club": "Național București",
+      "club_nation": "Romania"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Lucian Marinescu",
+      "dob": "1972-06-24",
+      "caps": 4,
+      "goals": null,
+      "club": "Rapid București",
+      "club_nation": "Romania"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Gabriel Popescu",
+      "dob": "1973-12-23",
+      "caps": 12,
+      "goals": null,
+      "club": "Salamanca",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Ilie Dumitrescu",
+      "dob": "1969-01-06",
+      "caps": 62,
+      "goals": null,
+      "club": "Atlante",
+      "club_nation": "Mexico"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Iulian Filipescu",
+      "dob": "1974-03-29",
+      "caps": 15,
+      "goals": null,
+      "club": "Galatasaray",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Ovidiu Stîngă",
+      "dob": "1972-12-05",
+      "caps": 19,
+      "goals": null,
+      "club": "PSV Eindhoven",
+      "club_nation": "Netherlands"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Tibor Selymes",
+      "dob": "1970-05-14",
+      "caps": 44,
+      "goals": null,
+      "club": "Anderlecht",
+      "club_nation": "Belgium"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Gheorghe Craioveanu",
+      "dob": "1968-02-14",
+      "caps": 18,
+      "goals": null,
+      "club": "Real Sociedad",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Florin Prunea",
+      "dob": "1968-08-08",
+      "caps": 35,
+      "goals": null,
+      "club": "Universitatea Cluj",
+      "club_nation": "Romania"
+    }
+  ],
+  "Tunisia": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Chokri El Ouaer",
+      "dob": "1966-08-15",
+      "caps": 51,
+      "goals": null,
+      "club": "Espérance de Tunis",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 2,
+      "position": "FW",
+      "name": "Imed Ben Younes",
+      "dob": "1974-06-16",
+      "caps": 7,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Sami Trabelsi (captain)",
+      "dob": "1968-02-04",
+      "caps": 45,
+      "goals": null,
+      "club": "CS Sfaxien",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Mounir Boukadida",
+      "dob": "1967-10-24",
+      "caps": 30,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Hatem Trabelsi",
+      "dob": "1977-01-25",
+      "caps": 2,
+      "goals": null,
+      "club": "CS Sfaxien",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Ferid Chouchane",
+      "dob": "1973-04-19",
+      "caps": 26,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 7,
+      "position": "DF",
+      "name": "Tarek Thabet",
+      "dob": "1971-08-16",
+      "caps": 43,
+      "goals": null,
+      "club": "Espérance de Tunis",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Zoubeir Baya",
+      "dob": "1971-05-15",
+      "caps": 44,
+      "goals": null,
+      "club": "SC Freiburg",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Riadh Jelassi",
+      "dob": "1971-07-07",
+      "caps": 13,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Kaies Ghodhbane",
+      "dob": "1976-01-07",
+      "caps": 46,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 11,
+      "position": "FW",
+      "name": "Adel Sellimi",
+      "dob": "1972-11-16",
+      "caps": 57,
+      "goals": null,
+      "club": "Real Jaén",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 12,
+      "position": "MF",
+      "name": "Mourad Melki",
+      "dob": "1975-05-09",
+      "caps": 2,
+      "goals": null,
+      "club": "Olympique Béja",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Riadh Bouazizi",
+      "dob": "1973-04-08",
+      "caps": 24,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Sirajeddine Chihi",
+      "dob": "1970-04-16",
+      "caps": 47,
+      "goals": null,
+      "club": "Espérance de Tunis",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Skander Souayah",
+      "dob": "1972-11-20",
+      "caps": 31,
+      "goals": null,
+      "club": "CS Sfaxien",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 16,
+      "position": "GK",
+      "name": "Radhouane Salhi",
+      "dob": "1967-12-18",
+      "caps": 5,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "José Clayton",
+      "dob": "1974-03-21",
+      "caps": 4,
+      "goals": null,
+      "club": "Étoile du Sahel",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Mehdi Ben Slimane",
+      "dob": "1974-01-01",
+      "caps": 32,
+      "goals": null,
+      "club": "SC Freiburg",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 19,
+      "position": "MF",
+      "name": "Faysal Ben Ahmed",
+      "dob": "1973-03-07",
+      "caps": 2,
+      "goals": null,
+      "club": "Espérance de Tunis",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Sabri Jaballah",
+      "dob": "1973-06-28",
+      "caps": 20,
+      "goals": null,
+      "club": "Club Africain",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Khaled Badra",
+      "dob": "1973-04-08",
+      "caps": 26,
+      "goals": null,
+      "club": "Espérance de Tunis",
+      "club_nation": "Tunisia"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Ali Boumnijel",
+      "dob": "1966-04-13",
+      "caps": 12,
+      "goals": null,
+      "club": "Bastia",
+      "club_nation": "France"
+    }
+  ],
+  "Argentina": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Carlos Roa",
+      "dob": "1969-08-15",
+      "caps": 10,
+      "goals": null,
+      "club": "Mallorca",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Roberto Ayala",
+      "dob": "1973-04-14",
+      "caps": 37,
+      "goals": null,
+      "club": "Napoli",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "José Chamot",
+      "dob": "1969-05-17",
+      "caps": 31,
+      "goals": null,
+      "club": "Lazio",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Mauricio Pineda",
+      "dob": "1975-07-13",
+      "caps": 7,
+      "goals": null,
+      "club": "Udinese",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 5,
+      "position": "MF",
+      "name": "Matías Almeyda",
+      "dob": "1973-12-21",
+      "caps": 24,
+      "goals": null,
+      "club": "Lazio",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Roberto Sensini",
+      "dob": "1966-10-12",
+      "caps": 44,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 7,
+      "position": "FW",
+      "name": "Claudio López",
+      "dob": "1974-07-17",
+      "caps": 25,
+      "goals": null,
+      "club": "Valencia",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Diego Simeone (captain)",
+      "dob": "1970-04-28",
+      "caps": 69,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Gabriel Batistuta",
+      "dob": "1969-02-01",
+      "caps": 61,
+      "goals": null,
+      "club": "Fiorentina",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Ariel Ortega",
+      "dob": "1974-03-04",
+      "caps": 50,
+      "goals": null,
+      "club": "Valencia",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Juan Sebastián Verón",
+      "dob": "1975-03-09",
+      "caps": 17,
+      "goals": null,
+      "club": "Sampdoria",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Germán Burgos",
+      "dob": "1969-04-16",
+      "caps": 9,
+      "goals": null,
+      "club": "River Plate",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 13,
+      "position": "DF",
+      "name": "Pablo Paz",
+      "dob": "1973-01-27",
+      "caps": 15,
+      "goals": null,
+      "club": "Tenerife",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 14,
+      "position": "DF",
+      "name": "Nelson Vivas",
+      "dob": "1969-10-18",
+      "caps": 11,
+      "goals": null,
+      "club": "Lugano",
+      "club_nation": "Switzerland"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Leonardo Astrada",
+      "dob": "1970-01-06",
+      "caps": 20,
+      "goals": null,
+      "club": "River Plate",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Sergio Berti",
+      "dob": "1969-09-17",
+      "caps": 15,
+      "goals": null,
+      "club": "River Plate",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 17,
+      "position": "GK",
+      "name": "Pablo Cavallero",
+      "dob": "1974-04-13",
+      "caps": 8,
+      "goals": null,
+      "club": "Vélez Sársfield",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Abel Balbo",
+      "dob": "1966-06-01",
+      "caps": 34,
+      "goals": null,
+      "club": "Roma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Hernán Crespo",
+      "dob": "1975-07-05",
+      "caps": 18,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Marcelo Gallardo",
+      "dob": "1976-01-18",
+      "caps": 23,
+      "goals": null,
+      "club": "River Plate",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 21,
+      "position": "FW",
+      "name": "Marcelo Delgado",
+      "dob": "1973-03-24",
+      "caps": 14,
+      "goals": null,
+      "club": "Racing",
+      "club_nation": "Argentina"
+    },
+    {
+      "number": 22,
+      "position": "DF",
+      "name": "Javier Zanetti",
+      "dob": "1973-08-10",
+      "caps": 30,
+      "goals": null,
+      "club": "Inter Milan",
+      "club_nation": "Italy"
+    }
+  ],
+  "Croatia": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Dražen Ladić",
+      "dob": "1963-01-01",
+      "caps": 41,
+      "goals": null,
+      "club": "Croatia Zagreb",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 2,
+      "position": "FW",
+      "name": "Petar Krpan",
+      "dob": "1974-07-01",
+      "caps": 1,
+      "goals": null,
+      "club": "Osijek",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Anthony Šerić",
+      "dob": "1979-01-15",
+      "caps": 3,
+      "goals": null,
+      "club": "Hajduk Split",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Igor Štimac",
+      "dob": "1967-09-06",
+      "caps": 29,
+      "goals": null,
+      "club": "Derby County",
+      "club_nation": "England"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Goran Jurić",
+      "dob": "1963-02-05",
+      "caps": 11,
+      "goals": null,
+      "club": "Croatia Zagreb",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 6,
+      "position": "DF",
+      "name": "Slaven Bilić",
+      "dob": "1968-09-11",
+      "caps": 36,
+      "goals": null,
+      "club": "Everton",
+      "club_nation": "England"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Aljoša Asanović",
+      "dob": "1965-12-14",
+      "caps": 39,
+      "goals": null,
+      "club": "Napoli",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Robert Prosinečki",
+      "dob": "1969-01-12",
+      "caps": 29,
+      "goals": null,
+      "club": "Croatia Zagreb",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Davor Šuker",
+      "dob": "1968-01-01",
+      "caps": 36,
+      "goals": null,
+      "club": "Real Madrid",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Zvonimir Boban (captain)",
+      "dob": "1968-10-08",
+      "caps": 35,
+      "goals": null,
+      "club": "Milan",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Silvio Marić",
+      "dob": "1975-03-20",
+      "caps": 7,
+      "goals": null,
+      "club": "Croatia Zagreb",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 12,
+      "position": "GK",
+      "name": "Marijan Mrmić",
+      "dob": "1965-05-06",
+      "caps": 12,
+      "goals": null,
+      "club": "Beşiktaş",
+      "club_nation": "Turkey"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Mario Stanić",
+      "dob": "1972-04-10",
+      "caps": 16,
+      "goals": null,
+      "club": "Parma",
+      "club_nation": "Italy"
+    },
+    {
+      "number": 14,
+      "position": "MF",
+      "name": "Zvonimir Soldo",
+      "dob": "1967-11-02",
+      "caps": 26,
+      "goals": null,
+      "club": "VfB Stuttgart",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Igor Tudor",
+      "dob": "1978-04-16",
+      "caps": 5,
+      "goals": null,
+      "club": "Hajduk Split",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 16,
+      "position": "FW",
+      "name": "Ardian Kozniku",
+      "dob": "1967-10-27",
+      "caps": 7,
+      "goals": null,
+      "club": "Bastia",
+      "club_nation": "France"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Robert Jarni",
+      "dob": "1968-10-26",
+      "caps": 38,
+      "goals": null,
+      "club": "Real Betis",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 18,
+      "position": "MF",
+      "name": "Zoran Mamić",
+      "dob": "1971-09-30",
+      "caps": 6,
+      "goals": null,
+      "club": "VfL Bochum",
+      "club_nation": "Germany"
+    },
+    {
+      "number": 19,
+      "position": "FW",
+      "name": "Goran Vlaović",
+      "dob": "1972-08-07",
+      "caps": 28,
+      "goals": null,
+      "club": "Valencia",
+      "club_nation": "Spain"
+    },
+    {
+      "number": 20,
+      "position": "DF",
+      "name": "Dario Šimić",
+      "dob": "1975-11-12",
+      "caps": 17,
+      "goals": null,
+      "club": "Croatia Zagreb",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 21,
+      "position": "MF",
+      "name": "Krunoslav Jurčić",
+      "dob": "1969-11-26",
+      "caps": 9,
+      "goals": null,
+      "club": "Croatia Zagreb",
+      "club_nation": "Croatia"
+    },
+    {
+      "number": 22,
+      "position": "GK",
+      "name": "Vladimir Vasilj",
+      "dob": "1975-07-06",
+      "caps": 1,
+      "goals": null,
+      "club": "Hrvatski Dragovoljac",
+      "club_nation": "Croatia"
+    }
+  ],
+  "Jamaica": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Warren Barrett (captain)",
+      "dob": "1970-07-09",
+      "caps": 128,
+      "goals": null,
+      "club": "Violet Kickers",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Stephen Malcolm",
+      "dob": "1970-05-02",
+      "caps": 62,
+      "goals": null,
+      "club": "Seba United",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 3,
+      "position": "MF",
+      "name": "Chris Dawes",
+      "dob": "1974-05-31",
+      "caps": 20,
+      "goals": null,
+      "club": "Galaxy",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Linval Dixon",
+      "dob": "1971-09-14",
+      "caps": 104,
+      "goals": null,
+      "club": "Hazard United",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Ian Goodison",
+      "dob": "1972-11-21",
+      "caps": 55,
+      "goals": null,
+      "club": "Olympic Gardens",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Fitzroy Simpson",
+      "dob": "1970-02-26",
+      "caps": 23,
+      "goals": null,
+      "club": "Portsmouth",
+      "club_nation": "England"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Peter Cargill",
+      "dob": "1964-03-02",
+      "caps": 76,
+      "goals": null,
+      "club": "Harbour View",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 8,
+      "position": "FW",
+      "name": "Marcus Gayle",
+      "dob": "1970-09-27",
+      "caps": 5,
+      "goals": null,
+      "club": "Wimbledon",
+      "club_nation": "England"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Andy Williams",
+      "dob": "1977-09-23",
+      "caps": 25,
+      "goals": null,
+      "club": "Columbus Crew",
+      "club_nation": "United States"
+    },
+    {
+      "number": 10,
+      "position": "FW",
+      "name": "Walter Boyd",
+      "dob": "1972-01-01",
+      "caps": 57,
+      "goals": null,
+      "club": "Arnett Gardens",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Theodore Whitmore",
+      "dob": "1972-08-05",
+      "caps": 76,
+      "goals": null,
+      "club": "Seba United",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 12,
+      "position": "DF",
+      "name": "Dean Sewell",
+      "dob": "1972-04-13",
+      "caps": 4,
+      "goals": null,
+      "club": "Constant Spring",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 13,
+      "position": "GK",
+      "name": "Aaron Lawrence",
+      "dob": "1970-08-11",
+      "caps": 17,
+      "goals": null,
+      "club": "Reno",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 14,
+      "position": "GK",
+      "name": "Donovan Ricketts",
+      "dob": "1977-06-07",
+      "caps": 0,
+      "goals": null,
+      "club": "Wadadah",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 15,
+      "position": "DF",
+      "name": "Ricardo Gardner",
+      "dob": "1978-09-25",
+      "caps": 34,
+      "goals": null,
+      "club": "Harbour View",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 16,
+      "position": "MF",
+      "name": "Robbie Earle",
+      "dob": "1965-01-27",
+      "caps": 8,
+      "goals": null,
+      "club": "Wimbledon",
+      "club_nation": "England"
+    },
+    {
+      "number": 17,
+      "position": "FW",
+      "name": "Onandi Lowe",
+      "dob": "1973-12-02",
+      "caps": 30,
+      "goals": null,
+      "club": "Waterhouse",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Deon Burton",
+      "dob": "1976-10-25",
+      "caps": 18,
+      "goals": null,
+      "club": "Derby County",
+      "club_nation": "England"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Frank Sinclair",
+      "dob": "1971-12-03",
+      "caps": 5,
+      "goals": null,
+      "club": "Chelsea",
+      "club_nation": "England"
+    },
+    {
+      "number": 20,
+      "position": "MF",
+      "name": "Darryl Powell",
+      "dob": "1971-11-15",
+      "caps": 2,
+      "goals": null,
+      "club": "Derby County",
+      "club_nation": "England"
+    },
+    {
+      "number": 21,
+      "position": "DF",
+      "name": "Durrant Brown",
+      "dob": "1964-07-08",
+      "caps": 125,
+      "goals": null,
+      "club": "Wadadah",
+      "club_nation": "Jamaica"
+    },
+    {
+      "number": 22,
+      "position": "FW",
+      "name": "Paul Hall",
+      "dob": "1972-07-03",
+      "caps": 23,
+      "goals": null,
+      "club": "Portsmouth",
+      "club_nation": "England"
+    }
+  ],
+  "Japan": [
+    {
+      "number": 1,
+      "position": "GK",
+      "name": "Nobuyuki Kojima",
+      "dob": "1966-01-17",
+      "caps": 5,
+      "goals": null,
+      "club": "Bellmare Hiratsuka",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 2,
+      "position": "DF",
+      "name": "Akira Narahashi",
+      "dob": "1971-11-26",
+      "caps": 29,
+      "goals": null,
+      "club": "Kashima Antlers",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 3,
+      "position": "DF",
+      "name": "Naoki Sōma",
+      "dob": "1971-07-19",
+      "caps": 50,
+      "goals": null,
+      "club": "Kashima Antlers",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 4,
+      "position": "DF",
+      "name": "Masami Ihara (captain)",
+      "dob": "1967-09-18",
+      "caps": 116,
+      "goals": null,
+      "club": "Yokohama Marinos",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 5,
+      "position": "DF",
+      "name": "Norio Omura",
+      "dob": "1969-09-06",
+      "caps": 31,
+      "goals": null,
+      "club": "Yokohama Marinos",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 6,
+      "position": "MF",
+      "name": "Motohiro Yamaguchi",
+      "dob": "1969-01-29",
+      "caps": 56,
+      "goals": null,
+      "club": "Yokohama Flügels",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 7,
+      "position": "MF",
+      "name": "Teruyoshi Itō",
+      "dob": "1974-08-31",
+      "caps": 2,
+      "goals": null,
+      "club": "Shimizu S-Pulse",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 8,
+      "position": "MF",
+      "name": "Hidetoshi Nakata",
+      "dob": "1977-01-22",
+      "caps": 21,
+      "goals": null,
+      "club": "Bellmare Hiratsuka",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 9,
+      "position": "FW",
+      "name": "Masashi Nakayama",
+      "dob": "1967-09-23",
+      "caps": 27,
+      "goals": null,
+      "club": "Júbilo Iwata",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 10,
+      "position": "MF",
+      "name": "Hiroshi Nanami",
+      "dob": "1972-11-28",
+      "caps": 44,
+      "goals": null,
+      "club": "Júbilo Iwata",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 11,
+      "position": "MF",
+      "name": "Shinji Ono",
+      "dob": "1979-09-27",
+      "caps": 2,
+      "goals": null,
+      "club": "Urawa Red Diamonds",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 12,
+      "position": "FW",
+      "name": "Wagner Lopes",
+      "dob": "1969-01-29",
+      "caps": 10,
+      "goals": null,
+      "club": "Bellmare Hiratsuka",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 13,
+      "position": "MF",
+      "name": "Toshihiro Hattori",
+      "dob": "1973-09-23",
+      "caps": 6,
+      "goals": null,
+      "club": "Júbilo Iwata",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 14,
+      "position": "FW",
+      "name": "Masayuki Okano",
+      "dob": "1972-07-25",
+      "caps": 25,
+      "goals": null,
+      "club": "Urawa Red Diamonds",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 15,
+      "position": "MF",
+      "name": "Hiroaki Morishima",
+      "dob": "1972-04-30",
+      "caps": 36,
+      "goals": null,
+      "club": "Cerezo Osaka",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 16,
+      "position": "DF",
+      "name": "Toshihide Saitō",
+      "dob": "1973-04-20",
+      "caps": 14,
+      "goals": null,
+      "club": "Shimizu S-Pulse",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 17,
+      "position": "DF",
+      "name": "Yutaka Akita",
+      "dob": "1970-08-06",
+      "caps": 27,
+      "goals": null,
+      "club": "Kashima Antlers",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 18,
+      "position": "FW",
+      "name": "Shōji Jō",
+      "dob": "1975-06-17",
+      "caps": 24,
+      "goals": null,
+      "club": "Yokohama Marinos",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 19,
+      "position": "DF",
+      "name": "Eisuke Nakanishi",
+      "dob": "1973-06-23",
+      "caps": 7,
+      "goals": null,
+      "club": "JEF United Ichihara",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 20,
+      "position": "GK",
+      "name": "Yoshikatsu Kawaguchi",
+      "dob": "1975-08-15",
+      "caps": 27,
+      "goals": null,
+      "club": "Yokohama Marinos",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 21,
+      "position": "GK",
+      "name": "Seigō Narazaki",
+      "dob": "1976-04-15",
+      "caps": 2,
+      "goals": null,
+      "club": "Yokohama Flügels",
+      "club_nation": "Japan"
+    },
+    {
+      "number": 22,
+      "position": "MF",
+      "name": "Takashi Hirano",
+      "dob": "1974-07-15",
+      "caps": 10,
+      "goals": null,
+      "club": "Nagoya Grampus Eight",
+      "club_nation": "Japan"
+    }
+  ]
+}
