@@ -69,16 +69,19 @@ async function scrape() {
       const cells = $(row).find("td, th");
 
       const number     = $(cells[0]).text().trim();
-      const position   = $(cells[1]).text().trim();
+      // Position cell sometimes has a numeric sortkey prepended (e.g. "1GK") — strip it
+      const position   = $(cells[1]).text().trim().replace(/^\d+/, "");
       const name       = $(cells[2]).text().trim();
       const dob        = $(cells[3]).find(".bday").text().trim() ||
                          $(cells[3]).text().replace(/\(.*?\)/g, "").trim();
       const caps       = $(cells[4]).text().trim();
-      const goals      = $(cells[5]).text().trim();
+      // Some years (e.g. 2014) have no goals column — detect by cell count
+      const hasGoals   = cells.length >= 7;
+      const goals      = hasGoals ? $(cells[5]).text().trim() : null;
 
-      // Club cell: last <a> is the club name; flag <img> alt gives the nation
-      const clubCell   = $(cells[6]);
-      const clubName   = clubCell.find("a").last().text().trim();
+      // Club cell: last non-footnote <a> is the club name; flag <img> alt gives the nation
+      const clubCell   = $(cells[hasGoals ? 6 : 5]);
+      const clubName   = clubCell.find("a").not("sup a, sup > a").filter((_, a) => !$(a).closest("sup").length).last().text().trim();
       const flagAlt    = clubCell.find("img").attr("alt") || "";
       const clubNation = parseCountryFromAlt(flagAlt);
 
@@ -88,7 +91,7 @@ async function scrape() {
         name,
         dob,
         caps:        parseInt(caps, 10),
-        goals:       parseInt(goals, 10),
+        goals:       goals !== null ? parseInt(goals, 10) : null,
         club:        clubName,
         club_nation: clubNation,
       });
