@@ -1,6 +1,6 @@
-import squads from '../data/squads.json';
-import results from '../data/results.json';
-import teams from '../data/teams.json';
+import squads from '../data/2022/squads.json';
+import results from '../data/2022/results.json';
+import teams from '../data/2022/teams.json';
 
 /** @type {Record<string, string>} */
 const resultToSquadName = { USA: 'United States' };

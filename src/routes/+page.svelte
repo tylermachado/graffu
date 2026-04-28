@@ -7,7 +7,7 @@
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
-	import squads from '../data/squads.json';
+	import squads from '../data/2022/squads.json';
 
 	/** @param {{ start: number }} d */
 	const xAccessor = (d) => d.start;

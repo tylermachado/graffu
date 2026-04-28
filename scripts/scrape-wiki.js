@@ -97,7 +97,7 @@ async function scrape() {
   const countryCount = Object.keys(filteredResult).length;
   const playerCount  = Object.values(filteredResult).reduce((sum, p) => sum + p.length, 0);
 
-  await fs.writeFile("src/data/squads.json", JSON.stringify(filteredResult, null, 2));
+  await fs.writeFile("src/data/2022/squads.json", JSON.stringify(filteredResult, null, 2));
   console.log(`Done! ${countryCount} countries, ${playerCount} players → squads.json`);
 }
 

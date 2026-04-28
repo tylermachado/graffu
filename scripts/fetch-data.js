@@ -33,11 +33,11 @@ async function fetchData() {
 			name: team.name
 		}));
 
-		const teamFilePath = path.join(__dirname, '../src/data/teams.json');
+		const teamFilePath = path.join(__dirname, '../src/data/2022/teams.json');
 		fs.mkdirSync(path.dirname(teamFilePath), { recursive: true });
 		fs.writeFileSync(teamFilePath, JSON.stringify(teamData, null, 2));
 
-		console.log(`✓ Saved ${teamData.length} teams to src/data/teams.json`);
+		console.log(`✓ Saved ${teamData.length} teams to src/data/2022/teams.json`);
 		console.log('Fetching players for each team...');
 
 		for (const team of teamData) {
@@ -63,10 +63,10 @@ async function fetchData() {
 			await delay(3000);
 		}
 
-		const playerFilePath = path.join(__dirname, '../src/data/players.json');
+		const playerFilePath = path.join(__dirname, '../src/data/2022/players.json');
 		fs.writeFileSync(playerFilePath, JSON.stringify(teamData, null, 2));
 
-		console.log(`✓ Saved all players to src/data/players.json`);
+		console.log(`✓ Saved all players to src/data/2022/players.json`);
 	} catch (error) {
 		console.error('✗ Error fetching data:', error.message);
 		process.exit(1);

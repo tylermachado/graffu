@@ -1,4 +1,4 @@
-import teams from '../data/teams.json';
+import teams from '../data/2022/teams.json';
 
 /** @param {Record<string, Array<{ club_nation: string }>>} squads */
 export function getSquadClubNationStats(squads) {
