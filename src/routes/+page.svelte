@@ -23,7 +23,7 @@
 
 <div style="position: relative;">
   <WorldMap />
-  <FlowLayer {squads} nation="Australia" />
+  <FlowLayer {squads} nation="United States" />
 </div>
 
 <div class="scatter-container">
