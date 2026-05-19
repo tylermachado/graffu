@@ -7,13 +7,46 @@
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
-	import squads from '../data/2022/squads.json';
+	import squads1994 from '../data/1994/squads.json';
+	import squads1998 from '../data/1998/squads.json';
+	import squads2002 from '../data/2002/squads.json';
+	import squads2006 from '../data/2006/squads.json';
+	import squads2010 from '../data/2010/squads.json';
+	import squads2014 from '../data/2014/squads.json';
+	import squads2018 from '../data/2018/squads.json';
+	import squads2022 from '../data/2022/squads.json';
+
+	const years = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022];
+
+	/** @type {Record<number, Record<string, any[]>>} */
+	const allSquads = {
+		1994: squads1994,
+		1998: squads1998,
+		2002: squads2002,
+		2006: squads2006,
+		2010: squads2010,
+		2014: squads2014,
+		2018: squads2018,
+		2022: squads2022,
+	};
+
+	let selectedYear = $state(2022);
+	let selectedNation = $state(Object.keys(squads2022)[0]);
+
+	const squads = $derived(allSquads[selectedYear]);
+	const nations = $derived(Object.keys(squads).sort());
+	const squadStats = $derived(getSquadClubNationStats(squads));
+	const confederationStats = $derived(getConfederationStats(squads));
+
+	$effect(() => {
+		// Reset nation when year changes if it's not available
+		if (!nations.includes(selectedNation)) {
+			selectedNation = nations[0];
+		}
+	});
 
 	/** @param {{ start: number }} d */
 	const xAccessor = (d) => d.start;
-
-	const squadStats = getSquadClubNationStats(squads);
-	const confederationStats = getConfederationStats(squads);
 
 	/** @param {{ start: number }} d */
 	const confedXAccessor = (d) => d.start;
@@ -21,9 +54,30 @@
 
 <h1>Club vs Country Statistics</h1>
 
-<div style="position: relative;">
-  <WorldMap />
-  <FlowLayer {squads} nation="United States" />
+<div class="year-toggle">
+	{#each years as year (year)}
+		<button
+			class="toggle-btn"
+			class:active={selectedYear === year}
+			onclick={() => { selectedYear = year; }}
+		>{year}</button>
+	{/each}
+</div>
+
+<div class="map-section">
+	<div class="nation-toggle">
+		{#each nations as nation (nation)}
+			<button
+				class="toggle-btn toggle-btn--sm"
+				class:active={selectedNation === nation}
+				onclick={() => { selectedNation = nation; }}
+			>{nation}</button>
+		{/each}
+	</div>
+	<div style="position: relative;">
+		<WorldMap />
+		<FlowLayer {squads} nation={selectedNation} />
+	</div>
 </div>
 
 <div class="scatter-container">
@@ -87,6 +141,46 @@
 {/each}
 
 <style>
+	.year-toggle {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.375rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.nation-toggle {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.25rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.toggle-btn {
+		padding: 0.3rem 0.75rem;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		background: #fff;
+		cursor: pointer;
+		font-size: 0.9rem;
+		color: #333;
+		transition: background 0.15s, color 0.15s, border-color 0.15s;
+	}
+
+	.toggle-btn--sm {
+		padding: 0.2rem 0.5rem;
+		font-size: 0.75rem;
+	}
+
+	.toggle-btn.active {
+		background: #333;
+		color: #fff;
+		border-color: #333;
+	}
+
+	.map-section {
+		margin-bottom: 2rem;
+	}
+
 	.scatter-container {
 		width: 100%;
 		max-width: 800px;
