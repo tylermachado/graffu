@@ -1,5 +1,6 @@
 <script>
 	import { LayerCake, Svg } from 'layercake';
+	import Scrolly from '$lib/Scrolly.svelte';
 	import StackedBar from '$lib/charts/StackedBar.svelte';
 	import ScatterDots from '$lib/charts/ScatterDots.svelte';
 	import WorldMap from '$lib/charts/WorldMap.svelte';
@@ -30,6 +31,65 @@
 		2022: squads2022,
 	};
 
+	// ── Scrollytelling ─────────────────────────────────────────────────────────
+
+	/**
+	 * @type {Array<{ year: number, nation: string | null, title: string, text: string }>}
+	 */
+	const steps = [
+		{
+			year: 1994,
+			nation: null,
+			title: '1994 — The baseline',
+			text: "At the 1994 World Cup, the world's national squads were broadly self-contained. CONCACAF sides drew 80% of players from domestic leagues; Asian confederations, nearly 96%. Even South America still fielded sides where 62% of players earned wages at home. Africa was already the outlier — but the gap hadn't yet become a chasm."
+		},
+		{
+			year: 1994,
+			nation: 'Nigeria',
+			title: 'Nigeria, 1994',
+			text: "Nigeria arrived at USA '94 without a single player from the domestic Nigerian league. Every one of their 22 players earned wages in Europe. This wasn't a transition in progress — it was a statement of how little the Super Eagles' identity had ever been tied to the clubs back home."
+		},
+		{
+			year: 1998,
+			nation: 'Tunisia',
+			title: 'Tunisia, 1998',
+			text: "Four years later, Tunisia offered a counter-example. Eighteen of their 23 players were at domestic clubs — the highest retention rate any African side would ever record at a World Cup. It suggested the Nigeria pattern wasn't inevitable. The Tunisian league, briefly, could hold its own."
+		},
+		{
+			year: 2010,
+			nation: 'South Africa',
+			title: 'South Africa, 2010',
+			text: "South Africa in 2010 were the hosts, and their squad showed it. Sixteen of 23 players were at domestic clubs — the only time a CAF side has been majority-domestic in the modern era. State investment, local pride, and hosting rights conspired to produce something anomalous."
+		},
+		{
+			year: 2010,
+			nation: 'Nigeria',
+			title: 'Nigeria, 2010 — same tournament',
+			text: "Nigeria were at the same tournament. Same year, same continent, same confederation. Zero players from the domestic league. Their flows point entirely to Europe. The host effect and the export reality existed simultaneously, in the same group stage."
+		},
+		{
+			year: 2014,
+			nation: 'Algeria',
+			title: '2014 — The nadir',
+			text: "By 2014, the export of African talent to European leagues was effectively total. Algeria brought 2 domestic players out of 23; Cameroon brought 2. The CAF domestic retention rate fell below 10% for the first time. African football had become a continent that produces players for everyone else."
+		},
+		{
+			year: 2022,
+			nation: 'Morocco',
+			title: 'Morocco, 2022',
+			text: "Morocco reached the World Cup semifinal in 2022 — the best result in African history. Three of their 26 players were at domestic clubs. The rest played in Europe or the Gulf. The team that went furthest did so as the most dispersed: a diaspora in national colors, assembled for a month, then scattered again."
+		}
+	];
+
+	let activeStep = $state(0);
+
+	const currentScrollyStep = $derived(steps[activeStep] ?? steps[0]);
+	const scrollyYear = $derived(currentScrollyStep.year);
+	const scrollyNation = $derived(currentScrollyStep.nation ?? '');
+	const scrollySquads = $derived(allSquads[scrollyYear]);
+
+	// ── Interactive section ────────────────────────────────────────────────────
+
 	let selectedYear = $state(2022);
 	let selectedNation = $state(Object.keys(squads2022)[0]);
 
@@ -52,95 +112,233 @@
 	const confedXAccessor = (d) => d.start;
 </script>
 
-<h1>Club vs Country Statistics</h1>
+<!-- ── Scrollytelling section ────────────────────────────────────────────── -->
+<section class="scrolly-outer">
+	<div class="sticky-vis">
+		<div class="map-container" style="position: relative;">
+			<WorldMap />
+			{#if scrollyNation}
+				<FlowLayer squads={scrollySquads} nation={scrollyNation} />
+			{/if}
+		</div>
+		<div class="step-badge">
+			<span class="badge-year">{scrollyYear}</span>
+			{#if currentScrollyStep.nation}
+				<span class="badge-nation">{currentScrollyStep.nation}</span>
+			{/if}
+		</div>
+	</div>
 
-<div class="year-toggle">
-	{#each years as year (year)}
-		<button
-			class="toggle-btn"
-			class:active={selectedYear === year}
-			onclick={() => { selectedYear = year; }}
-		>{year}</button>
-	{/each}
-</div>
+	<div class="steps-wrapper">
+		<Scrolly bind:value={activeStep}>
+			{#each steps as step, i (i)}
+				<div class="step">
+					<div class="step-card" class:active={activeStep === i}>
+						<p class="step-title">{step.title}</p>
+						<p class="step-text">{step.text}</p>
+					</div>
+				</div>
+			{/each}
+			<div class="step-spacer"></div>
+		</Scrolly>
+	</div>
+</section>
 
-<div class="map-section">
-	<div class="nation-toggle">
-		{#each nations as nation (nation)}
+<!-- ── Interactive section ───────────────────────────────────────────────── -->
+<section class="interactive-section">
+	<h1>Club vs Country Statistics</h1>
+
+	<div class="year-toggle">
+		{#each years as year (year)}
 			<button
-				class="toggle-btn toggle-btn--sm"
-				class:active={selectedNation === nation}
-				onclick={() => { selectedNation = nation; }}
-			>{nation}</button>
+				class="toggle-btn"
+				class:active={selectedYear === year}
+				onclick={() => { selectedYear = year; }}
+			>{year}</button>
 		{/each}
 	</div>
-	<div style="position: relative;">
-		<WorldMap />
-		<FlowLayer {squads} nation={selectedNation} />
-	</div>
-</div>
 
-<div class="scatter-container">
-	<h2>Domestic league share vs. World Cup ranking</h2>
-	<LayerCake
-		data={scatterData}
-		x={scatterX}
-		y={scatterY}
-		xDomain={[32, 1]}
-		yDomain={[0, 100]}
-		padding={{ top: 20, bottom: 50, left: 50, right: 20 }}
-	>
-		<Svg>
-			<ScatterDots data={scatterData} />
-		</Svg>
-	</LayerCake>
-</div>
-
-<div class="confederation-section">
-	<h2>Where do players play? By squad confederation</h2>
-	<div class="confed-header-row">
-		<div class="confed-axis-label-left">Players from</div>
-		<div class="confed-axis-label-right">Play club football in →</div>
-		<div></div>
-	</div>
-	{#each confederationStats as row (row.name)}
-		<div class="confed-row">
-			<div class="confed-label">
-				{row.name}
-				<span class="confed-arrow">→</span>
-			</div>
-			<div class="confed-bar-wrap">
-				<LayerCake
-					data={row.segments}
-					x={confedXAccessor}
-					xDomain={[0, 100]}
-				>
-					<Svg>
-						<StackedBar stackedData={row.segments} />
-					</Svg>
-				</LayerCake>
-			</div>
-			<div class="confed-count">{row.totalPlayers} players</div>
+	<div class="map-section">
+		<div class="nation-toggle">
+			{#each nations as nation (nation)}
+				<button
+					class="toggle-btn toggle-btn--sm"
+					class:active={selectedNation === nation}
+					onclick={() => { selectedNation = nation; }}
+				>{nation}</button>
+			{/each}
 		</div>
-	{/each}
-</div>
+		<div style="position: relative;">
+			<WorldMap />
+			<FlowLayer {squads} nation={selectedNation} />
+		</div>
+	</div>
 
-{#each Object.entries(squadStats).sort((a, b) => b[1][0].value - a[1][0].value) as [squadName, squadData] (squadName)}
-	<div class="chart-container">
-		<h2>{squadName}</h2>
+	<div class="scatter-container">
+		<h2>Domestic league share vs. World Cup ranking</h2>
 		<LayerCake
-			data={squadData}
-			x={xAccessor}
-			xDomain={[0, 100]}
+			data={scatterData}
+			x={scatterX}
+			y={scatterY}
+			xDomain={[32, 1]}
+			yDomain={[0, 100]}
+			padding={{ top: 20, bottom: 50, left: 50, right: 20 }}
 		>
 			<Svg>
-				<StackedBar stackedData={squadData} />
+				<ScatterDots data={scatterData} />
 			</Svg>
 		</LayerCake>
 	</div>
-{/each}
+
+	<div class="confederation-section">
+		<h2>Where do players play? By squad confederation</h2>
+		<div class="confed-header-row">
+			<div class="confed-axis-label-left">Players from</div>
+			<div class="confed-axis-label-right">Play club football in →</div>
+			<div></div>
+		</div>
+		{#each confederationStats as row (row.name)}
+			<div class="confed-row">
+				<div class="confed-label">
+					{row.name}
+					<span class="confed-arrow">→</span>
+				</div>
+				<div class="confed-bar-wrap">
+					<LayerCake
+						data={row.segments}
+						x={confedXAccessor}
+						xDomain={[0, 100]}
+					>
+						<Svg>
+							<StackedBar stackedData={row.segments} />
+						</Svg>
+					</LayerCake>
+				</div>
+				<div class="confed-count">{row.totalPlayers} players</div>
+			</div>
+		{/each}
+	</div>
+
+	{#each Object.entries(squadStats).sort((a, b) => b[1][0].value - a[1][0].value) as [squadName, squadData] (squadName)}
+		<div class="chart-container">
+			<h2>{squadName}</h2>
+			<LayerCake
+				data={squadData}
+				x={xAccessor}
+				xDomain={[0, 100]}
+			>
+				<Svg>
+					<StackedBar stackedData={squadData} />
+				</Svg>
+			</LayerCake>
+		</div>
+	{/each}
+</section>
 
 <style>
+	/* ── Scrollytelling ─────────────────────────────────────────────────────── */
+
+	.scrolly-outer {
+		position: relative;
+	}
+
+	.sticky-vis {
+		position: sticky;
+		top: 0;
+		height: 100vh;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background: #f5f4f0;
+	}
+
+	.map-container {
+		width: 100%;
+	}
+
+	.step-badge {
+		position: absolute;
+		top: 1.25rem;
+		right: 1.25rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 0.2rem;
+		pointer-events: none;
+	}
+
+	.badge-year {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: rgba(0, 0, 0, 0.15);
+		line-height: 1;
+	}
+
+	.badge-nation {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.3);
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+
+	.steps-wrapper {
+		position: relative;
+		z-index: 2;
+		margin-top: -100vh;
+		pointer-events: none;
+	}
+
+	.step {
+		min-height: 85vh;
+		display: flex;
+		align-items: center;
+		padding: 2rem;
+		pointer-events: none;
+	}
+
+	.step-card {
+		pointer-events: auto;
+		max-width: 360px;
+		background: rgba(255, 255, 255, 0.93);
+		padding: 1.5rem 1.75rem;
+		border-radius: 6px;
+		box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+		transition: opacity 0.4s ease;
+		opacity: 0.35;
+	}
+
+	.step-card.active {
+		opacity: 1;
+	}
+
+	.step-title {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		color: #888;
+		margin: 0 0 0.6rem;
+	}
+
+	.step-text {
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: #222;
+		margin: 0;
+	}
+
+	.step-spacer {
+		height: 40vh;
+	}
+
+	/* ── Interactive section ──────────────────────────────────────────────── */
+
+	.interactive-section {
+		padding: 3rem 2rem;
+	}
+
 	.year-toggle {
 		display: flex;
 		flex-wrap: wrap;
@@ -195,7 +393,7 @@
 		width: 100%;
 		max-width: 800px;
 		padding: 0rem;
-		margin-bottom:1.5rem;
+		margin-bottom: 1.5rem;
 	}
 
 	:global(.layercake-container) {
