@@ -16,6 +16,7 @@
 	import squads2014 from '../data/2014/squads.json';
 	import squads2018 from '../data/2018/squads.json';
 	import squads2022 from '../data/2022/squads.json';
+	import steps from '../data/scrolly-steps.json';
 
 	const years = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022];
 
@@ -33,53 +34,7 @@
 
 	// ── Scrollytelling ─────────────────────────────────────────────────────────
 
-	/**
-	 * @type {Array<{ year: number, nation: string | null, title: string, text: string }>}
-	 */
-	const steps = [
-		{
-			year: 1994,
-			nation: null,
-			title: '1994 — The baseline',
-			text: "At the 1994 World Cup, the world's national squads were broadly self-contained. CONCACAF sides drew 80% of players from domestic leagues; Asian confederations, nearly 96%. Even South America still fielded sides where 62% of players earned wages at home. Africa was already the outlier — but the gap hadn't yet become a chasm."
-		},
-		{
-			year: 1994,
-			nation: 'Nigeria',
-			title: 'Nigeria, 1994',
-			text: "Nigeria arrived at USA '94 without a single player from the domestic Nigerian league. Every one of their 22 players earned wages in Europe. This wasn't a transition in progress — it was a statement of how little the Super Eagles' identity had ever been tied to the clubs back home."
-		},
-		{
-			year: 1998,
-			nation: 'Tunisia',
-			title: 'Tunisia, 1998',
-			text: "Four years later, Tunisia offered a counter-example. Eighteen of their 23 players were at domestic clubs — the highest retention rate any African side would ever record at a World Cup. It suggested the Nigeria pattern wasn't inevitable. The Tunisian league, briefly, could hold its own."
-		},
-		{
-			year: 2010,
-			nation: 'South Africa',
-			title: 'South Africa, 2010',
-			text: "South Africa in 2010 were the hosts, and their squad showed it. Sixteen of 23 players were at domestic clubs — the only time a CAF side has been majority-domestic in the modern era. State investment, local pride, and hosting rights conspired to produce something anomalous."
-		},
-		{
-			year: 2010,
-			nation: 'Nigeria',
-			title: 'Nigeria, 2010 — same tournament',
-			text: "Nigeria were at the same tournament. Same year, same continent, same confederation. Zero players from the domestic league. Their flows point entirely to Europe. The host effect and the export reality existed simultaneously, in the same group stage."
-		},
-		{
-			year: 2014,
-			nation: 'Algeria',
-			title: '2014 — The nadir',
-			text: "By 2014, the export of African talent to European leagues was effectively total. Algeria brought 2 domestic players out of 23; Cameroon brought 2. The CAF domestic retention rate fell below 10% for the first time. African football had become a continent that produces players for everyone else."
-		},
-		{
-			year: 2022,
-			nation: 'Morocco',
-			title: 'Morocco, 2022',
-			text: "Morocco reached the World Cup semifinal in 2022 — the best result in African history. Three of their 26 players were at domestic clubs. The rest played in Europe or the Gulf. The team that went furthest did so as the most dispersed: a diaspora in national colors, assembled for a month, then scattered again."
-		}
-	];
+
 
 	let activeStep = $state(0);
 
