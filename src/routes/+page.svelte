@@ -18,6 +18,7 @@
 		justify-content: center;
 		background: #f5f4f0;
 		padding: 2rem;
+		padding-top: calc(52px + 2rem);
 	}
 
 	.home-content {

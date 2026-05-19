@@ -133,6 +133,7 @@
 
 	.scrolly-outer {
 		position: relative;
+		padding-top: 52px;
 	}
 
 	.sticky-vis {
