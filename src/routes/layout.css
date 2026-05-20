@@ -1,2 +1,100 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+/* ── Brand tokens ─────────────────────────────────────────────────────────── */
+
+:root {
+	/* Typography */
+	--font-body: 'Bricolage Grotesque', system-ui, sans-serif;
+	--font-mono: 'Ubuntu Mono', ui-monospace, monospace;
+
+	/* Type scale */
+	--text-xs:   0.72rem;
+	--text-sm:   0.85rem;
+	--text-base: 1rem;
+	--text-md:   1.125rem;
+	--text-lg:   1.35rem;
+	--text-xl:   1.75rem;
+	--text-2xl:  2.25rem;
+	--text-3xl:  3rem;
+
+	/* Weights */
+	--weight-regular: 400;
+	--weight-medium:  500;
+	--weight-semibold: 600;
+	--weight-bold:    700;
+	--weight-extrabold: 800;
+
+	/* Colors — neutrals */
+	--color-ink:        #111111;
+	--color-ink-muted:  #444444;
+	--color-ink-faint:  #888888;
+	--color-border:     #e0e0e0;
+	--color-surface:    #f5f4f0;
+	--color-bg:         #ffffff;
+
+	/* Spacing */
+	--space-xs:  0.25rem;
+	--space-sm:  0.5rem;
+	--space-md:  1rem;
+	--space-lg:  2rem;
+	--space-xl:  4rem;
+
+	/* Layout */
+	--max-prose: 680px;
+	--max-wide:  1100px;
+	--nav-height: 52px;
+}
+
+/* ── Base reset & defaults ────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	font-family: var(--font-body);
+	font-size: var(--text-base);
+	font-weight: var(--weight-regular);
+	line-height: 1.65;
+	color: var(--color-ink);
+	background: var(--color-bg);
+	margin: 0;
+	padding-top: var(--nav-height);
+}
+
+code, kbd, samp, pre {
+	font-family: var(--font-mono);
+	font-size: 0.9em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-body);
+	font-weight: var(--weight-bold);
+	line-height: 1.1;
+	color: var(--color-ink);
+	margin: 0 0 0.5em;
+}
+
+p {
+	margin: 0 0 1.25em;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+a {
+	color: inherit;
+}
+
+img, svg, video {
+	display: block;
+	max-width: 100%;
+}

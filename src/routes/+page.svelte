@@ -1,28 +1,69 @@
-<main class="home">
-	<div class="home-content">
-		<p class="eyebrow">Africa at the World Cup</p>
-		<h1>Club vs Country</h1>
-		<p class="intro">
-			Since 1994, African footballers have become the world's most exported talent.
-			This is the story of what that looks like — squad by squad, tournament by tournament.
-		</p>
-		<a href="/story" class="cta">Read the story →</a>
-	</div>
-</main>
+<div class="snap-container">
+
+	<!-- Page 1 — Site intro -->
+	<section class="page page--intro">
+		<div class="page-content">
+			<h1>Graffu</h1>
+			<p class="intro">
+				A data-visual storytelling project.
+			</p>
+		</div>
+	</section>
+
+	<!-- Page 2 — Club vs Country -->
+	<section class="page page--story">
+		<div class="page-content">
+			<p class="eyebrow">Africa at the World Cup</p>
+			<h1>Club vs Country</h1>
+			<p class="intro">
+				Since 1994, African footballers have become the world's most exported talent.
+				This is the story of what that looks like — squad by squad, tournament by tournament.
+			</p>
+			<a href="/story" class="cta">Read the story →</a>
+		</div>
+	</section>
+
+	<!-- Page 3 — Future story placeholder -->
+	<section class="page page--next">
+		<div class="page-content">
+			<p class="eyebrow">Africa at the World Cup</p>
+			<h1>Coming soon</h1>
+			<p class="intro">
+				Placeholder — a second story in the series. Details to follow.
+			</p>
+		</div>
+	</section>
+
+</div>
 
 <style>
-	.home {
-		min-height: 100vh;
+	.snap-container {
+		position: fixed;
+		top: 52px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+	}
+
+	.page {
+		scroll-snap-align: start;
+		height: calc(100vh - 52px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: #f5f4f0;
 		padding: 2rem;
-		padding-top: calc(52px + 2rem);
+		box-sizing: border-box;
 	}
 
-	.home-content {
+	.page--intro  { background: #e8e6e0; }
+	.page--story  { background: #f5f4f0; }
+	.page--next   { background: #edecea; }
+
+	.page-content {
 		max-width: 560px;
+		width: 100%;
 	}
 
 	.eyebrow {

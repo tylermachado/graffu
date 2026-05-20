@@ -69,6 +69,21 @@
 	const confedXAccessor = (d) => d.start;
 </script>
 
+<!-- ── Story header ─────────────────────────────────────────────────────── -->
+<header class="story-header">
+	<p class="story-eyebrow">Africa at the World Cup</p>
+	<h1 class="story-headline">Club vs Country</h1>
+	<p class="story-deck">
+		Since 1994, African footballers have become the world's most exported talent.
+		This is the story of what that looks like — squad by squad, tournament by tournament.
+	</p>
+	<div class="story-meta">
+		<span>By Your Name</span>
+		<span class="meta-sep">·</span>
+		<span>May 2026</span>
+	</div>
+</header>
+
 <!-- ── Intro ────────────────────────────────────────────────────────────── -->
 {#if introStep}
 	<section class="prose-section">
@@ -247,6 +262,53 @@
 
 	.step-spacer {
 		height: 40vh;
+	}
+
+	/* ── Story header ──────────────────────────────────────────────────────── */
+
+	.story-header {
+		max-width: 680px;
+		margin: 0 auto;
+		padding: 4rem 2rem 2rem;
+	}
+
+	.story-eyebrow {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #999;
+		margin: 0 0 0.75rem;
+	}
+
+	.story-headline {
+		font-size: clamp(2.25rem, 5vw, 3.5rem);
+		font-weight: 800;
+		line-height: 1.05;
+		margin: 0 0 1rem;
+		color: #111;
+	}
+
+	.story-deck {
+		font-size: 1.2rem;
+		line-height: 1.55;
+		color: #444;
+		margin: 0 0 1.5rem;
+		max-width: 580px;
+	}
+
+	.story-meta {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.85rem;
+		color: #999;
+		border-top: 1px solid #e0e0e0;
+		padding-top: 1rem;
+	}
+
+	.meta-sep {
+		color: #ccc;
 	}
 
 	/* ── Prose sections ────────────────────────────────────────────────────── */
