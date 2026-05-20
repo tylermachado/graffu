@@ -72,8 +72,19 @@ const steps = dataRows.map(cols => {
 	headers.forEach((key, i) => {
 		obj[key] = cols[i] ?? '';
 	});
+
+	const rawYear = obj.year.trim();
+
+	if (rawYear === 'intro' || rawYear === 'outro') {
+		return {
+			type: rawYear,
+			title: obj.title.trim(),
+			text: obj.text.trim()
+		};
+	}
+
 	return {
-		year: Number(obj.year),
+		year: Number(rawYear),
 		nation: obj.nation.trim() === '' ? null : obj.nation.trim(),
 		title: obj.title.trim(),
 		text: obj.text.trim()

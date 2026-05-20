@@ -18,6 +18,10 @@
 	import squads2022 from '../../data/2022/squads.json';
 	import steps from '../../data/scrolly-steps.json';
 
+	const introStep = steps.find(s => s.type === 'intro');
+	const outroStep = steps.find(s => s.type === 'outro');
+	const scrollySteps = steps.filter(s => s.type !== 'intro' && s.type !== 'outro');
+
 	const years = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022];
 
 	/** @type {Record<number, Record<string, any[]>>} */
@@ -36,7 +40,7 @@
 
 	let activeStep = $state(0);
 
-	const currentScrollyStep = $derived(steps[activeStep] ?? steps[0]);
+	const currentScrollyStep = $derived(scrollySteps[activeStep] ?? scrollySteps[0]);
 	const scrollyYear = $derived(currentScrollyStep.year);
 	const scrollyNation = $derived(currentScrollyStep.nation ?? '');
 	const scrollySquads = $derived(allSquads[scrollyYear]);
@@ -65,6 +69,15 @@
 	const confedXAccessor = (d) => d.start;
 </script>
 
+<!-- ── Intro ────────────────────────────────────────────────────────────── -->
+{#if introStep}
+	<section class="prose-section">
+		{#each introStep.text.split('\n\n') as paragraph}
+			<p>{paragraph}</p>
+		{/each}
+	</section>
+{/if}
+
 <!-- ── Scrollytelling section ────────────────────────────────────────────── -->
 <section class="scrolly-outer">
 	<div class="sticky-vis">
@@ -84,7 +97,7 @@
 
 	<div class="steps-wrapper">
 		<Scrolly bind:value={activeStep}>
-			{#each steps as step, i (i)}
+			{#each scrollySteps as step, i (i)}
 				<div class="step">
 					<div class="step-card" class:active={activeStep === i}>
 						<p class="step-title">{step.title}</p>
@@ -96,6 +109,15 @@
 		</Scrolly>
 	</div>
 </section>
+
+<!-- ── Outro ────────────────────────────────────────────────────────────── -->
+{#if outroStep}
+	<section class="prose-section">
+		{#each outroStep.text.split('\n\n') as paragraph}
+			<p>{paragraph}</p>
+		{/each}
+	</section>
+{/if}
 
 <!-- ── Interactive section ───────────────────────────────────────────────── -->
 <section class="interactive-section">
@@ -225,6 +247,25 @@
 
 	.step-spacer {
 		height: 40vh;
+	}
+
+	/* ── Prose sections ────────────────────────────────────────────────────── */
+
+	.prose-section {
+		max-width: 680px;
+		margin: 0 auto;
+		padding: 3rem 2rem;
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: #222;
+	}
+
+	.prose-section p {
+		margin: 0 0 1.25rem;
+	}
+
+	.prose-section p:last-child {
+		margin-bottom: 0;
 	}
 
 	/* ── Interactive section ──────────────────────────────────────────────── */
