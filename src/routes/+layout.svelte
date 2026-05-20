@@ -9,9 +9,9 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 
 <header class="site-header">
-	<a href="/" class="site-name">Graffu</a>
+	<a href="{base}/" class="site-name">Graffu</a>
 	<nav>
-		<a href="/">Home</a>
+		<a href="{base}/">Home</a>
 		<a href="{base}/story">Club vs Country</a>
 	</nav>
 </header>
