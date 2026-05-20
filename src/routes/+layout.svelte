@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import { base } from '$app/paths';
 
 	let { children } = $props();
 </script>
@@ -11,7 +12,7 @@
 	<a href="/" class="site-name">Graffu</a>
 	<nav>
 		<a href="/">Home</a>
-		<a href="/story">Club vs Country</a>
+		<a href="{base}/story">Club vs Country</a>
 	</nav>
 </header>
 

@@ -30,6 +30,8 @@ jobs:
         run: |
           export NODE_ENV=production
           npm run build
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}'
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4

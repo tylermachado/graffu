@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <div class="snap-container">
 
 	<!-- Page 1 — Site intro -->
@@ -19,7 +23,7 @@
 				Since 1994, African footballers have become the world's most exported talent.
 				This is the story of what that looks like — squad by squad, tournament by tournament.
 			</p>
-			<a href="/story" class="cta">Read the story →</a>
+			<a href="{base}/story" class="cta">Read the story →</a>
 		</div>
 	</section>
 
