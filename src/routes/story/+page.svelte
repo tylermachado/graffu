@@ -92,10 +92,6 @@
 			id: 1,
 			text: 'Squad data compiled from FIFA official World Cup squad lists and Wikipedia tournament records, 1994–2022. Domestic retention rate is defined as the share of a squad’s players based at clubs in their home country at the time of each tournament.'
 		},
-		{
-			id: 2,
-			text: 'The Bosman ruling (Union Royale Belge des Sociétés de Football Association v. Jean-Marc Bosman, December 1995) established the right of EU professional footballers to move to a new club at the end of their contracts without a transfer fee, and prohibited clubs from fielding more than three foreign players in UEFA competition. It fundamentally reshaped the European transfer market.'
-		},
 	];
 </script>
 
@@ -107,9 +103,9 @@
 		Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage. This is the story of what that looks like, squad by squad, tournament by tournament.
 	</p>
 	<div class="story-meta">
-		<span>By Your Name</span>
-		<span class="meta-sep">·</span>
-		<span>May 2026</span>
+		<!-- <span>By Your Name</span> -->
+		<!-- <span class="meta-sep">·</span> -->
+		<span>Published May 2026</span>
 	</div>
 </header>
 
