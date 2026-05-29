@@ -5,9 +5,13 @@
 	import ScatterDots from '$lib/charts/ScatterDots.svelte';
 	import WorldMap from '$lib/charts/WorldMap.svelte';
 	import FlowLayer from '$lib/charts/FlowLayer.svelte';
+	import CombinedFlowLayer from '$lib/charts/CombinedFlowLayer.svelte';
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
+	import { getAllCombinedFlows } from '$lib/getAllCombinedFlows.js';
+	import teams from '../../data/2022/teams.json';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
+	import RetentionOverTime from '$lib/charts/RetentionOverTime.svelte';
 	import squads1994 from '../../data/1994/squads.json';
 	import squads1998 from '../../data/1998/squads.json';
 	import squads2002 from '../../data/2002/squads.json';
@@ -35,6 +39,12 @@
 		2018: squads2018,
 		2022: squads2022,
 	};
+
+	// ── Combined flows (all years, all nations) ──────────────────────────────
+
+	/** @type {Record<string, string>} */
+	const nationToConfederation = Object.fromEntries(teams.map((t) => [t.nation, t.confederation]));
+	const combinedFlows = getAllCombinedFlows(allSquads, nationToConfederation);
 
 	// ── Scrollytelling ─────────────────────────────────────────────────────────
 
@@ -67,15 +77,34 @@
 
 	/** @param {{ start: number }} d */
 	const confedXAccessor = (d) => d.start;
+
+	/**
+	 * Converts [n] footnote markers in prose text to superscript HTML.
+	 * Safe: text comes from a local JSON file, not user input.
+	 * @param {string} text
+	 */
+	function renderRef(text) {
+		return text.replace(/\[(\d+)\]/g, '<sup class="fn-ref">$1</sup>');
+	}
+
+	const FOOTNOTES = [
+		{
+			id: 1,
+			text: 'Squad data compiled from FIFA official World Cup squad lists and Wikipedia tournament records, 1994–2022. Domestic retention rate is defined as the share of a squad’s players based at clubs in their home country at the time of each tournament.'
+		},
+		{
+			id: 2,
+			text: 'The Bosman ruling (Union Royale Belge des Sociétés de Football Association v. Jean-Marc Bosman, December 1995) established the right of EU professional footballers to move to a new club at the end of their contracts without a transfer fee, and prohibited clubs from fielding more than three foreign players in UEFA competition. It fundamentally reshaped the European transfer market.'
+		},
+	];
 </script>
 
 <!-- ── Story header ─────────────────────────────────────────────────────── -->
 <header class="story-header">
-	<p class="story-eyebrow">Africa at the World Cup</p>
+	<p class="story-eyebrow">African Football at the World Cup</p>
 	<h1 class="story-headline">Club vs Country</h1>
 	<p class="story-deck">
-		Since 1994, African footballers have become the world's most exported talent.
-		This is the story of what that looks like — squad by squad, tournament by tournament.
+		Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage. This is the story of what that looks like, squad by squad, tournament by tournament.
 	</p>
 	<div class="story-meta">
 		<span>By Your Name</span>
@@ -84,14 +113,36 @@
 	</div>
 </header>
 
+<!-- ── Combined flows section ────────────────────────────────────────────── -->
+<section class="combined-flow-section">
+	<p class="combined-flow-desc">
+		Player flows from national squad to club nation, aggregated across all World Cup tournaments 1994–2022.
+		Arcs colored by source confederation. Filled circles = domestic retention.
+	</p>
+	<div class="combined-flow-map" style="position: relative;">
+		<WorldMap />
+		<CombinedFlowLayer flows={combinedFlows} />
+	</div>
+	<div class="combined-flow-legend">
+		{#each [['UEFA', '#4a90d9'], ['CAF', '#3cb371'], ['CONMEBOL', '#e67e22'], ['AFC', '#9b59b6'], ['CONCACAF', '#e74c3c'], ['OFC', '#95a5a6']] as [confed, color] (confed)}
+			<span class="legend-item">
+				<span class="legend-dot" style="background: {color};"></span>
+				{confed}
+			</span>
+		{/each}
+	</div>
+</section>
+
 <!-- ── Intro ────────────────────────────────────────────────────────────── -->
 {#if introStep}
 	<section class="prose-section">
-		{#each introStep.text.split('\n\n') as paragraph}
-			<p>{paragraph}</p>
+		{#each introStep.text.split('\n\n') as paragraph, i (i)}
+			<p>{@html renderRef(paragraph)}</p>
 		{/each}
 	</section>
 {/if}
+
+<RetentionOverTime />
 
 <!-- ── Scrollytelling section ────────────────────────────────────────────── -->
 <section class="scrolly-outer">
@@ -128,8 +179,8 @@
 <!-- ── Outro ────────────────────────────────────────────────────────────── -->
 {#if outroStep}
 	<section class="prose-section">
-		{#each outroStep.text.split('\n\n') as paragraph}
-			<p>{paragraph}</p>
+		{#each outroStep.text.split('\n\n') as paragraph, i (i)}
+			<p>{@html renderRef(paragraph)}</p>
 		{/each}
 	</section>
 {/if}
@@ -163,6 +214,16 @@
 			<FlowLayer {squads} nation={selectedNation} />
 		</div>
 	</div>
+</section>
+
+<!-- ── Methodology ──────────────────────────────────────────────────────── -->
+<section class="methodology-section">
+	<h3 class="methodology-heading">Methodology &amp; Sources</h3>
+	<ol class="methodology-list">
+		{#each FOOTNOTES as note (note.id)}
+			<li id="fn-{note.id}">{note.text}</li>
+		{/each}
+	</ol>
 </section>
 
 <style>
@@ -470,5 +531,91 @@
 	.confed-count {
 		font-size: 0.75rem;
 		color: #888;
+	}
+
+	/* ── Methodology / footnotes ─────────────────────────────────────────────── */
+
+	.methodology-section {
+		max-width: 680px;
+		margin: 0 auto;
+		padding: 2rem 2rem 4rem;
+		border-top: 1px solid #e0e0e0;
+	}
+
+	.methodology-heading {
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #aaa;
+		margin: 0 0 0.75rem;
+	}
+
+	.methodology-list {
+		font-size: 0.825rem;
+		line-height: 1.65;
+		color: #777;
+		padding-left: 1.5rem;
+		margin: 0;
+	}
+
+	.methodology-list li {
+		margin-bottom: 0.5rem;
+	}
+
+	:global(.fn-ref) {
+		font-size: 0.65em;
+		vertical-align: super;
+		color: #999;
+		font-weight: 600;
+	}
+
+	/* ── Combined flows section ──────────────────────────────────────────────── */
+
+	.combined-flow-section {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 3rem 2rem;
+		border-top: 1px solid #e0e0e0;
+	}
+
+	.combined-flow-desc {
+		font-size: 0.85rem;
+		line-height: 1.5;
+		color: #777;
+		max-width: 640px;
+		margin: 0 0 1.5rem;
+	}
+
+	.combined-flow-map {
+		width: 100%;
+		background: #f5f4f0;
+		border-radius: 4px;
+		overflow: hidden;
+	}
+
+	.combined-flow-legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem 1.5rem;
+		margin-top: 1rem;
+	}
+
+	.legend-item {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #444;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+
+	.legend-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		flex-shrink: 0;
 	}
 </style>
