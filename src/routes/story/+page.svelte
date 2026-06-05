@@ -235,28 +235,23 @@
 
 <!-- ── Interactive section ───────────────────────────────────────────────── -->
 <section class="interactive-section">
-	<h1>Club vs Country Statistics</h1>
-
-	<div class="year-toggle">
-		{#each years as year (year)}
-			<button
-				class="toggle-btn"
-				class:active={selectedYear === year}
-				onclick={() => { selectedYear = year; }}
-			>{year}</button>
-		{/each}
-	</div>
+	<h1 class="interactive-heading">
+		<span class="heading-text">Explore the</span>
+		<select class="heading-select" bind:value={selectedNation}>
+			{#each nations as nation (nation)}
+				<option value={nation}>{nation}</option>
+			{/each}
+		</select>
+		<span class="heading-text">squad at the</span>
+		<select class="heading-select" bind:value={selectedYear}>
+			{#each years as year (year)}
+				<option value={year}>{year}</option>
+			{/each}
+		</select>
+		<span class="heading-text">World Cup</span>
+	</h1>
 
 	<div class="map-section">
-		<div class="nation-toggle">
-			{#each nations as nation (nation)}
-				<button
-					class="toggle-btn toggle-btn--sm"
-					class:active={selectedNation === nation}
-					onclick={() => { selectedNation = nation; }}
-				>{nation}</button>
-			{/each}
-		</div>
 		<div style="position: relative;">
 			<WorldMap />
 			<FlowLayer {squads} nation={selectedNation} />
@@ -445,40 +440,52 @@
 		padding: 3rem 2rem;
 	}
 
-	.year-toggle {
+	.interactive-heading {
+		font-size: 2rem;
+		font-weight: 600;
+		line-height: 1.3;
+		margin: 0 0 2rem;
+		color: #111;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 0.375rem;
-		margin-bottom: 1.5rem;
+		align-items: center;
+		gap: 0.6rem;
 	}
 
-	.nation-toggle {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.25rem;
-		margin-bottom: 0.75rem;
-	}
-
-	.toggle-btn {
-		padding: 0.3rem 0.75rem;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		background: #fff;
+	.heading-select {
+		background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right 0.25rem center;
+		background-size: 1.5rem;
+		border: none;
+		border-bottom: 2.5px solid #111;
+		padding: 0.4rem 2rem 0.4rem 0;
+		font-size: 2rem;
+		font-weight: 700;
+		color: #4a90d9;
 		cursor: pointer;
-		font-size: 0.9rem;
-		color: #333;
-		transition: background 0.15s, color 0.15s, border-color 0.15s;
+		font-family: inherit;
+		appearance: none;
+		transition: border-color 0.15s;
 	}
 
-	.toggle-btn--sm {
-		padding: 0.2rem 0.5rem;
-		font-size: 0.75rem;
+	.heading-select:hover {
+		border-bottom-color: #555;
 	}
 
-	.toggle-btn.active {
-		background: #333;
-		color: #fff;
-		border-color: #333;
+	.heading-select:focus {
+		outline: none;
+		border-bottom-color: #333;
+	}
+
+	/* Style selected options in dropdown */
+	.heading-select option:checked {
+		background: linear-gradient(#4a90d9, #4a90d9);
+		background-color: #4a90d9 !important;
+		color: white !important;
+		font-weight: 700;
+	}
+
+	.heading-text {
+		display: inline;
 	}
 
 	.map-section {
