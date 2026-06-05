@@ -192,6 +192,13 @@
 
 <RetentionOverTime />
 
+<!-- ── Explanation section ───────────────────────────────────────────────── -->
+<section class="prose-section">
+	<p>
+		In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart above. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move.
+	</p>
+</section>
+
 <!-- ── Scrollytelling section ────────────────────────────────────────────── -->
 <section class="scrolly-outer">
 	<div class="sticky-vis">
