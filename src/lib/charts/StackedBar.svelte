@@ -1,6 +1,8 @@
 <script>
 	import { getContext, onMount } from 'svelte';
 	import { schemeSet1 } from 'd3-scale-chromatic';
+	import confederations from '../../data/2022/confederations.json';
+	import { getConfederationColor } from '$lib/getConfederationColor.js';
 
 	/** @type {{stackedData: Array<{label: string, value: number, percentage: number, start: number, end: number, index: number, confederation?: string}>}} */
 	let { stackedData } = $props();
@@ -67,20 +69,11 @@
 		hoveredSegment = null;
 	}
 
-	const confederationIndices = {
-		'AFC': 'red',
-		'CAF': 'green',
-		'CONCACAF': 'blue',
-		'CONMEBOL': 'orange',
-		'OFC': 'brown',
-		'UEFA': 'purple',
-	};
-
 	const getSegmentColor = (segment) => {
-		if (segment.confederation && confederationIndices[segment.confederation] !== undefined) {
-			return confederationIndices[segment.confederation];
+		if (segment.confederation && getConfederationColor(segment.confederation)) {
+			return getConfederationColor(segment.confederation);
 		}
-		return 'gainsboro';
+		return '#ccc';
 	};
 </script>
 

@@ -15,7 +15,9 @@
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { getAllCombinedFlows } from '$lib/getAllCombinedFlows.js';
+	import { getConfederationColor } from '$lib/getConfederationColor.js';
 	import teams from '../../data/2022/teams.json';
+	import confederations from '../../data/2022/confederations.json';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
 	import RetentionOverTime from '$lib/charts/RetentionOverTime.svelte';
 	import squads1994 from '../../data/1994/squads.json';
@@ -172,10 +174,10 @@
 		<CombinedFlowLayer flows={combinedFlows} />
 	</div>
 	<div class="combined-flow-legend">
-		{#each [['UEFA', '#4a90d9'], ['CAF', '#3cb371'], ['CONMEBOL', '#e67e22'], ['AFC', '#9b59b6'], ['CONCACAF', '#e74c3c'], ['OFC', '#95a5a6']] as [confed, color] (confed)}
+		{#each confederations as confed (confed.confederation)}
 			<span class="legend-item">
-				<span class="legend-dot" style="background: {color};"></span>
-				{confed}
+				<span class="legend-dot" style="background: {confed.color};"></span>
+				{confed.confederation}
 			</span>
 		{/each}
 	</div>

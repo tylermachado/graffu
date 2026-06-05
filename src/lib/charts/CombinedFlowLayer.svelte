@@ -5,6 +5,7 @@
 	import { SvelteMap } from 'svelte/reactivity';
 	import worldData from 'world-atlas/countries-110m.json';
 	import { NAME_TO_ISO } from '$lib/nameToIso.js';
+	import { getConfederationColor, hexToRgba } from '$lib/getConfederationColor.js';
 
 	/**
 	 * @type {{
@@ -19,16 +20,6 @@
 	// Must match the projection in WorldMap.svelte exactly
 	const projection = geoConicConformal().scale(153).translate([width / 2, height / 2]);
 	const pathGen = geoPath(projection);
-
-	/** @type {Record<string, string>} */
-	const CONFEDERATION_COLOR = {
-		UEFA: '#4a90d9',
-		CAF: '#3cb371',
-		CONMEBOL: '#e67e22',
-		AFC: '#9b59b6',
-		CONCACAF: '#e74c3c',
-		OFC: '#95a5a6'
-	};
 
 	// Pre-compute projected centroids for every world-atlas feature, keyed by numeric ID string
 	const countries = /** @type {any} */ (
@@ -103,7 +94,7 @@
 		{@const src = getCentroid(flow.srcNation)}
 		{@const dst = getCentroid(flow.clubNation)}
 		{#if src && dst}
-			{@const color = CONFEDERATION_COLOR[flow.srcConfederation] ?? '#aaa'}
+			{@const color = getConfederationColor(flow.srcConfederation)}
 			<path
 				d={arcPath(src, dst)}
 				fill="none"
@@ -119,12 +110,12 @@
 	{#each domesticFlows as flow (flow.srcNation + '||' + flow.clubNation)}
 		{@const c = getCentroid(flow.srcNation)}
 		{#if c}
-			{@const color = CONFEDERATION_COLOR[flow.srcConfederation] ?? '#aaa'}
+			{@const color = getConfederationColor(flow.srcConfederation)}
 			<circle
 				cx={c[0]}
 				cy={c[1]}
 				r={Math.sqrt(flow.count) * 3.5}
-				fill={color}
+				fill={hexToRgba(color, 0.55)}
 				fill-opacity="0.55"
 				stroke={color}
 				stroke-width="1.5"

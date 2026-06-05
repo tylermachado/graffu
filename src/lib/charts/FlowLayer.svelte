@@ -4,6 +4,7 @@
 	import { scaleSqrt } from 'd3-scale';
 	import worldData from 'world-atlas/countries-110m.json';
 	import { getClubNationFlows } from '$lib/getClubNationFlows.js';
+	import { getNationColor, hexToRgba } from '$lib/getNationColor.js';
 
 	const WIDTH = 960;
 	const HEIGHT = 500;
@@ -182,6 +183,12 @@
 
 	// Stroke width: sqrt-scaled so thin flows stay visible but thick ones stand out
 	const strokeScale = $derived(scaleSqrt().domain([1, maxCount]).range([1, 8]).clamp(true));
+
+	// Nation color from teams.json
+	const nationColor = $derived(getNationColor(nation));
+	const nationColorRgba70 = $derived(hexToRgba(nationColor, 0.7));
+	const nationColorRgba35 = $derived(hexToRgba(nationColor, 0.35));
+	const nationColorRgbaStroke = $derived(hexToRgba(nationColor, 0.85));
 </script>
 
 <!--
@@ -207,7 +214,7 @@
 				<path
 					d={arcPath(srcCentroid, dst)}
 					fill="none"
-					stroke="rgba(220, 60, 60, 0.7)"
+					stroke={nationColorRgba70}
 					stroke-width={strokeScale(flow.count)}
 					stroke-linecap="round"
 				/>
@@ -220,8 +227,8 @@
 				cx={srcCentroid[0]}
 				cy={srcCentroid[1]}
 				r={Math.sqrt(domesticCount) * 3}
-				fill="rgba(220, 60, 60, 0.35)"
-				stroke="rgba(180, 30, 30, 0.85)"
+				fill={nationColorRgba35}
+				stroke={nationColorRgbaStroke}
 				stroke-width="1.5"
 			/>
 		{/if}

@@ -1,0 +1,8 @@
+[
+  { "confederation": "AFC", "color": "#CC0000" },
+  { "confederation": "CAF", "color": "#009900" },
+  { "confederation": "CONCACAF", "color": "#0000CC" },
+  { "confederation": "CONMEBOL", "color": "#FF9900" },
+  { "confederation": "OFC", "color": "#FF91A4" },
+  { "confederation": "UEFA", "color": "#660099" }
+]
