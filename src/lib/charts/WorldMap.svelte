@@ -4,18 +4,21 @@
 	// @ts-ignore – world-atlas ships no types
 	import worldData from 'world-atlas/countries-110m.json';
 
-	const width = 960;
-	const height = 500;
+	const WIDTH = 960;
+	const HEIGHT = 500;
 
-	const projection = geoConicConformal().scale(153).translate([width / 2, height / 2]);
-	const pathGen = geoPath(projection);
+	/** @type {{ scale?: number, translate?: [number, number] }} */
+	let { scale = 153, translate = [WIDTH / 2, HEIGHT / 2] } = $props();
+
+	const projection = $derived(geoConicConformal().scale(scale).translate(translate));
+	const pathGen = $derived(geoPath(projection));
 
 	// @ts-ignore
 	const countries = /** @type {any} */ (feature(worldData, worldData.objects.countries));
 </script>
 
 <div class="map-wrap">
-	<svg viewBox="0 0 {width} {height}" preserveAspectRatio="xMidYMid meet" class="world-svg">
+	<svg viewBox="0 0 {WIDTH} {HEIGHT}" preserveAspectRatio="xMidYMid meet" class="world-svg">
 		{#each countries.features as f, i (f.id ?? i)}
 			<path d={pathGen(/** @type {any} */(f)) ?? ''} class="country" />
 		{/each}

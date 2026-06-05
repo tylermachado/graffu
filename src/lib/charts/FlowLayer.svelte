@@ -1,20 +1,15 @@
 <script>
 	import { feature } from 'topojson-client';
-	import { geoConicConformal, geoPath } from 'd3-geo';
+	import { geoConicConformal, geoPath, geoCentroid } from 'd3-geo';
 	import { scaleSqrt } from 'd3-scale';
-	import { SvelteMap } from 'svelte/reactivity';
 	import worldData from 'world-atlas/countries-110m.json';
 	import { getClubNationFlows } from '$lib/getClubNationFlows.js';
 
-	/** @type {{ squads: Record<string, Array<{ club_nation: string }>>, nation: string }} */
-	let { squads, nation } = $props();
+	const WIDTH = 960;
+	const HEIGHT = 500;
 
-	const width = 960;
-	const height = 500;
-
-	// Must match the projection used in WorldMap.svelte exactly
-	const projection = geoConicConformal().scale(153).translate([width / 2, height / 2]);
-	const pathGen = geoPath(projection);
+	/** @type {{ squads: Record<string, Array<{ club_nation: string }>>, nation: string, scale?: number, translate?: [number, number] }} */
+	let { squads, nation, scale = 153, translate = [WIDTH / 2, HEIGHT / 2] } = $props();
 
 	/**
 	 * Maps squad/club-nation names (as used in squads.json) to ISO 3166-1 numeric codes,
@@ -105,16 +100,30 @@
 		Yugoslavia: '688'
 	};
 
-	// Pre-compute projected centroids for every world-atlas feature, keyed by numeric ID string
+	// Pre-compute geographic centroids once (lon/lat, never change)
 	const countries = /** @type {any} */ (feature(/** @type {any} */ (worldData), /** @type {any} */ (worldData).objects.countries));
-	/** @type {SvelteMap<string, [number, number]>} */
-	const centroidMap = new SvelteMap();
+	/** @type {Map<string, [number, number]>} */
+	const geoCenterMap = new Map();
 	for (const f of countries.features) {
-		const c = pathGen.centroid(/** @type {any} */ (f));
+		const c = geoCentroid(/** @type {any} */ (f));
 		if (c && !isNaN(c[0]) && !isNaN(c[1])) {
-			centroidMap.set(String(f.id), c);
+			geoCenterMap.set(String(f.id), /** @type {[number, number]} */ (c));
 		}
 	}
+
+	// Reactive projection — re-derived whenever scale or translate props change
+	const projection = $derived(geoConicConformal().scale(scale).translate(translate));
+
+	// Reactive screen-space centroid map — cheaply re-projected each time projection updates
+	const centroidMap = $derived.by(() => {
+		/** @type {Map<string, [number, number]>} */
+		const m = new Map();
+		for (const [id, geo] of geoCenterMap) {
+			const pt = projection(geo);
+			if (pt && !isNaN(pt[0])) m.set(id, /** @type {[number, number]} */ ([pt[0], pt[1]]));
+		}
+		return m;
+	});
 
 	/** @param {string} name @returns {string | undefined} */
 	function isoId(name) {
@@ -186,7 +195,7 @@
 {#if srcCentroid}
 	<svg
 		class="flow-layer"
-		viewBox="0 0 {width} {height}"
+		viewBox="0 0 {WIDTH} {HEIGHT}"
 		preserveAspectRatio="xMidYMid meet"
 		role="img"
 		aria-label="Player club-nation flows for {nation}"

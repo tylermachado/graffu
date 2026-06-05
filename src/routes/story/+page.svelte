@@ -6,6 +6,12 @@
 	import WorldMap from '$lib/charts/WorldMap.svelte';
 	import FlowLayer from '$lib/charts/FlowLayer.svelte';
 	import CombinedFlowLayer from '$lib/charts/CombinedFlowLayer.svelte';
+	import { feature } from 'topojson-client';
+	import { geoConicConformal, geoCentroid } from 'd3-geo';
+	import worldData from 'world-atlas/countries-110m.json';
+	import { NAME_TO_ISO } from '$lib/nameToIso.js';
+	import { tweened } from 'svelte/motion';
+	import { cubicInOut } from 'svelte/easing';
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { getAllCombinedFlows } from '$lib/getAllCombinedFlows.js';
@@ -54,6 +60,52 @@
 	const scrollyYear = $derived(currentScrollyStep.year);
 	const scrollyNation = $derived(currentScrollyStep.nation ?? '');
 	const scrollySquads = $derived(allSquads[scrollyYear]);
+
+	// ── Map zoom ───────────────────────────────────────────────────────────────
+
+	const MAP_WIDTH = 960;
+	const MAP_HEIGHT = 500;
+
+	// @ts-expect-error – world-atlas ships no types
+	const _zoomCountries = /** @type {any} */ (feature(worldData, worldData.objects.countries));
+	/** @type {Map<string, any>} */
+	const _featureById = new Map(_zoomCountries.features.map(/** @param {any} f */ (f) => [String(f.id), f]));
+
+	/**
+	 * Returns the scale and translate needed to show `nationName` centered in the
+	 * viewport with surrounding context (fitSize to 50% of viewport dimensions).
+	 * Falls back to the default world view when no nation is active.
+	 * @param {string} nationName
+	 * @returns {{ scale: number, translate: [number, number] }}
+	 */
+	function getZoomForNation(nationName) {
+		const DEFAULT_SCALE = 153;
+		const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
+		if (!nationName) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
+		const id = NAME_TO_ISO[nationName];
+		if (!id) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
+		const f = _featureById.get(id);
+		if (!f) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
+		// Scale to 30% of full-fit: country is visible with surrounding context.
+		// Center is computed by projecting the geographic centroid at targetScale with
+		// zero translation, then offsetting to place it at the viewport center.
+		const targetScale = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], f).scale() * 0.3;
+		const geoCenter = geoCentroid(f);
+		const rawProj = geoConicConformal().scale(targetScale).translate([0, 0]);
+		const pt = rawProj(geoCenter);
+		if (!pt) return { scale: 153, translate: /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]) };
+		const targetTranslate = /** @type {[number, number]} */ ([MAP_WIDTH / 2 - pt[0], MAP_HEIGHT / 2 - pt[1]]);
+		return { scale: targetScale, translate: targetTranslate };
+	}
+
+	const mapScale = tweened(153, { duration: 700, easing: cubicInOut });
+	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: 700, easing: cubicInOut });
+
+	$effect(() => {
+		const target = getZoomForNation(scrollyNation);
+		mapScale.set(target.scale);
+		mapTranslate.set(target.translate);
+	});
 
 	// ── Interactive section ────────────────────────────────────────────────────
 
@@ -144,9 +196,9 @@
 <section class="scrolly-outer">
 	<div class="sticky-vis">
 		<div class="map-container" style="position: relative;">
-			<WorldMap />
+			<WorldMap scale={$mapScale} translate={$mapTranslate} />
 			{#if scrollyNation}
-				<FlowLayer squads={scrollySquads} nation={scrollyNation} />
+				<FlowLayer squads={scrollySquads} nation={scrollyNation} scale={$mapScale} translate={$mapTranslate} />
 			{/if}
 		</div>
 		<div class="step-badge">
