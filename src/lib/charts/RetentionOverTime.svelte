@@ -10,9 +10,9 @@
 	const CONFEDERATIONS = [
 		{ name: 'AFC',      values: [96, 91, 63, 65, 49, 41, 45, 58, 51], highlight: false, color: '#CC0000' },
 		{ name: 'CONCACAF', values: [80, 77, 73, 59, 46, 48, 28, 50, 15], highlight: false, color: '#0000CC' },
-		{ name: 'UEFA',     values: [64, 58, 50, 57, 51, 48, 33, 34, 29], highlight: false, color: '#660099' },
-		{ name: 'CONMEBOL', values: [62, 42, 45, 32, 19, 17, 15, 11, 8], highlight: false, color: '#FF9900' },
-		{ name: 'CAF',      values: [36, 33, 22, 20, 20, 10, 15, 12, 25], highlight: true,  color: '#009900' },
+		{ name: 'UEFA',     values: [64, 58, 50, 57, 51, 48, 33, 34, 31], highlight: false, color: '#660099' },
+		{ name: 'CONMEBOL', values: [62, 42, 45, 32, 19, 17, 15, 11, 10], highlight: false, color: '#FF9900' },
+		{ name: 'CAF',      values: [36, 33, 22, 20, 20, 10, 15, 12, 23], highlight: true,  color: '#009900' },
 	];
 
 	const W = 640;
