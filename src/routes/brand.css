@@ -62,7 +62,19 @@
   --color-accent-amber:   #f8b600;   /* amber — highlights, quote marks      */
 
   /* Surfaces */
-  --color-surface-warm:   #f6efe1;   /* warm cream canvas                    */
+  --color-surface-warm:   #f6efe1;   /* warm cream canvas (= cream-300)      */
+
+  /* Cream scale — stepped from near-white to warm dark brown */
+  --color-cream-50:   #fefcf8;   /* barely-warm white                    */
+  --color-cream-100:  #fdf9f2;   /* lightest cream                       */
+  --color-cream-200:  #faf4e8;   /* light cream                          */
+  --color-cream-300:  #f6efe1;   /* base cream (= surface-warm)          */
+  --color-cream-400:  #eddcca;   /* warm ivory                           */
+  --color-cream-500:  #dfc5a6;   /* mid tan                              */
+  --color-cream-600:  #c8a47a;   /* golden tan                           */
+  --color-cream-700:  #a07f4a;   /* warm amber-brown                     */
+  --color-cream-800:  #735b2e;   /* dark toffee                          */
+  --color-cream-900:  #453616;   /* deep espresso                        */
 
   /* Type scale additions */
   --text-display: 3.5rem;            /* 56px — hero / page title             */
@@ -88,6 +100,18 @@
   --color-accent-red:     #e63e00;
   --color-accent-amber:   #f8b600;
   --color-surface-warm:   #f6efe1;
+
+  /* Cream scale — stepped from near-white to warm dark brown */
+  --color-cream-50:   #fefcf8;
+  --color-cream-100:  #fdf9f2;
+  --color-cream-200:  #faf4e8;
+  --color-cream-300:  #f6efe1;   /* base cream (= surface-warm) */
+  --color-cream-400:  #eddcca;
+  --color-cream-500:  #dfc5a6;
+  --color-cream-600:  #c8a47a;
+  --color-cream-700:  #a07f4a;
+  --color-cream-800:  #735b2e;
+  --color-cream-900:  #453616;
 
   /* Type scale additions */
   --text-display: 3.5rem;

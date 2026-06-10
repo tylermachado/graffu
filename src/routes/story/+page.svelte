@@ -706,7 +706,7 @@
 	}
 
 	.squad-bar-label {
-		font-size: 0.8rem;
+		font-size: 1.2rem;
 		font-weight: 600;
 		font-family: var(--font-display);
 		letter-spacing: -0.02em;
@@ -735,7 +735,7 @@
 		display: flex;
 		align-items: center;
 		gap: 0.35rem;
-		font-size: 0.8rem;
+		font-size: 1rem;
 		font-family: var(--font-display);
 		letter-spacing: -0.02em;
 		color: #444;
