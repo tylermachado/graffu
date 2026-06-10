@@ -88,15 +88,15 @@
 		if (!id) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
 		const f = _featureById.get(id);
 		if (!f) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-		// Scale to 30% of full-fit: country is visible with surrounding context.
+		// Scale to 15% of full-fit: country is visible with surrounding context (50% more zoomed-out).
 		// Center is computed by projecting the geographic centroid at targetScale with
 		// zero translation, then offsetting to place it at the viewport center.
-		const targetScale = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], f).scale() * 0.3;
+		const targetScale = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], f).scale() * 0.15;
 		const geoCenter = geoCentroid(f);
 		const rawProj = geoConicConformal().scale(targetScale).translate([0, 0]);
 		const pt = rawProj(geoCenter);
 		if (!pt) return { scale: 153, translate: /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]) };
-		const targetTranslate = /** @type {[number, number]} */ ([MAP_WIDTH / 2 - pt[0], MAP_HEIGHT / 2 - pt[1]]);
+		const targetTranslate = /** @type {[number, number]} */ ([MAP_WIDTH / 2 - pt[0], (MAP_HEIGHT * 2) / 3 - pt[1]]);
 		return { scale: targetScale, translate: targetTranslate };
 	}
 
