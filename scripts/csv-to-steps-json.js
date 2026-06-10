@@ -79,7 +79,7 @@ const steps = dataRows.map(cols => {
 		return {
 			type: rawYear,
 			title: obj.title.trim(),
-			text: obj.text.trim()
+			text: obj.text.trim().replace(/\r\n/g, '\n')
 		};
 	}
 
@@ -87,7 +87,7 @@ const steps = dataRows.map(cols => {
 		year: Number(rawYear),
 		nation: obj.nation.trim() === '' ? null : obj.nation.trim(),
 		title: obj.title.trim(),
-		text: obj.text.trim()
+		text: obj.text.trim().replace(/\r\n/g, '\n')
 	};
 });
 

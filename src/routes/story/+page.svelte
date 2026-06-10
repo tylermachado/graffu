@@ -358,7 +358,7 @@
 	}
 
 	.step-title {
-		font-size: 0.75rem;
+		font-size: 1rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.07em;
@@ -386,7 +386,7 @@
 	}
 
 	.story-eyebrow {
-		font-size: 0.75rem;
+		font-size: 1rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -593,7 +593,7 @@
 	}
 
 	.confed-count {
-		font-size: 0.75rem;
+		font-size: 1rem;
 		color: #888;
 	}
 
@@ -607,7 +607,7 @@
 	}
 
 	.methodology-heading {
-		font-size: 0.75rem;
+		font-size: 1rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;

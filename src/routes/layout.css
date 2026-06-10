@@ -26,9 +26,31 @@ code, kbd, samp, pre {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-serif);
+	font-family: var(--font-display);
 	line-height: 1.1;
 	margin: 0 0 0.5em;
+}
+
+nav, [role="navigation"] {
+	font-family: var(--font-display);
+}
+
+[data-legend], .legend {
+	font-family: var(--font-display);
+}
+
+.story-eyebrow, [data-eyebrow] {
+	font-family: var(--font-display);
+}
+
+.story-meta, [data-metadata] {
+	font-family: var(--font-display);
+}
+
+.step-title,
+figcaption,
+.legend-item {
+	font-family: var(--font-display);
 }
 
 p {

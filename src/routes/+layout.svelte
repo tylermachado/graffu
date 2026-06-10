@@ -30,14 +30,15 @@
 		justify-content: space-between;
 		padding: 0 1.5rem;
 		height: 52px;
-		background: #fff;
-		border-bottom: 1px solid #e8e8e8;
+		background: var(--color-brand);
+		border-bottom: 1px solid var(--color-brand);
 	}
 
 	.site-name {
-		font-size: 0.85rem;
+		font-family: var(--font-display);
+		font-size: 1.75rem;
 		font-weight: 700;
-		color: #111;
+		color: #fff;
 		text-decoration: none;
 		letter-spacing: 0.02em;
 	}
@@ -48,14 +49,15 @@
 	}
 
 	nav a {
-		font-size: 0.85rem;
+		font-family: var(--font-display);
+		font-size: 1.25rem;
 		font-weight: 500;
-		color: #555;
+		color: #fff;
 		text-decoration: none;
 		transition: color 0.15s;
 	}
 
 	nav a:hover {
-		color: #111;
+		color: var(--color-brand-light);
 	}
 </style>
