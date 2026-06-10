@@ -3,9 +3,10 @@
 	import { schemeSet1 } from 'd3-scale-chromatic';
 	import confederations from '../../data/2022/confederations.json';
 	import { getConfederationColor } from '$lib/getConfederationColor.js';
+	import { getNationColor } from '$lib/getNationColor.js';
 
-	/** @type {{stackedData: Array<{label: string, value: number, percentage: number, start: number, end: number, index: number, confederation?: string}>}} */
-	let { stackedData } = $props();
+	/** @type {{stackedData: Array<{label: string, value: number, percentage: number, start: number, end: number, index: number, confederation?: string}>, nation?: string}} */
+	let { stackedData, nation = '' } = $props();
 
 	const { xScale, height } = getContext('LayerCake');
 
@@ -79,6 +80,7 @@
 
 <g class="stacked-bar">
 	{#each stackedData as segment}
+		{@const isHome = nation && segment.label === nation}
 		<rect
 			x={$xScale(segment.start)}
 			y={($height - barHeight) / 2}
@@ -86,6 +88,9 @@
 			height={barHeight}
 			fill={getSegmentColor(segment)}
 			class="segment"
+			class:home-segment={isHome}
+			stroke={isHome ? getNationColor(nation) : 'white'}
+			stroke-width={isHome ? 3 : 2}
 			onmouseenter={(e) => handleMouseEnter(segment, e)}
 			onmouseleave={handleMouseLeave}
 		/>
@@ -95,13 +100,14 @@
 <style>
 	:global(.segment) {
 		transition: all 300ms ease-in-out;
-		stroke: white;
-		stroke-width: 2;
 		cursor: pointer;
 	}
 
 	:global(.segment:hover) {
 		filter: brightness(1.2);
-		stroke-width: 3;
+	}
+
+	:global(.home-segment) {
+		paint-order: stroke fill;
 	}
 </style>

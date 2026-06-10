@@ -100,6 +100,39 @@
 		return { scale: targetScale, translate: targetTranslate };
 	}
 
+	/**
+	 * Returns scale/translate to fit the nation and all its club-nation destinations.
+	 * @param {string} nationName
+	 * @param {Array<{ club_nation: string }>} players
+	 * @returns {{ scale: number, translate: [number, number] }}
+	 */
+	function getZoomForFlows(nationName, players) {
+		const DEFAULT_SCALE = 153;
+		const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
+		if (!nationName || !players?.length) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
+
+		const names = new Set([nationName]);
+		for (const p of players) {
+			if (p.club_nation) names.add(p.club_nation);
+		}
+
+		const features = [];
+		for (const name of names) {
+			const id = NAME_TO_ISO[name];
+			if (!id) continue;
+			const f = _featureById.get(id);
+			if (f) features.push(f);
+		}
+
+		if (!features.length) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
+
+		const collection = { type: 'FeatureCollection', features };
+		const proj = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], /** @type {any} */ (collection));
+		const targetScale = proj.scale() * 0.97;
+		const targetTranslate = /** @type {[number, number]} */ (proj.translate());
+		return { scale: targetScale, translate: targetTranslate };
+	}
+
 	const mapScale = tweened(153, { duration: 700, easing: cubicInOut });
 	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: 700, easing: cubicInOut });
 
@@ -112,9 +145,19 @@
 	// ── Interactive section ────────────────────────────────────────────────────
 
 	let selectedYear = $state(2022);
-	let selectedNation = $state(Object.keys(squads2022)[0]);
+	let selectedNation = $state(Object.keys(squads2022).sort()[0]);
+
+	const iMapScale = tweened(153, { duration: 700, easing: cubicInOut });
+	const iMapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: 700, easing: cubicInOut });
 
 	const squads = $derived(allSquads[selectedYear]);
+
+	$effect(() => {
+		const players = squads[selectedNation] ?? [];
+		const target = getZoomForFlows(selectedNation, players);
+		iMapScale.set(target.scale);
+		iMapTranslate.set(target.translate);
+	});
 	const nations = $derived(Object.keys(squads).sort());
 	const squadStats = $derived(getSquadClubNationStats(squads));
 	const confederationStats = $derived(getConfederationStats(squads));
@@ -257,11 +300,45 @@
 		<span class="heading-text">World Cup</span>
 	</h1>
 
+	<div class="interactive-body">
 	<div class="map-section">
 		<div style="position: relative;">
-			<WorldMap />
-			<FlowLayer {squads} nation={selectedNation} />
+			<WorldMap scale={$iMapScale} translate={$iMapTranslate} />
+			<FlowLayer {squads} nation={selectedNation} scale={$iMapScale} translate={$iMapTranslate} />
 		</div>
+	</div>
+
+	{#if squadStats[selectedNation]}
+		<div class="squad-bar-section">
+			<p class="squad-bar-label">Where players club: share of squad by club nation</p>
+			<div class="squad-bar-wrap">
+				<LayerCake
+					data={squadStats[selectedNation]}
+					x={xAccessor}
+					xDomain={[0, 100]}
+				>
+					<Svg>
+						<StackedBar stackedData={squadStats[selectedNation]} />
+					</Svg>
+				</LayerCake>
+			</div>
+			<div class="squad-bar-legend">
+				{#each squadStats[selectedNation].slice(0, 6) as seg (seg.label)}
+					<span class="squad-legend-item">
+						<span class="squad-legend-dot" style="background: {getConfederationColor(seg.confederation) ?? '#ccc'};"></span>
+						<span>{seg.label}{seg.confederation ? ` (${seg.confederation})` : ''}: <span class="squad-legend-pct">{seg.percentage.toFixed(0)}%</span></span>
+					</span>
+				{/each}
+				{#if squadStats[selectedNation].length > 6}
+					{@const othersTotal = squadStats[selectedNation].slice(6).reduce((sum, s) => sum + s.percentage, 0)}
+					<span class="squad-legend-item squad-legend-others">
+						<span class="squad-legend-dot" style="background: #ccc;"></span>
+						<span>Others <span class="squad-legend-pct">{othersTotal.toFixed(0)}%</span></span>
+					</span>
+				{/if}
+			</div>
+		</div>
+	{/if}
 	</div>
 </section>
 
@@ -291,7 +368,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		background: #f5f4f0;
 	}
 
 	.map-container {
@@ -499,6 +575,29 @@
 		display: inline;
 	}
 
+	.interactive-body {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	@media (min-width: 900px) {
+		.interactive-body {
+			display: grid;
+			grid-template-columns: 3fr 2fr;
+			gap: 2rem;
+			align-items: start;
+		}
+		.squad-bar-section {
+			max-width: none;
+			margin-top: 0;
+		}
+		.squad-bar-legend {
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+	}
+
 	.map-section {
 		margin-bottom: 2rem;
 	}
@@ -597,6 +696,65 @@
 	.confed-count {
 		font-size: 1rem;
 		color: #888;
+	}
+
+	/* ── Squad bar (interactive section) ────────────────────────────────────── */
+
+	.squad-bar-section {
+		max-width: 800px;
+		margin-top: 1.5rem;
+	}
+
+	.squad-bar-label {
+		font-size: 0.8rem;
+		font-weight: 600;
+		font-family: var(--font-display);
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		color: #999;
+		margin: 0 0 0.5rem;
+	}
+
+	.squad-bar-wrap {
+		height: 44px;
+		width: 100%;
+	}
+
+	:global(.squad-bar-wrap .layercake-container) {
+		height: 44px !important;
+	}
+
+	.squad-bar-legend {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.25rem;
+		margin-top: 0.75rem;
+	}
+
+	.squad-legend-item {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.8rem;
+		font-family: var(--font-display);
+		letter-spacing: -0.02em;
+		color: #444;
+	}
+
+	.squad-legend-others {
+		color: #999;
+	}
+
+	.squad-legend-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	.squad-legend-pct {
+		color: #888;
+		font-weight: 600;
 	}
 
 	/* ── Methodology / footnotes ─────────────────────────────────────────────── */
