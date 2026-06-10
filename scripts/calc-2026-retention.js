@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 const squads = JSON.parse(fs.readFileSync('./src/data/2026/squads.json', 'utf8'));
-const teams = JSON.parse(fs.readFileSync('./src/data/2022/teams.json', 'utf8'));
+const teams = JSON.parse(fs.readFileSync('./src/data/teams.json', 'utf8'));
 
 // Create nation -> confederation map
 const nationToConfederation = Object.fromEntries(teams.map(t => [t.nation, t.confederation]));
@@ -26,10 +26,10 @@ for (const [nation, players] of Object.entries(squads)) {
 }
 
 // Calculate retention rates
-const confederations = ['AFC', 'CONCACAF', 'UEFA', 'CONMEBOL', 'CAF'];
+const confederations = ['AFC', 'CONCACAF', 'UEFA', 'CONMEBOL', 'CAF', 'OFC'];
 console.log('\n2026 Domestic Retention Rates:');
 console.log('-----');
-
+     
 for (const confed of confederations) {
 	if (confedStats[confed]) {
 		const rate = Math.round((confedStats[confed].domestic / confedStats[confed].total) * 100);

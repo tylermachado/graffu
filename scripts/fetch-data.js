@@ -33,11 +33,11 @@ async function fetchData() {
 			name: team.name
 		}));
 
-		const teamFilePath = path.join(__dirname, '../src/data/2022/teams.json');
+		const teamFilePath = path.join(__dirname, '../src/data/teams.json');
 		fs.mkdirSync(path.dirname(teamFilePath), { recursive: true });
 		fs.writeFileSync(teamFilePath, JSON.stringify(teamData, null, 2));
 
-		console.log(`✓ Saved ${teamData.length} teams to src/data/2022/teams.json`);
+		console.log(`✓ Saved ${teamData.length} teams to src/data/teams.json`);
 		console.log('Fetching players for each team...');
 
 		for (const team of teamData) {

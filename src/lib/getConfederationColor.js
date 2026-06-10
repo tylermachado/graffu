@@ -1,4 +1,4 @@
-import confederations from '../data/2022/confederations.json';
+import confederations from '../data/confederations.json';
 
 /**
  * Creates a map of confederation names to their hex color codes

@@ -1,4 +1,4 @@
-import teams from '../data/2022/teams.json';
+import teams from '../data/teams.json';
 
 /** @type {Record<string, string>} */
 const nationToConfederation = Object.fromEntries(teams.map((t) => [t.nation, t.confederation]));

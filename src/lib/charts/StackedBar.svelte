@@ -1,7 +1,7 @@
 <script>
 	import { getContext, onMount } from 'svelte';
 	import { schemeSet1 } from 'd3-scale-chromatic';
-	import confederations from '../../data/2022/confederations.json';
+	import confederations from '../../data/confederations.json';
 	import { getConfederationColor } from '$lib/getConfederationColor.js';
 	import { getNationColor } from '$lib/getNationColor.js';
 

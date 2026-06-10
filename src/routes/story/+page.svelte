@@ -16,8 +16,8 @@
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { getAllCombinedFlows } from '$lib/getAllCombinedFlows.js';
 	import { getConfederationColor } from '$lib/getConfederationColor.js';
-	import teams from '../../data/2022/teams.json';
-	import confederations from '../../data/2022/confederations.json';
+	import teams from '../../data/teams.json';
+	import confederations from '../../data/confederations.json';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
 	import RetentionOverTime from '$lib/charts/RetentionOverTime.svelte';
 	import squads1994 from '../../data/1994/squads.json';

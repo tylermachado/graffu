@@ -1,4 +1,4 @@
-import teams from '../data/2022/teams.json';
+import teams from '../data/teams.json';
 
 /**
  * Creates a map of nation names to their hex color codes
