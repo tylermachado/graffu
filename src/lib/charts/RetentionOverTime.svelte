@@ -8,11 +8,11 @@
 
 	/** @type {Array<{ name: string; values: number[]; highlight: boolean; color: string }>} */
 	const CONFEDERATIONS = [
-		{ name: 'AFC',      values: [96, 91, 63, 65, 49, 41, 45, 58], highlight: false, color: '#c8c8c8' },
-		{ name: 'CONCACAF', values: [80, 77, 73, 59, 46, 48, 28, 50], highlight: false, color: '#c8c8c8' },
-		{ name: 'UEFA',     values: [64, 58, 50, 57, 51, 48, 33, 34], highlight: false, color: '#c8c8c8' },
-		{ name: 'CONMEBOL', values: [62, 42, 45, 32, 19, 17, 15, 11], highlight: false, color: '#c8c8c8' },
-		{ name: 'CAF',      values: [36, 33, 22, 20, 20, 10, 15, 12], highlight: true,  color: '#dc3c3c' },
+		{ name: 'AFC',      values: [96, 91, 63, 65, 49, 41, 45, 58], highlight: false, color: '#CC0000' },
+		{ name: 'CONCACAF', values: [80, 77, 73, 59, 46, 48, 28, 50], highlight: false, color: '#0000CC' },
+		{ name: 'UEFA',     values: [64, 58, 50, 57, 51, 48, 33, 34], highlight: false, color: '#660099' },
+		{ name: 'CONMEBOL', values: [62, 42, 45, 32, 19, 17, 15, 11], highlight: false, color: '#FF9900' },
+		{ name: 'CAF',      values: [36, 33, 22, 20, 20, 10, 15, 12], highlight: true,  color: '#009900' },
 	];
 
 	const W = 640;
@@ -76,9 +76,9 @@
 					stroke-width={conf.highlight ? 2.5 : 1.5}
 					stroke-linejoin="round"
 					stroke-linecap="round"
-					opacity={conf.highlight ? 1 : 0.55}
+					opacity={conf.highlight ? 1 : 0.3}
 				/>
-				<circle cx={lx} cy={ly} r={conf.highlight ? 4 : 3} fill={conf.color} opacity={conf.highlight ? 1 : 0.55} />
+				<circle cx={lx} cy={ly} r={conf.highlight ? 4 : 3} fill={conf.color} opacity={conf.highlight ? 1 : 0.3} />
 				<text
 					x={lx + 7}
 					y={ly}
@@ -86,7 +86,7 @@
 					class="conf-label"
 					class:conf-label--highlight={conf.highlight}
 					style:fill={conf.color}
-					style:opacity={conf.highlight ? '1' : '0.7'}
+					style:opacity={conf.highlight ? '1' : '0.35'}
 				>{conf.name}</text>
 			{/each}
 		</g>
@@ -95,9 +95,9 @@
 
 <style>
 	.retention-chart {
-		max-width: 680px;
+		width: 100%;
 		margin: 0 auto 2.5rem;
-		padding: 0 2rem;
+		padding: 0 1.5rem;
 	}
 
 	figcaption {
@@ -106,14 +106,16 @@
 
 	figcaption strong {
 		display: block;
-		font-size: 0.875rem;
+		font-family: var(--font-display);
+		font-size: 1.1rem;
 		font-weight: 700;
 		color: #111;
-		margin-bottom: 0.2rem;
+		margin-bottom: 0.3rem;
 	}
 
 	.sub {
-		font-size: 0.775rem;
+		font-family: var(--font-display);
+		font-size: 0.95rem;
 		color: #888;
 	}
 
@@ -132,7 +134,7 @@
 	.axis-label {
 		font-size: 10px;
 		fill: #aaa;
-		font-family: inherit;
+		font-family: var(--font-display);
 	}
 
 	.axis-label--y {
@@ -145,7 +147,7 @@
 
 	.conf-label {
 		font-size: 10px;
-		font-family: inherit;
+		font-family: var(--font-display);
 	}
 
 	.conf-label--highlight {
