@@ -237,7 +237,7 @@
 
 <div class="charts-row">
 	<RetentionOverTime />
-	<ConfederationShareOverTime {allSquads} {nationToConfederation} />
+	<ConfederationShareOverTime />
 </div>
 
 <!-- ── Explanation section ───────────────────────────────────────────────── -->

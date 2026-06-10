@@ -1,10 +1,29 @@
 <script>
+	import clubConf1994 from '../../data/1994/club-confederation.json';
+	import clubConf1998 from '../../data/1998/club-confederation.json';
+	import clubConf2002 from '../../data/2002/club-confederation.json';
+	import clubConf2006 from '../../data/2006/club-confederation.json';
+	import clubConf2010 from '../../data/2010/club-confederation.json';
+	import clubConf2014 from '../../data/2014/club-confederation.json';
+	import clubConf2018 from '../../data/2018/club-confederation.json';
+	import clubConf2022 from '../../data/2022/club-confederation.json';
+	import clubConf2026 from '../../data/2026/club-confederation.json';
+
 	/**
-	 * Each confederation's share of total World Cup players, 1994–2026.
-	 * Computed dynamically from squad data.
-	 * @type {{ allSquads: Record<number, Record<string, any[]>>; nationToConfederation: Record<string, string> }}
+	 * Club confederation data by year
+	 * @type {Record<number, any>}
 	 */
-	const { allSquads, nationToConfederation } = $props();
+	const clubConfData = {
+		1994: clubConf1994,
+		1998: clubConf1998,
+		2002: clubConf2002,
+		2006: clubConf2006,
+		2010: clubConf2010,
+		2014: clubConf2014,
+		2018: clubConf2018,
+		2022: clubConf2022,
+		2026: clubConf2026
+	};
 
 	const YEARS = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026];
 
@@ -13,6 +32,7 @@
 		{ name: 'CAF',      highlight: true,  color: '#009900' },
 		{ name: 'CONCACAF', highlight: false, color: '#0000CC' },
 		{ name: 'CONMEBOL', highlight: false, color: '#FF9900' },
+		{ name: 'OFC',      highlight: false, color: '#FFB6C1' },
 		{ name: 'UEFA',     highlight: false, color: '#660099' },
 	];
 
@@ -22,16 +42,9 @@
 		highlight,
 		color,
 		values: YEARS.map((year) => {
-			const squads = allSquads[year];
-			if (!squads) return 0;
-			let total = 0;
-			let confCount = 0;
-			for (const [nation, players] of Object.entries(squads)) {
-				const arr = /** @type {any[]} */ (players);
-				total += arr.length;
-				if (nationToConfederation[nation] === name) confCount += arr.length;
-			}
-			return total > 0 ? Math.round((confCount / total) * 100) : 0;
+			const data = clubConfData[year];
+			if (!data || !data[name]) return 0;
+			return Math.round(data[name].players_pct * 100);
 		})
 	}));
 
@@ -64,8 +77,8 @@
 
 <figure class="conf-share-chart">
 	<figcaption>
-		<strong>Share of total World Cup players by confederation, 1994–2026</strong>
-		<span class="sub">Percentage of all tournament players whose national team belongs to each confederation</span>
+		<strong>Share of total World Cup players by club confederation, 1994–2026</strong>
+		<span class="sub">Percentage of all tournament players who play their club football in each confederation</span>
 	</figcaption>
 	<svg
 		viewBox="0 0 {W} {H}"
