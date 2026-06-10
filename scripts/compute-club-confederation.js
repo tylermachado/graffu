@@ -31,6 +31,13 @@ for (const year of years) {
   let totalPlayers = 0;
   const allNations = new Set(Object.keys(squads));
 
+  // Count participating nations per confederation
+  for (const nation of Object.keys(squads)) {
+    const confed = nationToConfederation[nation] ?? "Unknown";
+    if (!nationSets[confed]) nationSets[confed] = new Set();
+    nationSets[confed].add(nation);
+  }
+
   const unknownNations = new Set();
 
   for (const players of Object.values(squads)) {
@@ -39,8 +46,6 @@ for (const year of years) {
       const confed = nationToConfederation[player.club_nation] ?? "Unknown";
       if (confed === "Unknown") unknownNations.add(player.club_nation);
       playerCounts[confed] = (playerCounts[confed] ?? 0) + 1;
-      if (!nationSets[confed]) nationSets[confed] = new Set();
-      nationSets[confed].add(player.club_nation);
       totalPlayers++;
     }
   }
@@ -52,14 +57,17 @@ for (const year of years) {
   const totalNations = allNations.size;
 
   const result = {};
-  for (const confed of Object.keys(playerCounts).sort()) {
-    const players = playerCounts[confed];
-    const nations = nationSets[confed].size;
+  const allConfeds = new Set([...Object.keys(playerCounts), ...Object.keys(nationSets)]);
+  for (const confed of [...allConfeds].sort()) {
+    const players = playerCounts[confed] ?? 0;
+    const nationSet = nationSets[confed] ?? new Set();
+    const nationList = [...nationSet].sort();
     result[confed] = {
       players,
       players_pct: totalPlayers > 0 ? players / totalPlayers : 0,
-      nations,
-      nations_pct: totalNations > 0 ? nations / totalNations : 0,
+      nations: nationList.length,
+      nations_pct: totalNations > 0 ? nationList.length / totalNations : 0,
+      nation_list: nationList,
     };
   }
 

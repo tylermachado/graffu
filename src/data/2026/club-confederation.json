@@ -2,37 +2,97 @@
   "AFC": {
     "players": 187,
     "players_pct": 0.15008025682182985,
-    "nations": 14,
-    "nations_pct": 0.2916666666666667
+    "nations": 9,
+    "nations_pct": 0.1875,
+    "nation_list": [
+      "Australia",
+      "Iran",
+      "Iraq",
+      "Japan",
+      "Jordan",
+      "Qatar",
+      "Saudi Arabia",
+      "South Korea",
+      "Uzbekistan"
+    ]
   },
   "CAF": {
     "players": 53,
     "players_pct": 0.04253611556982344,
-    "nations": 6,
-    "nations_pct": 0.125
+    "nations": 10,
+    "nations_pct": 0.20833333333333334,
+    "nation_list": [
+      "Algeria",
+      "Cape Verde",
+      "Côte d'Ivoire",
+      "DR Congo",
+      "Egypt",
+      "Ghana",
+      "Morocco",
+      "Senegal",
+      "South Africa",
+      "Tunisia"
+    ]
   },
   "CONCACAF": {
     "players": 81,
     "players_pct": 0.06500802568218299,
-    "nations": 7,
-    "nations_pct": 0.14583333333333334
+    "nations": 6,
+    "nations_pct": 0.125,
+    "nation_list": [
+      "Canada",
+      "Curaçao",
+      "Haiti",
+      "Mexico",
+      "Panama",
+      "United States"
+    ]
   },
   "CONMEBOL": {
     "players": 63,
     "players_pct": 0.05056179775280899,
-    "nations": 8,
-    "nations_pct": 0.16666666666666666
+    "nations": 6,
+    "nations_pct": 0.125,
+    "nation_list": [
+      "Argentina",
+      "Brazil",
+      "Colombia",
+      "Ecuador",
+      "Paraguay",
+      "Uruguay"
+    ]
   },
   "OFC": {
     "players": 8,
     "players_pct": 0.006420545746388443,
     "nations": 1,
-    "nations_pct": 0.020833333333333332
+    "nations_pct": 0.020833333333333332,
+    "nation_list": [
+      "New Zealand"
+    ]
   },
   "UEFA": {
     "players": 854,
     "players_pct": 0.6853932584269663,
-    "nations": 35,
-    "nations_pct": 0.7291666666666666
+    "nations": 16,
+    "nations_pct": 0.3333333333333333,
+    "nation_list": [
+      "Austria",
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Croatia",
+      "Czechia",
+      "England",
+      "France",
+      "Germany",
+      "Netherlands",
+      "Norway",
+      "Portugal",
+      "Scotland",
+      "Spain",
+      "Sweden",
+      "Switzerland",
+      "Turkey"
+    ]
   }
 }

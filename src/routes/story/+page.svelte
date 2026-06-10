@@ -20,6 +20,7 @@
 	import confederations from '../../data/confederations.json';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
 	import RetentionOverTime from '$lib/charts/RetentionOverTime.svelte';
+	import ConfederationShareOverTime from '$lib/charts/ConfederationShareOverTime.svelte';
 	import squads1994 from '../../data/1994/squads.json';
 	import squads1998 from '../../data/1998/squads.json';
 	import squads2002 from '../../data/2002/squads.json';
@@ -234,7 +235,10 @@
 	</section>
 {/if}
 
-<RetentionOverTime />
+<div class="charts-row">
+	<RetentionOverTime />
+	<ConfederationShareOverTime {allSquads} {nationToConfederation} />
+</div>
 
 <!-- ── Explanation section ───────────────────────────────────────────────── -->
 <section class="prose-section">
@@ -502,6 +506,16 @@
 		color: #444;
 		margin: 0 0 0.33rem;
 		max-width: 580px;
+	}
+
+	/* ── Charts row ──────────────────────────────────────────────────────── */
+
+	.charts-row {
+		display: flex;
+		flex-direction: column;
+		max-width: 860px;
+		margin: 0 auto;
+		padding: 0 1rem;
 	}
 
 	/* ── Prose sections ────────────────────────────────────────────────────── */

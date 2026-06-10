@@ -2,31 +2,73 @@
   "AFC": {
     "players": 56,
     "players_pct": 0.07608695652173914,
-    "nations": 9,
-    "nations_pct": 0.28125
+    "nations": 4,
+    "nations_pct": 0.125,
+    "nation_list": [
+      "Australia",
+      "Iran",
+      "Japan",
+      "South Korea"
+    ]
   },
   "CAF": {
     "players": 14,
     "players_pct": 0.019021739130434784,
-    "nations": 7,
-    "nations_pct": 0.21875
+    "nations": 5,
+    "nations_pct": 0.15625,
+    "nation_list": [
+      "Algeria",
+      "Cameroon",
+      "Côte d'Ivoire",
+      "Ghana",
+      "Nigeria"
+    ]
   },
   "CONCACAF": {
     "players": 67,
     "players_pct": 0.09103260869565218,
-    "nations": 5,
-    "nations_pct": 0.15625
+    "nations": 4,
+    "nations_pct": 0.125,
+    "nation_list": [
+      "Costa Rica",
+      "Honduras",
+      "Mexico",
+      "United States"
+    ]
   },
   "CONMEBOL": {
     "players": 37,
     "players_pct": 0.050271739130434784,
-    "nations": 7,
-    "nations_pct": 0.21875
+    "nations": 6,
+    "nations_pct": 0.1875,
+    "nation_list": [
+      "Argentina",
+      "Brazil",
+      "Chile",
+      "Colombia",
+      "Ecuador",
+      "Uruguay"
+    ]
   },
   "UEFA": {
     "players": 562,
     "players_pct": 0.7635869565217391,
-    "nations": 24,
-    "nations_pct": 0.75
+    "nations": 13,
+    "nations_pct": 0.40625,
+    "nation_list": [
+      "Belgium",
+      "Bosnia and Herzegovina",
+      "Croatia",
+      "England",
+      "France",
+      "Germany",
+      "Greece",
+      "Italy",
+      "Netherlands",
+      "Portugal",
+      "Russia",
+      "Spain",
+      "Switzerland"
+    ]
   }
 }
