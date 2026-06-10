@@ -1,0 +1,162 @@
+{
+  "Costa Rica": {
+    "total": 23,
+    "domestic": 20,
+    "rate": 0.8695652173913043
+  },
+  "Ecuador": {
+    "total": 23,
+    "domestic": 18,
+    "rate": 0.782608695652174
+  },
+  "Germany": {
+    "total": 23,
+    "domestic": 21,
+    "rate": 0.9130434782608695
+  },
+  "Poland": {
+    "total": 23,
+    "domestic": 8,
+    "rate": 0.34782608695652173
+  },
+  "England": {
+    "total": 23,
+    "domestic": 21,
+    "rate": 0.9130434782608695
+  },
+  "Paraguay": {
+    "total": 23,
+    "domestic": 5,
+    "rate": 0.21739130434782608
+  },
+  "Sweden": {
+    "total": 23,
+    "domestic": 6,
+    "rate": 0.2608695652173913
+  },
+  "Trinidad and Tobago": {
+    "total": 23,
+    "domestic": 4,
+    "rate": 0.17391304347826086
+  },
+  "Argentina": {
+    "total": 23,
+    "domestic": 3,
+    "rate": 0.13043478260869565
+  },
+  "Côte d'Ivoire": {
+    "total": 23,
+    "domestic": 0,
+    "rate": 0
+  },
+  "Netherlands": {
+    "total": 23,
+    "domestic": 14,
+    "rate": 0.6086956521739131
+  },
+  "Serbia and Montenegro": {
+    "total": 23,
+    "domestic": 7,
+    "rate": 0.30434782608695654
+  },
+  "Angola": {
+    "total": 23,
+    "domestic": 9,
+    "rate": 0.391304347826087
+  },
+  "Iran": {
+    "total": 23,
+    "domestic": 16,
+    "rate": 0.6956521739130435
+  },
+  "Mexico": {
+    "total": 23,
+    "domestic": 19,
+    "rate": 0.8260869565217391
+  },
+  "Portugal": {
+    "total": 23,
+    "domestic": 8,
+    "rate": 0.34782608695652173
+  },
+  "Czechia": {
+    "total": 23,
+    "domestic": 2,
+    "rate": 0.08695652173913043
+  },
+  "Ghana": {
+    "total": 23,
+    "domestic": 4,
+    "rate": 0.17391304347826086
+  },
+  "Italy": {
+    "total": 23,
+    "domestic": 23,
+    "rate": 1
+  },
+  "United States": {
+    "total": 23,
+    "domestic": 11,
+    "rate": 0.4782608695652174
+  },
+  "Australia": {
+    "total": 23,
+    "domestic": 3,
+    "rate": 0.13043478260869565
+  },
+  "Brazil": {
+    "total": 23,
+    "domestic": 3,
+    "rate": 0.13043478260869565
+  },
+  "Croatia": {
+    "total": 23,
+    "domestic": 3,
+    "rate": 0.13043478260869565
+  },
+  "Japan": {
+    "total": 23,
+    "domestic": 17,
+    "rate": 0.7391304347826086
+  },
+  "France": {
+    "total": 23,
+    "domestic": 11,
+    "rate": 0.4782608695652174
+  },
+  "South Korea": {
+    "total": 23,
+    "domestic": 16,
+    "rate": 0.6956521739130435
+  },
+  "Switzerland": {
+    "total": 23,
+    "domestic": 6,
+    "rate": 0.2608695652173913
+  },
+  "Togo": {
+    "total": 23,
+    "domestic": 1,
+    "rate": 0.043478260869565216
+  },
+  "Saudi Arabia": {
+    "total": 23,
+    "domestic": 23,
+    "rate": 1
+  },
+  "Spain": {
+    "total": 23,
+    "domestic": 18,
+    "rate": 0.782608695652174
+  },
+  "Tunisia": {
+    "total": 23,
+    "domestic": 4,
+    "rate": 0.17391304347826086
+  },
+  "Ukraine": {
+    "total": 23,
+    "domestic": 19,
+    "rate": 0.8260869565217391
+  }
+}

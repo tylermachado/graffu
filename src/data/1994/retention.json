@@ -1,0 +1,122 @@
+{
+  "Colombia": {
+    "total": 22,
+    "domestic": 17,
+    "rate": 0.7727272727272727
+  },
+  "Romania": {
+    "total": 22,
+    "domestic": 14,
+    "rate": 0.6363636363636364
+  },
+  "Switzerland": {
+    "total": 22,
+    "domestic": 18,
+    "rate": 0.8181818181818182
+  },
+  "United States": {
+    "total": 22,
+    "domestic": 15,
+    "rate": 0.6818181818181818
+  },
+  "Brazil": {
+    "total": 22,
+    "domestic": 11,
+    "rate": 0.5
+  },
+  "Cameroon": {
+    "total": 22,
+    "domestic": 11,
+    "rate": 0.5
+  },
+  "Russia": {
+    "total": 22,
+    "domestic": 10,
+    "rate": 0.45454545454545453
+  },
+  "Sweden": {
+    "total": 22,
+    "domestic": 10,
+    "rate": 0.45454545454545453
+  },
+  "Bolivia": {
+    "total": 22,
+    "domestic": 16,
+    "rate": 0.7272727272727273
+  },
+  "Germany": {
+    "total": 22,
+    "domestic": 16,
+    "rate": 0.7272727272727273
+  },
+  "South Korea": {
+    "total": 22,
+    "domestic": 20,
+    "rate": 0.9090909090909091
+  },
+  "Spain": {
+    "total": 22,
+    "domestic": 22,
+    "rate": 1
+  },
+  "Argentina": {
+    "total": 22,
+    "domestic": 11,
+    "rate": 0.5
+  },
+  "Bulgaria": {
+    "total": 22,
+    "domestic": 9,
+    "rate": 0.4090909090909091
+  },
+  "Greece": {
+    "total": 22,
+    "domestic": 22,
+    "rate": 1
+  },
+  "Nigeria": {
+    "total": 22,
+    "domestic": 0,
+    "rate": 0
+  },
+  "Italy": {
+    "total": 22,
+    "domestic": 22,
+    "rate": 1
+  },
+  "Mexico": {
+    "total": 22,
+    "domestic": 20,
+    "rate": 0.9090909090909091
+  },
+  "Norway": {
+    "total": 22,
+    "domestic": 7,
+    "rate": 0.3181818181818182
+  },
+  "Republic of Ireland": {
+    "total": 22,
+    "domestic": 0,
+    "rate": 0
+  },
+  "Belgium": {
+    "total": 22,
+    "domestic": 20,
+    "rate": 0.9090909090909091
+  },
+  "Morocco": {
+    "total": 22,
+    "domestic": 13,
+    "rate": 0.5909090909090909
+  },
+  "Netherlands": {
+    "total": 22,
+    "domestic": 14,
+    "rate": 0.6363636363636364
+  },
+  "Saudi Arabia": {
+    "total": 22,
+    "domestic": 22,
+    "rate": 1
+  }
+}

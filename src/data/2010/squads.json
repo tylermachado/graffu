@@ -1712,7 +1712,7 @@
       "caps": 70,
       "goals": null,
       "club": "Dalian Shide",
-      "club_nation": "China"
+      "club_nation": "China PR"
     },
     {
       "number": 10,
@@ -5524,7 +5524,7 @@
       "caps": 6,
       "goals": null,
       "club": "Sparta Prague",
-      "club_nation": "Czech Republic"
+      "club_nation": "Czechia"
     },
     {
       "number": 20,
@@ -5799,7 +5799,7 @@
       "club_nation": "Germany"
     }
   ],
-  "Ivory Coast": [
+  "Côte d'Ivoire": [
     {
       "number": 1,
       "position": "GK",
@@ -6028,10 +6028,10 @@
       "caps": 4,
       "goals": null,
       "club": "ASEC Mimosas",
-      "club_nation": "Ivory Coast"
+      "club_nation": "Côte d'Ivoire"
     }
   ],
-  "North Korea": [
+  "Korea DPR": [
     {
       "number": 1,
       "position": "GK",
@@ -6040,7 +6040,7 @@
       "caps": 28,
       "goals": null,
       "club": "Pyongyang City",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 2,
@@ -6050,7 +6050,7 @@
       "caps": 31,
       "goals": null,
       "club": "Amrokgang",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 3,
@@ -6060,7 +6060,7 @@
       "caps": 26,
       "goals": null,
       "club": "Sobaeksu",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 4,
@@ -6070,7 +6070,7 @@
       "caps": 35,
       "goals": null,
       "club": "April 25",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 5,
@@ -6080,7 +6080,7 @@
       "caps": 41,
       "goals": null,
       "club": "April 25",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 6,
@@ -6090,7 +6090,7 @@
       "caps": 11,
       "goals": null,
       "club": "April 25",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 7,
@@ -6100,7 +6100,7 @@
       "caps": 16,
       "goals": null,
       "club": "Rimyongsu",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 8,
@@ -6110,7 +6110,7 @@
       "caps": 23,
       "goals": null,
       "club": "April 25",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 9,
@@ -6140,7 +6140,7 @@
       "caps": 42,
       "goals": null,
       "club": "April 25",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 12,
@@ -6150,7 +6150,7 @@
       "caps": 16,
       "goals": null,
       "club": "April 25",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 13,
@@ -6160,7 +6160,7 @@
       "caps": 34,
       "goals": null,
       "club": "Amrokgang",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 14,
@@ -6170,7 +6170,7 @@
       "caps": 12,
       "goals": null,
       "club": "Amrokgang",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 15,
@@ -6180,7 +6180,7 @@
       "caps": 52,
       "goals": null,
       "club": "Pyongyang City",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 16,
@@ -6190,7 +6190,7 @@
       "caps": 41,
       "goals": null,
       "club": "April 25",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 17,
@@ -6210,7 +6210,7 @@
       "caps": 10,
       "goals": null,
       "club": "Amrokgang",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 19,
@@ -6220,7 +6220,7 @@
       "caps": 10,
       "goals": null,
       "club": "Pyongyang City",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 20,
@@ -6230,7 +6230,7 @@
       "caps": 9,
       "goals": null,
       "club": "Amrokgang",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 21,
@@ -6240,7 +6240,7 @@
       "caps": 15,
       "goals": null,
       "club": "Kyonggongop",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 22,
@@ -6250,7 +6250,7 @@
       "caps": 7,
       "goals": null,
       "club": "Rimyongsu",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     },
     {
       "number": 23,
@@ -6260,7 +6260,7 @@
       "caps": 3,
       "goals": null,
       "club": "Sobaeksu",
-      "club_nation": "North Korea"
+      "club_nation": "Korea DPR"
     }
   ],
   "Portugal": [
@@ -6826,7 +6826,7 @@
       "caps": 11,
       "goals": null,
       "club": "Hangzhou Greentown",
-      "club_nation": "China"
+      "club_nation": "China PR"
     },
     {
       "number": 11,
@@ -6886,7 +6886,7 @@
       "caps": 25,
       "goals": null,
       "club": "Hangzhou Greentown",
-      "club_nation": "China"
+      "club_nation": "China PR"
     },
     {
       "number": 17,

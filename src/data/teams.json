@@ -218,6 +218,7 @@
   { "nation": "San Marino", "confederation": "UEFA", "color": "#003399" },
   { "nation": "Scotland", "confederation": "UEFA", "color": "#003366" },
   { "nation": "Serbia", "confederation": "UEFA", "color": "#CC0000" },
+  { "nation": "Serbia and Montenegro", "confederation": "UEFA", "color": "#CC0000" },
   { "nation": "Slovakia", "confederation": "UEFA", "color": "#003399" },
   { "nation": "Slovenia", "confederation": "UEFA", "color": "#006600" },
   { "nation": "Spain", "confederation": "UEFA", "color": "#CC0000" },
@@ -225,5 +226,6 @@
   { "nation": "Switzerland", "confederation": "UEFA", "color": "#CC0000" },
   { "nation": "Turkey", "confederation": "UEFA", "color": "#CC0000" },
   { "nation": "Ukraine", "confederation": "UEFA", "color": "#FFCC00" },
-  { "nation": "Wales", "confederation": "UEFA", "color": "#CC0000" }
+  { "nation": "Wales", "confederation": "UEFA", "color": "#CC0000" },
+  { "nation": "Yugoslavia", "confederation": "UEFA", "color": "#003399" }
 ]

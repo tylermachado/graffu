@@ -1,0 +1,32 @@
+{
+  "AFC": {
+    "players": 91,
+    "players_pct": 0.12907801418439716,
+    "nations": 5,
+    "nations_pct": 0.15625
+  },
+  "CAF": {
+    "players": 39,
+    "players_pct": 0.05531914893617021,
+    "nations": 4,
+    "nations_pct": 0.125
+  },
+  "CONCACAF": {
+    "players": 61,
+    "players_pct": 0.08652482269503546,
+    "nations": 3,
+    "nations_pct": 0.09375
+  },
+  "CONMEBOL": {
+    "players": 67,
+    "players_pct": 0.0950354609929078,
+    "nations": 6,
+    "nations_pct": 0.1875
+  },
+  "UEFA": {
+    "players": 447,
+    "players_pct": 0.6340425531914894,
+    "nations": 20,
+    "nations_pct": 0.625
+  }
+}

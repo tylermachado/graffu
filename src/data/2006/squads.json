@@ -2087,7 +2087,7 @@
       "club_nation": "Argentina"
     }
   ],
-  "Ivory Coast": [
+  "Côte d'Ivoire": [
     {
       "number": 1,
       "position": "GK",
@@ -3711,7 +3711,7 @@
       "club_nation": "Portugal"
     }
   ],
-  "Czech Republic": [
+  "Czechia": [
     {
       "number": 1,
       "position": "GK",
@@ -3790,7 +3790,7 @@
       "caps": 115,
       "goals": null,
       "club": "Dynamo České Budějovice",
-      "club_nation": "Czech Republic"
+      "club_nation": "Czechia"
     },
     {
       "number": 9,
@@ -3870,7 +3870,7 @@
       "caps": 11,
       "goals": null,
       "club": "Sparta Prague",
-      "club_nation": "Czech Republic"
+      "club_nation": "Czechia"
     },
     {
       "number": 17,
@@ -6210,7 +6210,7 @@
       "caps": 5,
       "goals": null,
       "club": "Sparta Prague",
-      "club_nation": "Czech Republic"
+      "club_nation": "Czechia"
     },
     {
       "number": 19,
