@@ -12,6 +12,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
+		"csv-to-steps": "node scripts/csv-to-steps-json.js",
 		"fetch-data": "node scripts/fetch-data.js",
 		"scrape-wiki": "node scripts/scrape-wiki.js"
 	},
