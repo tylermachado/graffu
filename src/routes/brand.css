@@ -1,0 +1,245 @@
+/* ── brand.css ──────────────────────────────────────────────────────────────
+/* ── Webfont declarations ──────────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'TAY Flapjack';
+  src: url('/fonts/tay-flapjack/TAYFlapjack.woff2') format('woff2'),
+       url('/fonts/tay-flapjack/TAYFlapjack.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/source-serif-4/source-serif-4-latin-400-normal.woff2') format('woff2'),
+       url('/fonts/source-serif-4/source-serif-4-latin-400-normal.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/source-serif-4/source-serif-4-latin-400-italic.woff2') format('woff2'),
+       url('/fonts/source-serif-4/source-serif-4-latin-400-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/source-serif-4/source-serif-4-latin-700-normal.woff2') format('woff2'),
+       url('/fonts/source-serif-4/source-serif-4-latin-700-normal.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('/fonts/source-serif-4/source-serif-4-latin-700-italic.woff2') format('woff2'),
+       url('/fonts/source-serif-4/source-serif-4-latin-700-italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ── Tailwind v4 theme extensions ───────────────────────────────────────── */
+/*  These generate utility classes: font-display, font-serif, text-brand,   */
+/*  bg-surface-warm, text-accent-amber, tracking-brand, etc.                */
+
+@theme {
+  /* Typefaces */
+  --font-display: 'TAY Flapjack', serif;
+  --font-serif:   'Source Serif 4', Georgia, serif;
+
+  /* Brand palette */
+  --color-brand:          #059657;   /* primary green — nav, CTAs, dividers  */
+  --color-brand-light:    #76ebb8;   /* mint — hover fills, soft backgrounds */
+  --color-accent-red:     #e63e00;   /* orange-red                           */
+  --color-accent-amber:   #f8b600;   /* amber — highlights, quote marks      */
+
+  /* Surfaces */
+  --color-surface-warm:   #f6efe1;   /* warm cream canvas                    */
+
+  /* Type scale additions */
+  --text-display: 3.5rem;            /* 56px — hero / page title             */
+  --text-quote:   2rem;              /* 32px — pull quotes                   */
+  --text-heading: 1.5rem;            /* 24px — section headings, nav links   */
+
+  /* Letter spacing */
+  --tracking-brand: -0.02em;         /* tight tracking on all headings       */
+}
+
+
+/* ── Raw custom properties ───────────────────────────────────────────────── */
+/*  For use as var(--*) outside of Tailwind utilities.                       */
+
+:root {
+  /* Typefaces */
+  --font-display: 'TAY Flapjack', serif;
+  --font-serif:   'Source Serif 4', Georgia, serif;
+
+  /* Brand palette */
+  --color-brand:          #059657;
+  --color-brand-light:    #76ebb8;
+  --color-accent-red:     #e63e00;
+  --color-accent-amber:   #f8b600;
+  --color-surface-warm:   #f6efe1;
+
+  /* Type scale additions */
+  --text-display: 3.5rem;
+  --text-quote:   2rem;
+  --text-heading: 1.5rem;
+
+  /* Letter spacing */
+  --tracking-brand: -0.02em;
+
+  /* Nav — overrides layout.css 52px to match style tile */
+  --nav-height: 80px;
+  --nav-bg:     var(--color-brand);
+
+  /* Button shared tokens */
+  --btn-height:  3rem;        /* 48px                                        */
+  --btn-px:      1.5rem;      /* 24px                                        */
+  --btn-py:      1rem;        /* 16px                                        */
+  --btn-radius:  4px;
+  --btn-font:    var(--font-display);
+
+  /* Brand rule — decorative divider element */
+  --rule-w:      4rem;        /* 64px                                        */
+  --rule-h:      4px;
+  --rule-color:  var(--color-brand);
+}
+
+
+/* ── Type styles ─────────────────────────────────────────────────────────── */
+
+/* Hero / page title ——————————————————————————————————————
+   TAY Flapjack at 56px. Used for primary h1, hero headings.
+   Regular weight (400) — the typeface carries the personality. */
+.type-display {
+  font-family:    var(--font-display);
+  font-size:      var(--text-display);
+  font-weight:    400;
+  line-height:    1.25;
+  letter-spacing: var(--tracking-brand);
+}
+
+/* Section heading ————————————————————————————————————————
+   Source Serif 4 at 24px. Used for h2/h3 content headings. */
+.type-heading {
+  font-family:    var(--font-serif);
+  font-size:      var(--text-heading);
+  font-weight:    400;
+  line-height:    1.25;
+  letter-spacing: var(--tracking-brand);
+}
+
+/* Body copy ——————————————————————————————————————————————
+   Source Serif 4 at 16px. Used for paragraphs, descriptions. */
+.type-body {
+  font-family:    var(--font-serif);
+  font-size:      var(--text-base);
+  font-weight:    400;
+  line-height:    1.5;
+  letter-spacing: var(--tracking-brand);
+}
+
+/* Attribution / bold serif ———————————————————————————————
+   Source Serif 4 700. Used for bylines, author names. */
+.type-attribution {
+  font-family: var(--font-serif);
+  font-size:   var(--text-base);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Pull quote ——————————————————————————————————————————————
+   TAY Flapjack at 32px. Used for blockquotes, testimonials. */
+.type-quote {
+  font-family: var(--font-display);
+  font-size:   var(--text-quote);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* UI label ———————————————————————————————————————————————
+   TAY Flapjack, uppercase, 16px. Used for buttons, tags, labels. */
+.type-ui {
+  font-family:    var(--font-display);
+  font-size:      var(--text-base);
+  font-weight:    400;
+  line-height:    1;
+  text-transform: uppercase;
+}
+
+/* Nav link ———————————————————————————————————————————————
+   TAY Flapjack at 24px. Used for primary navigation items. */
+.type-nav {
+  font-family:    var(--font-display);
+  font-size:      var(--text-heading);
+  font-weight:    400;
+  line-height:    1;
+}
+
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+
+.btn {
+  display:        inline-flex;
+  align-items:    center;
+  justify-content: center;
+  gap:            2rem;
+  height:         var(--btn-height);
+  padding:        var(--btn-py) var(--btn-px);
+  font-family:    var(--btn-font);
+  font-size:      var(--text-base);
+  font-weight:    400;
+  line-height:    1;
+  text-transform: uppercase;
+  border-radius:  var(--btn-radius);
+  text-decoration: none;
+  cursor:         pointer;
+  white-space:    nowrap;
+}
+
+/* Filled green */
+.btn-primary {
+  background-color: var(--color-brand);
+  color:            #ffffff;
+  border:           none;
+}
+
+/* Outlined black */
+.btn-secondary {
+  background-color: transparent;
+  color:            var(--color-ink);
+  border:           1px solid currentColor;
+}
+
+/* Underlined text-only */
+.btn-link {
+  background:      none;
+  border:          none;
+  padding:         0;
+  height:          auto;
+  gap:             0;
+  text-decoration: underline;
+  color:           var(--color-ink);
+}
+
+
+/* ── Decorative elements ─────────────────────────────────────────────────── */
+
+/* Brand rule — the short green bar used as a section divider in the tile */
+.brand-rule {
+  display:          block;
+  width:            var(--rule-w);
+  height:           var(--rule-h);
+  background-color: var(--rule-color);
+  border:           none;
+  flex-shrink:      0;
+}
