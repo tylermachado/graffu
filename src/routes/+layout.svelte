@@ -29,7 +29,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 0 1.5rem;
-		height: 52px;
+		height: 80px;
 		background: var(--color-brand);
 		border-bottom: 1px solid var(--color-brand);
 	}

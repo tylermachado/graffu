@@ -149,30 +149,27 @@
 	];
 </script>
 
-<!-- ── Story header ─────────────────────────────────────────────────────── -->
-<header class="story-header">
-	<p class="story-eyebrow">African Football at the World Cup</p>
-	<h1 class="story-headline">Club vs Country</h1>
-	<p class="story-deck">
-		Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage. This is the story of what that looks like, squad by squad, tournament by tournament.
-	</p>
-	<div class="story-meta">
-		<!-- <span>By Your Name</span> -->
-		<!-- <span class="meta-sep">·</span> -->
-		<span>Published May 2026</span>
+<!-- ── Hero: combined flow map with overlaid story header ──────────────── -->
+<section class="hero-section">
+	<div class="hero-map">
+		<WorldMap />
+		<CombinedFlowLayer flows={combinedFlows} />
 	</div>
-</header>
+	<header class="story-header">
+		<p class="story-eyebrow">African Football at the World Cup</p>
+		<h1 class="story-headline">Club vs Country</h1>
+		<p class="story-deck">
+			Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage.
+		</p>
+	</header>
+</section>
 
-<!-- ── Combined flows section ────────────────────────────────────────────── -->
-<section class="combined-flow-section">
+<!-- ── Flow legend + description ─────────────────────────────────────────── -->
+<div class="flow-meta">
 	<p class="combined-flow-desc">
 		Player flows from national squad to club nation, aggregated across all World Cup tournaments 1994–2022.
 		Arcs colored by source confederation. Filled circles = domestic retention.
 	</p>
-	<div class="combined-flow-map" style="position: relative;">
-		<WorldMap />
-		<CombinedFlowLayer flows={combinedFlows} />
-	</div>
 	<div class="combined-flow-legend">
 		{#each confederations as confed (confed.confederation)}
 			<span class="legend-item">
@@ -181,7 +178,7 @@
 			</span>
 		{/each}
 	</div>
-</section>
+</div>
 
 <!-- ── Intro ────────────────────────────────────────────────────────────── -->
 {#if introStep}
@@ -197,7 +194,7 @@
 <!-- ── Explanation section ───────────────────────────────────────────────── -->
 <section class="prose-section">
 	<p>
-		In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart above. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move.
+		In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart above. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move. So when you see a larger circle over a country, that means more of that nation's squad is playing domestically; when you see more lines going elsewehre, that means more of that nation's players play for clubs abroad.
 	</p>
 </section>
 
@@ -377,51 +374,56 @@
 		height: 40vh;
 	}
 
+	/* ── Hero section ──────────────────────────────────────────────────────── */
+
+	.hero-section {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		background: #f5f4f0;
+	}
+
+	.hero-map {
+		position: relative;
+		width: 100%;
+	}
+
 	/* ── Story header ──────────────────────────────────────────────────────── */
 
 	.story-header {
-		max-width: 680px;
-		margin: 0 auto;
-		padding: 4rem 2rem 2rem;
+		position: absolute;
+		right: 0;
+		bottom: 25px;
+		max-width: 600px;
+		padding: 1rem 1rem;
+		background: rgba(245, 244, 240, 0.78);
+		border-radius: 4px;
 	}
 
 	.story-eyebrow {
 		font-size: 1rem;
 		font-weight: 700;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		letter-spacing: -0.02em;
 		color: #999;
-		margin: 0 0 0.75rem;
+		margin: 0 0 0.33rem;
 	}
 
 	.story-headline {
 		font-size: clamp(2.25rem, 5vw, 3.5rem);
+		letter-spacing: -0.04em;
 		font-weight: 800;
 		line-height: 1.05;
-		margin: 0 0 1rem;
+		margin: 0 0 0.33rem;
 		color: #111;
 	}
 
 	.story-deck {
-		font-size: 1.2rem;
-		line-height: 1.55;
+		font-size: 1xrem;
+		line-height: 1.2;
 		color: #444;
-		margin: 0 0 1.5rem;
+		margin: 0 0 0.33rem;
 		max-width: 580px;
-	}
-
-	.story-meta {
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		font-size: 0.85rem;
-		color: #999;
-		border-top: 1px solid #e0e0e0;
-		padding-top: 1rem;
-	}
-
-	.meta-sep {
-		color: #ccc;
 	}
 
 	/* ── Prose sections ────────────────────────────────────────────────────── */
@@ -634,35 +636,30 @@
 		font-weight: 600;
 	}
 
-	/* ── Combined flows section ──────────────────────────────────────────────── */
+	/* ── Flow meta (legend + description below hero) ────────────────────────── */
 
-	.combined-flow-section {
+	.flow-meta {
 		max-width: 960px;
 		margin: 0 auto;
-		padding: 3rem 2rem;
-		border-top: 1px solid #e0e0e0;
-	}
-
-	.combined-flow-desc {
-		font-size: 0.85rem;
-		line-height: 1.5;
-		color: #777;
-		max-width: 640px;
-		margin: 0 0 1.5rem;
-	}
-
-	.combined-flow-map {
-		width: 100%;
-		background: #f5f4f0;
-		border-radius: 4px;
-		overflow: hidden;
+		padding: 1.25rem 2rem 2rem;
+		border-bottom: 1px solid #e0e0e0;
 	}
 
 	.combined-flow-legend {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.75rem 1.5rem;
-		margin-top: 1rem;
+		margin-bottom: 0.75rem;
+	}
+
+	.combined-flow-desc {
+		font-family: var(--font-display);
+		letter-spacing: -0.01em;
+		font-size: 0.85rem;
+		line-height: 1.25;
+		color: #777;
+		max-width: 640px;
+		margin: 0;
 	}
 
 	.legend-item {
