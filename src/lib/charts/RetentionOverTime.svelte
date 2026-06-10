@@ -1,18 +1,18 @@
 <script>
 	/**
-	 * Domestic retention rate by confederation, 1994–2022.
+	 * Domestic retention rate by confederation, 1994–2026.
 	 * Data compiled from squad files; matches the summary table in writing/outline.md.
 	 */
 
-	const YEARS = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022];
+	const YEARS = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026];
 
 	/** @type {Array<{ name: string; values: number[]; highlight: boolean; color: string }>} */
 	const CONFEDERATIONS = [
-		{ name: 'AFC',      values: [96, 91, 63, 65, 49, 41, 45, 58], highlight: false, color: '#CC0000' },
-		{ name: 'CONCACAF', values: [80, 77, 73, 59, 46, 48, 28, 50], highlight: false, color: '#0000CC' },
-		{ name: 'UEFA',     values: [64, 58, 50, 57, 51, 48, 33, 34], highlight: false, color: '#660099' },
-		{ name: 'CONMEBOL', values: [62, 42, 45, 32, 19, 17, 15, 11], highlight: false, color: '#FF9900' },
-		{ name: 'CAF',      values: [36, 33, 22, 20, 20, 10, 15, 12], highlight: true,  color: '#009900' },
+		{ name: 'AFC',      values: [96, 91, 63, 65, 49, 41, 45, 58, 51], highlight: false, color: '#CC0000' },
+		{ name: 'CONCACAF', values: [80, 77, 73, 59, 46, 48, 28, 50, 15], highlight: false, color: '#0000CC' },
+		{ name: 'UEFA',     values: [64, 58, 50, 57, 51, 48, 33, 34, 29], highlight: false, color: '#660099' },
+		{ name: 'CONMEBOL', values: [62, 42, 45, 32, 19, 17, 15, 11, 8], highlight: false, color: '#FF9900' },
+		{ name: 'CAF',      values: [36, 33, 22, 20, 20, 10, 15, 12, 25], highlight: true,  color: '#009900' },
 	];
 
 	const W = 640;
@@ -44,14 +44,14 @@
 
 <figure class="retention-chart">
 	<figcaption>
-		<strong>Domestic retention rate by confederation, 1994–2022</strong>
+		<strong>Domestic retention rate by confederation, 1994–2026</strong>
 		<span class="sub">Share of World Cup squad players based at clubs in their home country</span>
 	</figcaption>
 	<svg
 		viewBox="0 0 {W} {H}"
 		class="chart-svg"
 		role="img"
-		aria-label="Line chart showing domestic retention rates by confederation from 1994 to 2022. CAF starts lowest at 36% and falls to 12%."
+		aria-label="Line chart showing domestic retention rates by confederation from 1994 to 2026. CAF starts lowest at 36% and rises to 25% by 2026."
 	>
 		<g transform="translate({M.left},{M.top})">
 			<!-- Grid lines and Y labels -->

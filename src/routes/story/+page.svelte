@@ -28,13 +28,14 @@
 	import squads2014 from '../../data/2014/squads.json';
 	import squads2018 from '../../data/2018/squads.json';
 	import squads2022 from '../../data/2022/squads.json';
+	import squads2026 from '../../data/2026/squads.json';
 	import steps from '../../data/scrolly-steps.json';
 
 	const introStep = steps.find(s => s.type === 'intro');
 	const outroStep = steps.find(s => s.type === 'outro');
 	const scrollySteps = steps.filter(s => s.type !== 'intro' && s.type !== 'outro');
 
-	const years = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022];
+	const years = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026];
 
 	/** @type {Record<number, Record<string, any[]>>} */
 	const allSquads = {
@@ -46,6 +47,7 @@
 		2014: squads2014,
 		2018: squads2018,
 		2022: squads2022,
+		2026: squads2026
 	};
 
 	// ── Combined flows (all years, all nations) ──────────────────────────────
@@ -144,8 +146,8 @@
 
 	// ── Interactive section ────────────────────────────────────────────────────
 
-	let selectedYear = $state(2022);
-	let selectedNation = $state(Object.keys(squads2022).sort()[0]);
+	let selectedYear = $state(2026);
+	let selectedNation = $state(Object.keys(squads2026).sort()[0]);
 
 	const iMapScale = tweened(153, { duration: 700, easing: cubicInOut });
 	const iMapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: 700, easing: cubicInOut });
@@ -187,7 +189,7 @@
 	const FOOTNOTES = [
 		{
 			id: 1,
-			text: 'Squad data compiled from FIFA official World Cup squad lists and Wikipedia tournament records, 1994–2022. Domestic retention rate is defined as the share of a squad’s players based at clubs in their home country at the time of each tournament.'
+			text: 'Squad data compiled from FIFA official World Cup squad lists and Wikipedia tournament records, 1994–2026. Domestic retention rate is defined as the share of a squad’s players based at clubs in their home country at the time of each tournament.'
 		},
 	];
 </script>
@@ -210,7 +212,7 @@
 <!-- ── Flow legend + description ─────────────────────────────────────────── -->
 <div class="flow-meta">
 	<p class="combined-flow-desc">
-		Player flows from national squad to club nation, aggregated across all World Cup tournaments 1994–2022.
+		Player flows from national squad to club nation, aggregated across all World Cup tournaments 1994–2026.
 		Arcs colored by source confederation. Filled circles = domestic retention.
 	</p>
 	<div class="combined-flow-legend">
