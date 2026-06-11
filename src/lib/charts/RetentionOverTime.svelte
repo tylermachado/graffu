@@ -62,7 +62,13 @@
 
 			<!-- X labels -->
 			{#each YEARS as yr}
-				<text x={x(yr)} y={IH + 20} class="axis-label axis-label--x">{yr}</text>
+				<text x={x(yr)} y={IH + 20} class="axis-label axis-label--x axis-label--x-desktop">{yr}</text>
+				<text
+					x={x(yr)}
+					y={IH + 20}
+					class="axis-label axis-label--x axis-label--x-mobile"
+					transform={`rotate(-45 ${x(yr)} ${IH + 20})`}
+				>{yr}</text>
 			{/each}
 
 			<!-- Lines — draw non-highlighted first so CAF renders on top -->
@@ -145,6 +151,10 @@
 		text-anchor: middle;
 	}
 
+	.axis-label--x-mobile {
+		display: none;
+	}
+
 	.conf-label {
 		font-size: 10px;
 		font-family: var(--font-display);
@@ -153,5 +163,29 @@
 	.conf-label--highlight {
 		font-size: 11px;
 		font-weight: 700;
+	}
+
+	@media (max-width: 640px) {
+		/* SVG text scales with the viewBox; increase source sizes on small screens. */
+		.axis-label {
+			font-size: 28px;
+		}
+
+		.axis-label--x-desktop {
+			display: none;
+		}
+
+		.axis-label--x-mobile {
+			display: block;
+			text-anchor: end;
+		}
+
+		.conf-label {
+			font-size: 20px;
+		}
+
+		.conf-label--highlight {
+			font-size: 22px;
+		}
 	}
 </style>
