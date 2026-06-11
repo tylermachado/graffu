@@ -141,7 +141,7 @@
 		display: block;
 		font-family: var(--font-display);
 		font-size: 1.1rem;
-		font-weight: 700;
+		font-weight: 400;
 		color: #111;
 		margin-bottom: 0.3rem;
 	}
@@ -185,6 +185,6 @@
 
 	.conf-label--highlight {
 		font-size: 11px;
-		font-weight: 700;
+		font-weight: 400;
 	}
 </style>

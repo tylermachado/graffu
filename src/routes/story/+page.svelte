@@ -554,7 +554,7 @@
 	.story-headline {
 		font-size: clamp(2.25rem, 5vw, 3.5rem);
 		letter-spacing: -0.04em;
-		font-weight: 800;
+		font-weight: 400;
 		line-height: 1.05;
 		margin: 0 0 0.33rem;
 		color: #111;

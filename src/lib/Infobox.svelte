@@ -91,7 +91,7 @@
 		display: block;
 		font-family: var(--font-display);
 		font-size: 0.75rem;
-		font-weight: 700;
+		font-weight: 400;
 		letter-spacing: 0.1em;
 		text-transform: uppercase;
 		color: #8a7f68;
@@ -101,7 +101,7 @@
 	.infobox-title {
 		font-family: var(--font-display);
 		font-size: 1.15rem;
-		font-weight: 700;
+		font-weight: 400;
 		letter-spacing: -0.02em;
 		line-height: 1.1;
 		margin: 0;
