@@ -1,7 +1,64 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { base } from '$app/paths';
+	import { base, resolve } from '$app/paths';
+	import { onMount } from 'svelte';
+
+	const tayFlapjackWoff2 = `${base}/fonts/tay-flapjack/TAYFlapjack.woff2`;
+	const tayFlapjackWoff = `${base}/fonts/tay-flapjack/TAYFlapjack.woff`;
+	const sourceSerif400Woff2 = `${base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff2`;
+	const sourceSerif400Woff = `${base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff`;
+	const sourceSerif400ItalicWoff2 = `${base}/fonts/source-serif-4/source-serif-4-latin-400-italic.woff2`;
+	const sourceSerif400ItalicWoff = `${base}/fonts/source-serif-4/source-serif-4-latin-400-italic.woff`;
+	const sourceSerif700Woff2 = `${base}/fonts/source-serif-4/source-serif-4-latin-700-normal.woff2`;
+	const sourceSerif700Woff = `${base}/fonts/source-serif-4/source-serif-4-latin-700-normal.woff`;
+	const sourceSerif700ItalicWoff2 = `${base}/fonts/source-serif-4/source-serif-4-latin-700-italic.woff2`;
+	const sourceSerif700ItalicWoff = `${base}/fonts/source-serif-4/source-serif-4-latin-700-italic.woff`;
+
+	onMount(() => {
+		const fontFaces = [
+			new FontFace('TAY Flapjack', `url('${tayFlapjackWoff2}') format('woff2'), url('${tayFlapjackWoff}') format('woff')`, {
+				weight: '400',
+				style: 'normal',
+				display: 'swap'
+			}),
+			new FontFace('Source Serif 4', `url('${sourceSerif400Woff2}') format('woff2'), url('${sourceSerif400Woff}') format('woff')`, {
+				weight: '400',
+				style: 'normal',
+				display: 'swap'
+			}),
+			new FontFace(
+				'Source Serif 4',
+				`url('${sourceSerif400ItalicWoff2}') format('woff2'), url('${sourceSerif400ItalicWoff}') format('woff')`,
+				{
+					weight: '400',
+					style: 'italic',
+					display: 'swap'
+				}
+			),
+			new FontFace('Source Serif 4', `url('${sourceSerif700Woff2}') format('woff2'), url('${sourceSerif700Woff}') format('woff')`, {
+				weight: '700',
+				style: 'normal',
+				display: 'swap'
+			}),
+			new FontFace(
+				'Source Serif 4',
+				`url('${sourceSerif700ItalicWoff2}') format('woff2'), url('${sourceSerif700ItalicWoff}') format('woff')`,
+				{
+					weight: '700',
+					style: 'italic',
+					display: 'swap'
+				}
+			)
+		];
+
+		void Promise.all(
+			fontFaces.map(async (fontFace) => {
+				const loadedFont = await fontFace.load();
+				document.fonts.add(loadedFont);
+			})
+		);
+	});
 
 	let { children } = $props();
 </script>
@@ -9,63 +66,15 @@
 <svelte:head>
 	<link rel="icon" href={favicon} />
 	<!-- Preload critical webfonts -->
-	<link rel="preload" as="font" href="{base}/fonts/tay-flapjack/TAYFlapjack.woff2" type="font/woff2" crossorigin />
-	<link rel="preload" as="font" href="{base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff2" type="font/woff2" crossorigin />
-	
-	<!-- Font faces with base path -->
-	<style>
-		@font-face {
-			font-family: 'TAY Flapjack';
-			src: url('{base}/fonts/tay-flapjack/TAYFlapjack.woff2') format('woff2'),
-				 url('{base}/fonts/tay-flapjack/TAYFlapjack.woff') format('woff');
-			font-weight: 400;
-			font-style: normal;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: 'Source Serif 4';
-			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff2') format('woff2'),
-				 url('{base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff') format('woff');
-			font-weight: 400;
-			font-style: normal;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: 'Source Serif 4';
-			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-400-italic.woff2') format('woff2'),
-				 url('{base}/fonts/source-serif-4/source-serif-4-latin-400-italic.woff') format('woff');
-			font-weight: 400;
-			font-style: italic;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: 'Source Serif 4';
-			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-700-normal.woff2') format('woff2'),
-				 url('{base}/fonts/source-serif-4/source-serif-4-latin-700-normal.woff') format('woff');
-			font-weight: 700;
-			font-style: normal;
-			font-display: swap;
-		}
-
-		@font-face {
-			font-family: 'Source Serif 4';
-			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-700-italic.woff2') format('woff2'),
-				 url('{base}/fonts/source-serif-4/source-serif-4-latin-700-italic.woff') format('woff');
-			font-weight: 700;
-			font-style: italic;
-			font-display: swap;
-		}
-	</style>
+	<link rel="preload" as="font" href={tayFlapjackWoff2} type="font/woff2" crossorigin="anonymous" />
+	<link rel="preload" as="font" href={sourceSerif400Woff2} type="font/woff2" crossorigin="anonymous" />
 </svelte:head>
 
 <header class="site-header">
-	<a href="{base}/" class="site-name">Graffu</a>
+	<a href={resolve('/')} class="site-name">Graffu</a>
 	<nav>
-		<a href="{base}/">Home</a>
-		<a href="{base}/story">Club vs Country</a>
+		<a href={resolve('/')}>Home</a>
+		<a href={resolve('/story')}>Club vs Country</a>
 	</nav>
 </header>
 
