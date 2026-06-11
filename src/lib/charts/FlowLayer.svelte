@@ -5,101 +5,20 @@
 	import worldData from 'world-atlas/countries-110m.json';
 	import { getClubNationFlows } from '$lib/getClubNationFlows.js';
 	import { getNationColor, hexToRgba } from '$lib/getNationColor.js';
+	import { NAME_TO_ISO } from '$lib/nameToIso.js';
 
 	const WIDTH = 960;
 	const HEIGHT = 500;
 
+	// countries-110m omits a few small territories; provide fallback lon/lat centroids.
+	/** @type {Record<string, [number, number]>} */
+	const GEO_CENTROID_FALLBACKS = {
+		'132': [-23.62, 15.11],
+		'531': [-68.99, 12.19]
+	};
+
 	/** @type {{ squads: Record<string, Array<{ club_nation: string }>>, nation: string, scale?: number, translate?: [number, number] }} */
 	let { squads, nation, scale = 153, translate = [WIDTH / 2, HEIGHT / 2] } = $props();
-
-	/**
-	 * Maps squad/club-nation names (as used in squads.json) to ISO 3166-1 numeric codes,
-	 * which are the feature IDs in world-atlas/countries-110m.json.
-	 * England, Scotland, and Wales all share the United Kingdom code (826).
-	 * Historical entities (FR Yugoslavia, Serbia and Montenegro) map to Serbia (688).
-	 * @type {Record<string, string>}
-	 */
-	const NAME_TO_ISO = {
-		Algeria: '012',
-		Angola: '024',
-		Argentina: '032',
-		Australia: '036',
-		Austria: '040',
-		Belgium: '056',
-		Bolivia: '068',
-		'Bosnia and Herzegovina': '070',
-		Brazil: '076',
-		Bulgaria: '100',
-		Cameroon: '120',
-		Canada: '124',
-		Chile: '152',
-		China: '156',
-		'China PR': '156',
-		Colombia: '170',
-		'Costa Rica': '188',
-		Croatia: '191',
-		'Czech Republic': '203',
-		Cyprus: '196',
-		Denmark: '208',
-		Ecuador: '218',
-		Egypt: '818',
-		England: '826',
-		France: '250',
-		'FR Yugoslavia': '688',
-		Germany: '276',
-		Ghana: '288',
-		Greece: '300',
-		Honduras: '340',
-		Hungary: '348',
-		Iceland: '352',
-		Iran: '364',
-		Ireland: '372',
-		Israel: '376',
-		'Ivory Coast': '384',
-		Italy: '380',
-		Jamaica: '388',
-		Japan: '392',
-		'South Korea': '410',
-		Kuwait: '414',
-		Mexico: '484',
-		Morocco: '504',
-		Netherlands: '528',
-		'New Zealand': '554',
-		Nigeria: '566',
-		'North Korea': '408',
-		Norway: '578',
-		Panama: '591',
-		Paraguay: '600',
-		Peru: '604',
-		Poland: '616',
-		Portugal: '620',
-		Qatar: '634',
-		'Republic of Ireland': '372',
-		Romania: '642',
-		Russia: '643',
-		'Saudi Arabia': '682',
-		Scotland: '826',
-		Senegal: '686',
-		Serbia: '688',
-		'Serbia and Montenegro': '688',
-		Slovakia: '703',
-		Slovenia: '705',
-		'South Africa': '710',
-		Spain: '724',
-		Sweden: '752',
-		Switzerland: '756',
-		Togo: '768',
-		'Trinidad and Tobago': '780',
-		Tunisia: '788',
-		Turkey: '792',
-		Ukraine: '804',
-		'United Arab Emirates': '784',
-		'United Kingdom': '826',
-		'United States': '840',
-		Uruguay: '858',
-		Wales: '826',
-		Yugoslavia: '688'
-	};
 
 	// Pre-compute geographic centroids once (lon/lat, never change)
 	const countries = /** @type {any} */ (feature(/** @type {any} */ (worldData), /** @type {any} */ (worldData).objects.countries));
@@ -109,6 +28,12 @@
 		const c = geoCentroid(/** @type {any} */ (f));
 		if (c && !isNaN(c[0]) && !isNaN(c[1])) {
 			geoCenterMap.set(String(f.id), /** @type {[number, number]} */ (c));
+		}
+	}
+
+	for (const [id, geo] of Object.entries(GEO_CENTROID_FALLBACKS)) {
+		if (!geoCenterMap.has(id)) {
+			geoCenterMap.set(id, geo);
 		}
 	}
 

@@ -9,10 +9,11 @@
 
 	/**
 	 * @type {{
-	 *   flows: Array<{ srcNation: string; clubNation: string; srcConfederation: string; count: number }>
+	 *   flows: Array<{ srcNation: string; clubNation: string; srcConfederation: string; count: number }>;
+	 *   animate?: boolean;
 	 * }}
 	 */
-	let { flows } = $props();
+	let { flows, animate = false } = $props();
 
 	const width = 960;
 	const height = 500;
@@ -80,6 +81,14 @@
 	);
 
 	const strokeScale = $derived(scaleSqrt().domain([1, maxCount]).range([0.3, 6]).clamp(true));
+
+	/**
+	 * Adds a small stagger so arcs/circles reveal progressively on first render.
+	 * @param {number} index
+	 */
+	function getDelay(index) {
+		return Math.min(index * 20, 600);
+	}
 </script>
 
 <svg
@@ -90,7 +99,7 @@
 	aria-label="Combined player club-nation flows across all World Cup tournaments 1994–2022"
 >
 	<!-- Foreign flows as arcs (rendered first, behind circles) -->
-	{#each foreignFlows as flow (flow.srcNation + '||' + flow.clubNation)}
+	{#each foreignFlows as flow, i (flow.srcNation + '||' + flow.clubNation)}
 		{@const src = getCentroid(flow.srcNation)}
 		{@const dst = getCentroid(flow.clubNation)}
 		{#if src && dst}
@@ -102,12 +111,14 @@
 				stroke-width={strokeScale(flow.count)}
 				stroke-linecap="round"
 				stroke-opacity="0.25"
+				class:animate-arc={animate}
+				style:animation-delay={`${getDelay(i)}ms`}
 			/>
 		{/if}
 	{/each}
 
 	<!-- Domestic retention circles (rendered on top of arcs) -->
-	{#each domesticFlows as flow (flow.srcNation + '||' + flow.clubNation)}
+	{#each domesticFlows as flow, i (flow.srcNation + '||' + flow.clubNation)}
 		{@const c = getCentroid(flow.srcNation)}
 		{#if c}
 			{@const color = getConfederationColor(flow.srcConfederation)}
@@ -120,6 +131,8 @@
 				stroke={color}
 				stroke-width="1.5"
 				stroke-opacity="1"
+				class:animate-circle={animate}
+				style:animation-delay={`${getDelay(i)}ms`}
 			/>
 		{/if}
 	{/each}
@@ -133,5 +146,37 @@
 		width: 100%;
 		height: auto;
 		pointer-events: none;
+	}
+
+	.animate-arc {
+		opacity: 0;
+		animation: arc-in 1950ms ease-out forwards;
+	}
+
+	.animate-circle {
+		opacity: 0;
+		transform-box: fill-box;
+		transform-origin: center;
+		animation: circle-in 1500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+	}
+
+	@keyframes arc-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	@keyframes circle-in {
+		from {
+			opacity: 0;
+			transform: scale(0.2);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
 	}
 </style>

@@ -35,9 +35,8 @@
 		height: auto;
 		display: block;
 	}
-
 	.country {
-		fill: #d0d0d0;
+		fill: var(--color-cream-400);
 		stroke: #fff;
 		stroke-width: 0.4;
 	}

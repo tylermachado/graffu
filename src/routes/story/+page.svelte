@@ -201,7 +201,7 @@
 <section class="hero-section">
 	<div class="hero-map">
 		<WorldMap />
-		<CombinedFlowLayer flows={combinedFlows} />
+		<CombinedFlowLayer flows={combinedFlows} animate={true} />
 	</div>
 	<header class="story-header">
 		<p class="story-eyebrow">African Football at the World Cup</p>
