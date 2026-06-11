@@ -44,7 +44,7 @@
 		values: YEARS.map((year) => {
 			const data = clubConfData[year];
 			if (!data || !data[name]) return 0;
-			return Math.round(data[name].players_pct * 100);
+			return Math.round(data[name].players_pct * 25);
 		})
 	}));
 

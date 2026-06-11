@@ -237,7 +237,6 @@
 
 <div class="charts-row">
 	<RetentionOverTime />
-	<ConfederationShareOverTime />
 </div>
 
 <!-- ── Explanation section ───────────────────────────────────────────────── -->
@@ -287,6 +286,16 @@
 		{/each}
 	</section>
 {/if}
+
+<div class="charts-row">
+	<RetentionOverTime />
+</div>
+
+<section class="prose-section">
+	<p>
+		The interactive map below shows all player flows from the squads of every World Cup tournament between 1994 and 2026. The size of the circles indicates the number of players who stayed in their home country's leagues, while the arcs show the most common international moves. Use the dropdown menus to explore.
+	</p>
+</section>
 
 <!-- ── Interactive section ───────────────────────────────────────────────── -->
 <section class="interactive-section">
