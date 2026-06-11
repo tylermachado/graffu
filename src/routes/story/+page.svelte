@@ -92,9 +92,11 @@
 		const f = _featureById.get(id);
 		if (!f) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
 		// Scale to 15% of full-fit: country is visible with surrounding context (50% more zoomed-out).
+		// Large countries like Brazil use 0.25 for better framing; others use 0.15.
 		// Center is computed by projecting the geographic centroid at targetScale with
 		// zero translation, then offsetting to place it at the viewport center.
-		const targetScale = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], f).scale() * 0.15;
+		const multiplier = nationName === 'Brazil' ? 0.25 : 0.15;
+		const targetScale = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], f).scale() * multiplier;
 		const geoCenter = geoCentroid(f);
 		const rawProj = geoConicConformal().scale(targetScale).translate([0, 0]);
 		const pt = rawProj(geoCenter);
@@ -325,7 +327,7 @@
 
 	{#if squadStats[selectedNation]}
 		<div class="squad-bar-section">
-			<p class="squad-bar-label">Where players club: share of squad by club nation</p>
+			<p class="squad-bar-label">share of squad by club nation</p>
 			<div class="squad-bar-wrap">
 				<LayerCake
 					data={squadStats[selectedNation]}
