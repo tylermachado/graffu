@@ -6,7 +6,60 @@
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+	<link rel="icon" href={favicon} />
+	<!-- Preload critical webfonts -->
+	<link rel="preload" as="font" href="{base}/fonts/tay-flapjack/TAYFlapjack.woff2" type="font/woff2" crossorigin />
+	<link rel="preload" as="font" href="{base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff2" type="font/woff2" crossorigin />
+	
+	<!-- Font faces with base path -->
+	<style>
+		@font-face {
+			font-family: 'TAY Flapjack';
+			src: url('{base}/fonts/tay-flapjack/TAYFlapjack.woff2') format('woff2'),
+				 url('{base}/fonts/tay-flapjack/TAYFlapjack.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Source Serif 4';
+			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff2') format('woff2'),
+				 url('{base}/fonts/source-serif-4/source-serif-4-latin-400-normal.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Source Serif 4';
+			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-400-italic.woff2') format('woff2'),
+				 url('{base}/fonts/source-serif-4/source-serif-4-latin-400-italic.woff') format('woff');
+			font-weight: 400;
+			font-style: italic;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Source Serif 4';
+			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-700-normal.woff2') format('woff2'),
+				 url('{base}/fonts/source-serif-4/source-serif-4-latin-700-normal.woff') format('woff');
+			font-weight: 700;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		@font-face {
+			font-family: 'Source Serif 4';
+			src: url('{base}/fonts/source-serif-4/source-serif-4-latin-700-italic.woff2') format('woff2'),
+				 url('{base}/fonts/source-serif-4/source-serif-4-latin-700-italic.woff') format('woff');
+			font-weight: 700;
+			font-style: italic;
+			font-display: swap;
+		}
+	</style>
+</svelte:head>
 
 <header class="site-header">
 	<a href="{base}/" class="site-name">Graffu</a>
