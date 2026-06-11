@@ -145,6 +145,7 @@
 		left: 0;
 		width: 100%;
 		height: auto;
+		aspect-ratio: 960 / 500;
 		pointer-events: none;
 	}
 

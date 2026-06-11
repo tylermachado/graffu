@@ -511,6 +511,49 @@
 		height: 40vh;
 	}
 
+	@media (max-width: 768px) {
+		.sticky-vis {
+			justify-content: flex-end;
+		}
+
+		.map-container {
+			height: 60vh;
+			overflow: hidden;
+		}
+
+		.map-container :global(.map-wrap) {
+			display: flex;
+			justify-content: center;
+			height: 100%;
+		}
+
+		.map-container :global(.world-svg) {
+			height: 100%;
+			width: calc(60vh * 960 / 500);
+			max-width: none;
+			flex-shrink: 0;
+		}
+
+		.map-container :global(.flow-layer) {
+			height: 100%;
+			width: calc(60vh * 960 / 500);
+			max-width: none;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.step {
+			align-items: flex-start;
+			padding: 0;
+		}
+
+		.step-card {
+			max-width: 100%;
+			padding: 0.75rem 1rem;
+			box-shadow: none;
+		}
+	}
+
 	@media (min-width: 1100px) {
 		.sticky-layout {
 			width: 100%;
