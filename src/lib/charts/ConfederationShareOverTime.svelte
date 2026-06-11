@@ -33,7 +33,6 @@
 		{ name: 'CONCACAF', highlight: false, color: '#0000CC' },
 		{ name: 'CONMEBOL', highlight: false, color: '#FF9900' },
 		{ name: 'OFC',      highlight: false, color: '#FFB6C1' },
-		{ name: 'UEFA',     highlight: false, color: '#660099' },
 	];
 
 	/** @type {Array<{ name: string; values: number[]; highlight: boolean; color: string }>} */
@@ -44,7 +43,7 @@
 		values: YEARS.map((year) => {
 			const data = clubConfData[year];
 			if (!data || !data[name]) return 0;
-			return Math.round(data[name].players_pct * 25);
+			return Math.round(data[name].players_pct * 100);
 		})
 	}));
 
@@ -64,7 +63,7 @@
 
 	/** @param {number} value */
 	function y(value) {
-		return IH - (value / 100) * IH;
+		return IH - (value / 25) * IH;
 	}
 
 	/** @param {number[]} values */
@@ -72,13 +71,13 @@
 		return YEARS.map((yr, i) => `${x(yr)},${y(values[i])}`).join(' ');
 	}
 
-	const yTicks = [0, 25, 50, 75, 100];
+	const yTicks = [0, 5, 10, 15, 20, 25];
 </script>
 
 <figure class="conf-share-chart">
 	<figcaption>
 		<strong>Share of total World Cup players by club confederation, 1994–2026</strong>
-		<span class="sub">Percentage of all tournament players who play their club football in each confederation</span>
+		<span class="sub">Percentage of all tournament players who play their club football in each confederation (excluding UEFA)</span>
 	</figcaption>
 	<svg
 		viewBox="0 0 {W} {H}"
@@ -165,7 +164,7 @@
 	}
 
 	.axis-label {
-		font-size: 10px;
+		font-size: 14px;
 		fill: #aaa;
 		font-family: var(--font-display);
 	}
@@ -179,12 +178,12 @@
 	}
 
 	.conf-label {
-		font-size: 10px;
+		font-size: 14px;
 		font-family: var(--font-display);
 	}
 
 	.conf-label--highlight {
-		font-size: 11px;
+		font-size: 15px;
 		font-weight: 400;
 	}
 </style>

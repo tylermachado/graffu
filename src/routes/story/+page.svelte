@@ -78,31 +78,37 @@
 	const _featureById = new Map(_zoomCountries.features.map(/** @param {any} f */ (f) => [String(f.id), f]));
 
 	/**
-	 * Returns the scale and translate needed to show `nationName` centered in the
-	 * viewport with surrounding context (fitSize to 50% of viewport dimensions).
-	 * Falls back to the default world view when no nation is active.
+	 * Returns the scale and translate needed to show `nationName` and all its club-nation
+	 * destinations centered in the viewport. Falls back to the default world view when no
+	 * nation is active.
 	 * @param {string} nationName
+	 * @param {Array<{ club_nation: string }>} players
 	 * @returns {{ scale: number, translate: [number, number] }}
 	 */
-	function getZoomForNation(nationName) {
+	function getZoomForNation(nationName, players = []) {
 		const DEFAULT_SCALE = 153;
 		const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
 		if (!nationName) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-		const id = NAME_TO_ISO[nationName];
-		if (!id) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-		const f = _featureById.get(id);
-		if (!f) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-		// Scale to 15% of full-fit: country is visible with surrounding context (50% more zoomed-out).
-		// Large countries like Brazil use 0.25 for better framing; others use 0.15.
-		// Center is computed by projecting the geographic centroid at targetScale with
-		// zero translation, then offsetting to place it at the viewport center.
-		const multiplier = nationName === 'Brazil' ? 0.25 : 0.15;
-		const targetScale = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], f).scale() * multiplier;
-		const geoCenter = geoCentroid(f);
-		const rawProj = geoConicConformal().scale(targetScale).translate([0, 0]);
-		const pt = rawProj(geoCenter);
-		if (!pt) return { scale: 153, translate: /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]) };
-		const targetTranslate = /** @type {[number, number]} */ ([MAP_WIDTH / 2 - pt[0], (MAP_HEIGHT * 2) / 3 - pt[1]]);
+
+		const names = new Set([nationName]);
+		for (const p of players) {
+			if (p.club_nation) names.add(p.club_nation);
+		}
+
+		const features = [];
+		for (const name of names) {
+			const id = NAME_TO_ISO[name];
+			if (!id) continue;
+			const f = _featureById.get(id);
+			if (f) features.push(f);
+		}
+
+		if (!features.length) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
+
+		const collection = { type: 'FeatureCollection', features };
+		const proj = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], /** @type {any} */ (collection));
+		const targetScale = proj.scale() * 0.97;
+		const targetTranslate = /** @type {[number, number]} */ (proj.translate());
 		return { scale: targetScale, translate: targetTranslate };
 	}
 
@@ -143,7 +149,8 @@
 	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: 700, easing: cubicInOut });
 
 	$effect(() => {
-		const target = getZoomForNation(scrollyNation);
+		const players = scrollySquads[scrollyNation] ?? [];
+		const target = getZoomForNation(scrollyNation, players);
 		mapScale.set(target.scale);
 		mapTranslate.set(target.translate);
 	});
@@ -318,7 +325,7 @@
 {/if}
 
 <div class="charts-row">
-	<RetentionOverTime />
+	<ConfederationShareOverTime />
 </div>
 
 <section class="prose-section">

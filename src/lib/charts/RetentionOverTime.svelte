@@ -132,7 +132,7 @@
 	}
 
 	.axis-label {
-		font-size: 10px;
+		font-size: 14px;
 		fill: #aaa;
 		font-family: var(--font-display);
 	}
