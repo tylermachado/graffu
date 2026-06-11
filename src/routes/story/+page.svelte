@@ -1,5 +1,6 @@
 <script>
 	import { LayerCake, Svg } from 'layercake';
+	import Infobox from '$lib/Infobox.svelte';
 	import Scrolly from '$lib/Scrolly.svelte';
 	import StackedBar from '$lib/charts/StackedBar.svelte';
 	import ScatterDots from '$lib/charts/ScatterDots.svelte';
@@ -230,10 +231,19 @@
 
 <!-- ── Intro ────────────────────────────────────────────────────────────── -->
 {#if introStep}
-	<section class="prose-section">
-		{#each introStep.text.split('\n\n') as paragraph, i (i)}
-			<p>{@html renderRef(paragraph)}</p>
-		{/each}
+		{@const introParagraphs = introStep.text.split('\n\n')}
+	<section class="prose-section prose-with-infobox">
+		<div class="prose-copy">
+			{#each introParagraphs as paragraph, i (i)}
+				<p>{@html renderRef(paragraph)}</p>
+			{/each}
+		</div>
+		<aside class="prose-infobox">
+			<Infobox title="">
+				<p>In international soccer, 11 players are on the pitch at any given time, but each nation in the World Cup has 26 players on its squad in total (up from 22 or 23 in previous years).</p>
+				<p>The 2026 tournament is the first to feature 48 teams competing, up from 32 in other years since the 1990s.</p>
+			</Infobox>
+		</aside>
 	</section>
 {/if}
 
@@ -242,20 +252,38 @@
 </div>
 
 <!-- ── Explanation section ───────────────────────────────────────────────── -->
-<section class="prose-section">
-	<p>
-		In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart above. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move. So when you see a larger circle over a country, that means more of that nation's squad is playing domestically; when you see more lines going elsewehre, that means more of that nation's players play for clubs abroad.
-	</p>
+<section class="prose-section prose-with-infobox">
+	<div class="prose-copy">
+		<p>
+			In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart above. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move. So when you see a larger circle over a country, that means more of that nation's squad is playing domestically; when you see more lines going elsewehre, that means more of that nation's players play for clubs abroad.
+		</p>
+	</div>
+	<aside class="prose-infobox">
+			<Infobox title="">
+				<p>Every continent has a "confederation" that governs football in that region, although some countries choose to play in a geographically different confederation (e.g. Australia in AFC, Israel in UEFA).</p>
+				<ul>
+					<li><strong>UEFA</strong> — Europe</li>
+					<li><strong>CONMEBOL</strong> — South America</li>
+					<li><strong>CONCACAF</strong> — North & Central America and the Caribbean</li>
+					<li><strong>AFC</strong> — Asia</li>
+					<li><strong>CAF</strong> — Africa</li>
+					<li><strong>OFC</strong> — Oceania (mostly island nations in the Pacific)</li>
+				</ul>
+			</Infobox>
+	</aside>
 </section>
 
 <!-- ── Scrollytelling section ────────────────────────────────────────────── -->
 <section class="scrolly-outer">
 	<div class="sticky-vis">
-		<div class="map-container" style="position: relative;">
-			<WorldMap scale={$mapScale} translate={$mapTranslate} />
-			{#if scrollyNation}
-				<FlowLayer squads={scrollySquads} nation={scrollyNation} scale={$mapScale} translate={$mapTranslate} />
-			{/if}
+		<div class="sticky-layout">
+			<div class="sticky-margin"></div>
+			<div class="map-container" style="position: relative;">
+				<WorldMap scale={$mapScale} translate={$mapTranslate} />
+				{#if scrollyNation}
+					<FlowLayer squads={scrollySquads} nation={scrollyNation} scale={$mapScale} translate={$mapTranslate} />
+				{/if}
+			</div>
 		</div>
 		<div class="step-badge">
 			<span class="badge-year">{scrollyYear}</span>
@@ -387,6 +415,15 @@
 		justify-content: center;
 	}
 
+	.sticky-layout {
+		width: 100%;
+		display: block;
+	}
+
+	.sticky-margin {
+		display: none;
+	}
+
 	.map-container {
 		width: 100%;
 	}
@@ -465,6 +502,18 @@
 
 	.step-spacer {
 		height: 40vh;
+	}
+
+	@media (min-width: 1100px) {
+		.sticky-layout {
+			width: 100%;
+			display: block;
+			padding: 0 1.5rem;
+		}
+
+		.sticky-margin {
+			display: none;
+		}
 	}
 
 	/* ── Hero section ──────────────────────────────────────────────────────── */
@@ -546,6 +595,33 @@
 
 	.prose-section p:last-child {
 		margin-bottom: 0;
+	}
+
+	.prose-with-infobox {
+		display: grid;
+		gap: 1.5rem;
+	}
+
+	.prose-copy {
+		min-width: 0;
+	}
+
+	.prose-infobox {
+		width: 100%;
+	}
+
+	@media (min-width: 1100px) {
+		.prose-with-infobox {
+			max-width: 1040px;
+			grid-template-columns: minmax(0, 680px) minmax(240px, 280px);
+			align-items: start;
+			column-gap: 2rem;
+		}
+
+		.prose-infobox {
+			position: sticky;
+			top: calc(var(--nav-height) + 1.5rem);
+		}
 	}
 
 	/* ── Interactive section ──────────────────────────────────────────────── */
