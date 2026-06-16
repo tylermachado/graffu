@@ -90,11 +90,11 @@
 	.infobox-kicker {
 		display: block;
 		font-family: var(--font-display);
-		font-size: 0.75rem;
+		font-size: 1.1rem;
 		font-weight: 400;
-		letter-spacing: 0.1em;
+		letter-spacing: -0.05em;
 		text-transform: uppercase;
-		color: #8a7f68;
+		color: var(--color-cream-900);
 		margin: 0 0 0.35rem;
 	}
 

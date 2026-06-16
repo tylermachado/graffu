@@ -71,7 +71,7 @@
 </svelte:head>
 
 <header class="site-header">
-	<a href={resolve('/')} class="site-name">Graffu</a>
+	<a href={resolve('/')} class="site-name">GRAFFU</a>
 	<nav>
 		<a href={resolve('/')}>Home</a>
 		<a href={resolve('/story')}>Club vs Country</a>

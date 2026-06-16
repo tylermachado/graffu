@@ -7,7 +7,7 @@
 	<!-- Page 1 — Site intro -->
 	<section class="page page--intro">
 		<div class="page-content">
-			<h1>Graffu</h1>
+			<h1>GRAFFU</h1>
 			<p class="intro">
 				A data-visual storytelling project.
 			</p>
@@ -17,24 +17,7 @@
 	<!-- Page 2 — Club vs Country -->
 	<section class="page page--story">
 		<div class="page-content">
-			<p class="eyebrow">Africa at the World Cup</p>
 			<h1>Club vs Country</h1>
-			<p class="intro">
-				Since 1994, African footballers have become the world's most exported talent.
-				This is the story of what that looks like — squad by squad, tournament by tournament.
-			</p>
-			<a href="{base}/story" class="cta">Read the story →</a>
-		</div>
-	</section>
-
-	<!-- Page 3 — Future story placeholder -->
-	<section class="page page--next">
-		<div class="page-content">
-			<p class="eyebrow">Africa at the World Cup</p>
-			<h1>Coming soon</h1>
-			<p class="intro">
-				Placeholder — a second story in the series. Details to follow.
-			</p>
 		</div>
 	</section>
 
