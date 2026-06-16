@@ -17,6 +17,7 @@
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { getAllCombinedFlows } from '$lib/getAllCombinedFlows.js';
 	import { getConfederationColor } from '$lib/getConfederationColor.js';
+	import { TOURNAMENT_YEARS } from '$lib/constants.js';
 	import teams from '../../data/teams.json';
 	import confederations from '../../data/confederations.json';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
@@ -37,7 +38,7 @@
 	const outroStep = steps.find(s => s.type === 'outro');
 	const scrollySteps = steps.filter(s => s.type !== 'intro' && s.type !== 'outro');
 
-	const years = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026];
+	const years = TOURNAMENT_YEARS;
 
 	/** @type {Record<number, Record<string, any[]>>} */
 	const allSquads = {

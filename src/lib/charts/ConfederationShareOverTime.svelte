@@ -25,7 +25,7 @@
 		2026: clubConf2026
 	};
 
-	const YEARS = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026];
+	import { TOURNAMENT_YEARS as YEARS } from '$lib/constants.js';
 
 	const CONF_META = [
 		{ name: 'AFC',      highlight: false, color: '#CC0000' },

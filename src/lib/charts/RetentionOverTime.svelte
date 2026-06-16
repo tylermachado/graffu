@@ -4,7 +4,7 @@
 	 * Data compiled from squad files; matches the summary table in writing/outline.md.
 	 */
 
-	const YEARS = [1994, 1998, 2002, 2006, 2010, 2014, 2018, 2022, 2026];
+	import { TOURNAMENT_YEARS as YEARS } from '$lib/constants.js';
 
 	/** @type {Array<{ name: string; values: number[]; highlight: boolean; color: string }>} */
 	const CONFEDERATIONS = [
