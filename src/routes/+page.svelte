@@ -1,7 +1,43 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import clubVsCountryImg from '$lib/assets/story-screenshots/club-vs-country.png';
+	import { SITE_URL } from '$lib/constants.js';
+
+	const title = 'GRAFFU — Visual essays that simply explain data';
+	const description = 'Visual essays that simply explain data.';
+	const canonical = `${SITE_URL}/`;
+	const ogImage = `${SITE_URL}/og-club-vs-country.png`;
+
+	// Escape `<` so the serialized data can never break out of the <script> tag.
+	const jsonLd = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: 'GRAFFU',
+		url: `${SITE_URL}/`,
+		description
+	}).replace(/</g, '\\u003c');
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<meta name="description" content={description} />
+	<link rel="canonical" href={canonical} />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="GRAFFU" />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:image" content={ogImage} />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={ogImage} />
+
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${jsonLd}</scr` + `ipt>`}
+</svelte:head>
 
 <div class="snap-container">
 

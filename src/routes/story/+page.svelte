@@ -17,7 +17,7 @@
 	import { getConfederationStats } from '$lib/getConfederationStats.js';
 	import { getAllCombinedFlows } from '$lib/getAllCombinedFlows.js';
 	import { getConfederationColor } from '$lib/getConfederationColor.js';
-	import { TOURNAMENT_YEARS } from '$lib/constants.js';
+	import { TOURNAMENT_YEARS, SITE_URL } from '$lib/constants.js';
 	import teams from '../../data/teams.json';
 	import confederations from '../../data/confederations.json';
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
@@ -174,6 +174,24 @@
 		return escaped.replace(/\[(\d+)\]/g, '<sup class="fn-ref">$1</sup>');
 	}
 
+	// ── Page metadata ────────────────────────────────────────────────────────
+	const pageTitle = 'Club vs Country — GRAFFU';
+	const pageDescription =
+		'Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage. An interactive visual essay.';
+	const canonical = `${SITE_URL}/story`;
+	const ogImage = `${SITE_URL}/og-club-vs-country.png`;
+
+	// Escape `<` so the serialized data can never break out of the <script> tag.
+	const jsonLd = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+		headline: 'Club vs Country',
+		description: pageDescription,
+		url: canonical,
+		image: ogImage,
+		isPartOf: { '@type': 'WebSite', name: 'GRAFFU', url: `${SITE_URL}/` }
+	}).replace(/</g, '\\u003c');
+
 	const FOOTNOTES = [
 		{
 			id: 1,
@@ -181,6 +199,27 @@
 		},
 	];
 </script>
+
+<svelte:head>
+	<title>{pageTitle}</title>
+	<meta name="description" content={pageDescription} />
+	<link rel="canonical" href={canonical} />
+
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="GRAFFU" />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={pageDescription} />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:image" content={ogImage} />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={pageTitle} />
+	<meta name="twitter:description" content={pageDescription} />
+	<meta name="twitter:image" content={ogImage} />
+
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
+	{@html `<script type="application/ld+json">${jsonLd}</scr` + `ipt>`}
+</svelte:head>
 
 <!-- ── Hero: combined flow map with overlaid story header ──────────────── -->
 <section class="hero-section">
