@@ -81,48 +81,18 @@
 	/**
 	 * Returns the scale and translate needed to show `nationName` and all its club-nation
 	 * destinations centered in the viewport. Falls back to the default world view when no
-	 * nation is active.
+	 * nation is active — or, when `requirePlayers` is set, when the nation has no players.
 	 * @param {string} nationName
 	 * @param {Array<{ club_nation: string }>} players
+	 * @param {{ requirePlayers?: boolean }} [options]
 	 * @returns {{ scale: number, translate: [number, number] }}
 	 */
-	function getZoomForNation(nationName, players = []) {
+	function getZoomToFit(nationName, players = [], { requirePlayers = false } = {}) {
 		const DEFAULT_SCALE = 153;
 		const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
-		if (!nationName) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-
-		const names = new Set([nationName]);
-		for (const p of players) {
-			if (p.club_nation) names.add(p.club_nation);
+		if (!nationName || (requirePlayers && !players?.length)) {
+			return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
 		}
-
-		const features = [];
-		for (const name of names) {
-			const id = NAME_TO_ISO[name];
-			if (!id) continue;
-			const f = _featureById.get(id);
-			if (f) features.push(f);
-		}
-
-		if (!features.length) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-
-		const collection = { type: 'FeatureCollection', features };
-		const proj = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], /** @type {any} */ (collection));
-		const targetScale = proj.scale() * 0.97;
-		const targetTranslate = /** @type {[number, number]} */ (proj.translate());
-		return { scale: targetScale, translate: targetTranslate };
-	}
-
-	/**
-	 * Returns scale/translate to fit the nation and all its club-nation destinations.
-	 * @param {string} nationName
-	 * @param {Array<{ club_nation: string }>} players
-	 * @returns {{ scale: number, translate: [number, number] }}
-	 */
-	function getZoomForFlows(nationName, players) {
-		const DEFAULT_SCALE = 153;
-		const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
-		if (!nationName || !players?.length) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
 
 		const names = new Set([nationName]);
 		for (const p of players) {
@@ -151,7 +121,7 @@
 
 	$effect(() => {
 		const players = scrollySquads[scrollyNation] ?? [];
-		const target = getZoomForNation(scrollyNation, players);
+		const target = getZoomToFit(scrollyNation, players);
 		mapScale.set(target.scale);
 		mapTranslate.set(target.translate);
 	});
@@ -168,7 +138,7 @@
 
 	$effect(() => {
 		const players = squads[selectedNation] ?? [];
-		const target = getZoomForFlows(selectedNation, players);
+		const target = getZoomToFit(selectedNation, players, { requirePlayers: true });
 		iMapScale.set(target.scale);
 		iMapTranslate.set(target.translate);
 	});
