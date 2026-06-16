@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import clubVsCountryImg from '$lib/assets/story-screenshots/club-vs-country.png';
+	import clubVsCountryImg from '$lib/assets/story-screenshots/club-vs-country.webp';
 	import { SITE_URL } from '$lib/constants.js';
 
 	const title = 'GRAFFU — Visual essays that simply explain data';
 	const description = 'Visual essays that simply explain data.';
 	const canonical = `${SITE_URL}/`;
-	const ogImage = `${SITE_URL}/og-club-vs-country.png`;
+	const ogImage = `${SITE_URL}/og-club-vs-country.jpg`;
 
 	// Escape `<` so the serialized data can never break out of the <script> tag.
 	const jsonLd = JSON.stringify({
