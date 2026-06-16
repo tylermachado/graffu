@@ -191,11 +191,17 @@
 
 	/**
 	 * Converts [n] footnote markers in prose text to superscript HTML.
-	 * Safe: text comes from a local JSON file, not user input.
+	 * Escapes the surrounding text first so only the intended <sup> markup is
+	 * emitted — literal &, <, > in prose render as text, and the function stays
+	 * safe even if the prose source ever stops being author-controlled.
 	 * @param {string} text
 	 */
 	function renderRef(text) {
-		return text.replace(/\[(\d+)\]/g, '<sup class="fn-ref">$1</sup>');
+		const escaped = text
+			.replace(/&/g, '&amp;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;');
+		return escaped.replace(/\[(\d+)\]/g, '<sup class="fn-ref">$1</sup>');
 	}
 
 	const FOOTNOTES = [
