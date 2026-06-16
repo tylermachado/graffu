@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
+	import clubVsCountryImg from '$lib/assets/story-screenshots/club-vs-country.png';
 </script>
 
 <div class="snap-container">
@@ -9,17 +10,17 @@
 		<div class="page-content">
 			<h1>GRAFFU</h1>
 			<p class="intro">
-				A data-visual storytelling project.
+				Visual essays that simply explain data.
 			</p>
 		</div>
 	</section>
 
 	<!-- Page 2 — Club vs Country -->
-	<section class="page page--story">
+	<a href={resolve('/story')} class="page page--story" style="background-image: url({clubVsCountryImg})">
 		<div class="page-content">
 			<h1>Club vs Country</h1>
 		</div>
-	</section>
+	</a>
 
 </div>
 
@@ -45,7 +46,7 @@
 	}
 
 	.page--intro  { background: #e8e6e0; }
-	.page--story  { background: #f5f4f0; }
+	.page--story  { background: #f5f4f0; background-size: cover; background-position: center; text-decoration: none; color: inherit; }
 	.page--next   { background: #edecea; }
 
 	.page-content {

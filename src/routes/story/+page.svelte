@@ -293,12 +293,6 @@
 				{/if}
 			</div>
 		</div>
-		<div class="step-badge">
-			<span class="badge-year">{scrollyYear}</span>
-			{#if currentScrollyStep.nation}
-				<span class="badge-nation">{currentScrollyStep.nation}</span>
-			{/if}
-		</div>
 	</div>
 
 	<div class="steps-wrapper">
@@ -434,17 +428,6 @@
 
 	.map-container {
 		width: 100%;
-	}
-
-	.step-badge {
-		position: absolute;
-		top: 1.25rem;
-		right: 1.25rem;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		gap: 0.2rem;
-		pointer-events: none;
 	}
 
 	.badge-year {
@@ -698,9 +681,9 @@
 		background-size: 1.5rem;
 		border: none;
 		border-bottom: 2.5px solid #111;
-		padding: 0.4rem 2rem 0.4rem 0;
-		font-size: 2rem;
-		font-weight: 700;
+		padding: 0.4rem 2rem 0.1rem 0;
+		font-weight: 600;
+		font-size: 1.5rem;
 		color: #4a90d9;
 		cursor: pointer;
 		font-family: inherit;
@@ -722,11 +705,14 @@
 		background: linear-gradient(#4a90d9, #4a90d9);
 		background-color: #4a90d9 !important;
 		color: white !important;
-		font-weight: 700;
+		font-weight: 600;
+		font-size: 1.5rem;
 	}
 
 	.heading-text {
 		display: inline;
+		font-size: 1.5rem;
+		font-weight: 600;
 	}
 
 	.interactive-body {
