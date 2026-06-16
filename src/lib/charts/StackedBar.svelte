@@ -91,9 +91,16 @@
 			class:home-segment={isHome}
 			stroke={isHome ? getNationColor(nation) : 'white'}
 			stroke-width={isHome ? 3 : 2}
+			role="img"
+			aria-label={`${segment.label}${segment.confederation ? ` (${segment.confederation})` : ''}: ${segment.value}, ${segment.percentage.toFixed(1)}%`}
 			onmouseenter={(e) => handleMouseEnter(segment, e)}
 			onmouseleave={handleMouseLeave}
-		/>
+		>
+			<title
+				>{segment.label}{segment.confederation ? ` (${segment.confederation})` : ''}: {segment.value}
+				({segment.percentage.toFixed(1)}%)</title
+			>
+		</rect>
 	{/each}
 </g>
 
