@@ -70,3 +70,15 @@ img, svg, video {
 	display: block;
 	max-width: 100%;
 }
+
+/* ── Reduced motion ───────────────────────────────────────────────────────── */
+/* Honor the OS "reduce motion" setting: near-instant CSS transitions/animations.
+   JS-driven map-zoom tweens are gated separately in story/+page.svelte. */
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}

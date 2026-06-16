@@ -116,14 +116,27 @@
 		return { scale: targetScale, translate: targetTranslate };
 	}
 
-	const mapScale = tweened(153, { duration: 700, easing: cubicInOut });
-	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: 700, easing: cubicInOut });
+	// Honor the OS "reduce motion" setting for the JS-driven map-zoom tweens.
+	// Browser-only ($effect never runs during SSR), so matchMedia is safe here.
+	const ZOOM_DURATION = 700;
+	let prefersReducedMotion = $state(false);
+	$effect(() => {
+		const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+		prefersReducedMotion = mq.matches;
+		const onChange = (/** @type {MediaQueryListEvent} */ e) => (prefersReducedMotion = e.matches);
+		mq.addEventListener('change', onChange);
+		return () => mq.removeEventListener('change', onChange);
+	});
+	const zoomTween = () => ({ duration: prefersReducedMotion ? 0 : ZOOM_DURATION });
+
+	const mapScale = tweened(153, { duration: ZOOM_DURATION, easing: cubicInOut });
+	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: ZOOM_DURATION, easing: cubicInOut });
 
 	$effect(() => {
 		const players = scrollySquads[scrollyNation] ?? [];
 		const target = getZoomToFit(scrollyNation, players);
-		mapScale.set(target.scale);
-		mapTranslate.set(target.translate);
+		mapScale.set(target.scale, zoomTween());
+		mapTranslate.set(target.translate, zoomTween());
 	});
 
 	// ── Interactive section ────────────────────────────────────────────────────
@@ -131,16 +144,16 @@
 	let selectedYear = $state(2026);
 	let selectedNation = $state(Object.keys(squads2026).sort()[0]);
 
-	const iMapScale = tweened(153, { duration: 700, easing: cubicInOut });
-	const iMapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: 700, easing: cubicInOut });
+	const iMapScale = tweened(153, { duration: ZOOM_DURATION, easing: cubicInOut });
+	const iMapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: ZOOM_DURATION, easing: cubicInOut });
 
 	const squads = $derived(allSquads[selectedYear]);
 
 	$effect(() => {
 		const players = squads[selectedNation] ?? [];
 		const target = getZoomToFit(selectedNation, players, { requirePlayers: true });
-		iMapScale.set(target.scale);
-		iMapTranslate.set(target.translate);
+		iMapScale.set(target.scale, zoomTween());
+		iMapTranslate.set(target.translate, zoomTween());
 	});
 	const nations = $derived(Object.keys(squads).sort());
 	const squadStats = $derived(getSquadClubNationStats(squads));
