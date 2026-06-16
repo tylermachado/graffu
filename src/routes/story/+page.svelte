@@ -248,6 +248,7 @@
 		<aside class="prose-infobox">
 			<Infobox title="">
 				<p>In international soccer, 11 players are on the pitch at any given time, but each nation in the World Cup has 26 players on its squad in total (up from 22 or 23 in previous years).</p>
+				<p>The stars of global soccer often play for two teams simultaneously; they represent their country’s national team in international competitions like the World Cup, but they spend most of the year with, and make most of their salaries from, club teams that could be based in their home country or anywhere else — clubs like Arsenal in the English Premier League, Barcelona in Spain's La Liga, Orlando Pirates in South Africa's Premier Soccer League and so on.</p>
 				<p>The 2026 tournament is the first to feature 48 teams competing, up from 32 in other years since the 1990s.</p>
 			</Infobox>
 		</aside>

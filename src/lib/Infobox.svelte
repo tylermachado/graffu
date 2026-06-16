@@ -117,7 +117,7 @@
 
 	.infobox-body p,
 	.infobox-body :global(p) {
-		font-size: 0.95rem;
+		font-size: 0.85rem;
 		line-height: 1.55;
 		margin: 0 0 0.85rem;
 	}
