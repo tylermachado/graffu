@@ -41,17 +41,7 @@
 
 <div class="snap-container">
 
-	<!-- Page 1 — Site intro -->
-	<section class="page page--intro">
-		<div class="page-content">
-			<h1>GRAFFU</h1>
-			<p class="intro">
-				Visual essays that simply explain data.
-			</p>
-		</div>
-	</section>
-
-	<!-- Page 2 — Club vs Country -->
+	<!-- Page 1 — Club vs Country -->
 	<a href={resolve('/club-vs-country')} class="page page--story" style="background-image: url({clubVsCountryImg})">
 		<div class="page-content">
 			<h1>Club vs Country</h1>

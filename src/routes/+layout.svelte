@@ -72,10 +72,7 @@
 
 <header class="site-header">
 	<a href={resolve('/')} class="site-name">GRAFFU</a>
-	<nav>
-		<a href={resolve('/')}>Home</a>
-		<a href={resolve('/club-vs-country')}>Club vs Country</a>
-	</nav>
+	<p class="site-tagline">Visual stories that simply explain data.</p>
 </header>
 
 {@render children()}
@@ -88,38 +85,30 @@
 		right: 0;
 		z-index: 100;
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
 		padding: 0 1.5rem;
-		height: 80px;
-		background: var(--color-brand);
-		border-bottom: 1px solid var(--color-brand);
+		background: var(--color-cream-50);
+		border-bottom: 1px solid var(--color-cream-50);
 	}
 
 	.site-name {
 		font-family: var(--font-display);
-		font-size: 1.75rem;
+		font-size: 2.75rem;
 		font-weight: 700;
-		color: #fff;
+		line-height: 0.75;
+		margin-top: 1rem;
 		text-decoration: none;
 		letter-spacing: 0.02em;
 	}
 
-	nav {
-		display: flex;
-		gap: 1.5rem;
-	}
-
-	nav a {
+	.site-tagline {
 		font-family: var(--font-display);
-		font-size: 1.25rem;
-		font-weight: 500;
-		color: #fff;
-		text-decoration: none;
-		transition: color 0.15s;
-	}
-
-	nav a:hover {
-		color: var(--color-brand-light);
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.25;
+		margin: 0.25rem 0 1rem;
+		color: var(--color-gray-700);
 	}
 </style>
