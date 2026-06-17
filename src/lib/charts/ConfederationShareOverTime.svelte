@@ -83,7 +83,7 @@
 		viewBox="0 0 {W} {H}"
 		class="chart-svg"
 		role="img"
-		aria-label="Line chart showing each confederation's share of total World Cup players from 1994 to 2026. UEFA consistently holds the largest share, while CAF's share grows notably in 2026."
+		aria-label="Line chart showing each confederation's share of total World Cup players from 1994 to 2026, by where players play their club football (UEFA excluded). CAF, highlighted, holds a small and declining share — falling from around 5–6% in the 1990s to 2–4% by 2026 — even as more African nations qualify, reflecting how African players are based at clubs abroad."
 	>
 		<g transform="translate({M.left},{M.top})">
 			<!-- Grid lines and Y labels -->

@@ -51,7 +51,7 @@
 		viewBox="0 0 {W} {H}"
 		class="chart-svg"
 		role="img"
-		aria-label="Line chart showing domestic retention rates by confederation from 1994 to 2026. CAF starts lowest at 36% and rises to 25% by 2026."
+		aria-label="Line chart showing the share of each confederation's World Cup squad players based at clubs in their home country, 1994 to 2026. Retention falls across all confederations over the period. CAF, highlighted, sits among the lowest throughout — starting at 36%, bottoming at 10% in 2014, and partially recovering to 23% by 2026."
 	>
 		<g transform="translate({M.left},{M.top})">
 			<!-- Grid lines and Y labels -->
