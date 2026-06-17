@@ -7,10 +7,7 @@
 	import WorldMap from '$lib/charts/WorldMap.svelte';
 	import FlowLayer from '$lib/charts/FlowLayer.svelte';
 	import CombinedFlowLayer from '$lib/charts/CombinedFlowLayer.svelte';
-	import { feature } from 'topojson-client';
-	import { geoConicConformal, geoCentroid } from 'd3-geo';
-	import worldData from 'world-atlas/countries-110m.json';
-	import { NAME_TO_ISO } from '$lib/nameToIso.js';
+	import { MAP_WIDTH, MAP_HEIGHT, DEFAULT_MAP_SCALE, getZoomToFit } from '$lib/mapZoom.js';
 	import { tweened } from 'svelte/motion';
 	import { cubicInOut } from 'svelte/easing';
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
@@ -23,35 +20,19 @@
 	import { scatterData, scatterX, scatterY } from '$lib/getScatterData.js';
 	import RetentionOverTime from '$lib/charts/RetentionOverTime.svelte';
 	import ConfederationShareOverTime from '$lib/charts/ConfederationShareOverTime.svelte';
-	import squads1994 from '../../data/1994/squads.json';
-	import squads1998 from '../../data/1998/squads.json';
-	import squads2002 from '../../data/2002/squads.json';
-	import squads2006 from '../../data/2006/squads.json';
-	import squads2010 from '../../data/2010/squads.json';
-	import squads2014 from '../../data/2014/squads.json';
-	import squads2018 from '../../data/2018/squads.json';
-	import squads2022 from '../../data/2022/squads.json';
-	import squads2026 from '../../data/2026/squads.json';
+	// Slimmed squad data — only the `club_nation` field the visuals read.
+	// Regenerate with `npm run slim-data` after editing any data/<year>/squads.json.
+	import squadClubNations from '../../data/squad-club-nations.json';
 	import steps from '../../data/scrolly-steps.json';
+
+	/** @type {Record<number, Record<string, Array<{ club_nation: string }>>>} */
+	const allSquads = /** @type {any} */ (squadClubNations);
 
 	const introStep = steps.find(s => s.type === 'intro');
 	const outroStep = steps.find(s => s.type === 'outro');
 	const scrollySteps = steps.filter(s => s.type !== 'intro' && s.type !== 'outro');
 
 	const years = TOURNAMENT_YEARS;
-
-	/** @type {Record<number, Record<string, any[]>>} */
-	const allSquads = {
-		1994: squads1994,
-		1998: squads1998,
-		2002: squads2002,
-		2006: squads2006,
-		2010: squads2010,
-		2014: squads2014,
-		2018: squads2018,
-		2022: squads2022,
-		2026: squads2026
-	};
 
 	// ── Combined flows (all years, all nations) ──────────────────────────────
 
@@ -64,57 +45,12 @@
 	let activeStep = $state(0);
 
 	const currentScrollyStep = $derived(scrollySteps[activeStep] ?? scrollySteps[0]);
-	const scrollyYear = $derived(currentScrollyStep.year);
+	const scrollyYear = $derived(currentScrollyStep.year ?? years[0]);
 	const scrollyNation = $derived(currentScrollyStep.nation ?? '');
-	const scrollySquads = $derived(allSquads[scrollyYear]);
+	const scrollySquads = $derived(allSquads[scrollyYear] ?? {});
 
 	// ── Map zoom ───────────────────────────────────────────────────────────────
-
-	const MAP_WIDTH = 960;
-	const MAP_HEIGHT = 500;
-
-	// @ts-expect-error – world-atlas ships no types
-	const _zoomCountries = /** @type {any} */ (feature(worldData, worldData.objects.countries));
-	/** @type {Map<string, any>} */
-	const _featureById = new Map(_zoomCountries.features.map(/** @param {any} f */ (f) => [String(f.id), f]));
-
-	/**
-	 * Returns the scale and translate needed to show `nationName` and all its club-nation
-	 * destinations centered in the viewport. Falls back to the default world view when no
-	 * nation is active — or, when `requirePlayers` is set, when the nation has no players.
-	 * @param {string} nationName
-	 * @param {Array<{ club_nation: string }>} players
-	 * @param {{ requirePlayers?: boolean }} [options]
-	 * @returns {{ scale: number, translate: [number, number] }}
-	 */
-	function getZoomToFit(nationName, players = [], { requirePlayers = false } = {}) {
-		const DEFAULT_SCALE = 153;
-		const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
-		if (!nationName || (requirePlayers && !players?.length)) {
-			return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-		}
-
-		const names = new Set([nationName]);
-		for (const p of players) {
-			if (p.club_nation) names.add(p.club_nation);
-		}
-
-		const features = [];
-		for (const name of names) {
-			const id = NAME_TO_ISO[name];
-			if (!id) continue;
-			const f = _featureById.get(id);
-			if (f) features.push(f);
-		}
-
-		if (!features.length) return { scale: DEFAULT_SCALE, translate: DEFAULT_TRANSLATE };
-
-		const collection = { type: 'FeatureCollection', features };
-		const proj = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], /** @type {any} */ (collection));
-		const targetScale = proj.scale() * 0.97;
-		const targetTranslate = /** @type {[number, number]} */ (proj.translate());
-		return { scale: targetScale, translate: targetTranslate };
-	}
+	// Projection constants and getZoomToFit live in $lib/mapZoom.js.
 
 	// Honor the OS "reduce motion" setting for the JS-driven map-zoom tweens.
 	// Browser-only ($effect never runs during SSR), so matchMedia is safe here.
@@ -129,7 +65,7 @@
 	});
 	const zoomTween = () => ({ duration: prefersReducedMotion ? 0 : ZOOM_DURATION });
 
-	const mapScale = tweened(153, { duration: ZOOM_DURATION, easing: cubicInOut });
+	const mapScale = tweened(DEFAULT_MAP_SCALE, { duration: ZOOM_DURATION, easing: cubicInOut });
 	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: ZOOM_DURATION, easing: cubicInOut });
 
 	$effect(() => {
@@ -142,9 +78,9 @@
 	// ── Interactive section ────────────────────────────────────────────────────
 
 	let selectedYear = $state(2026);
-	let selectedNation = $state(Object.keys(squads2026).sort()[0]);
+	let selectedNation = $state(Object.keys(allSquads[2026]).sort()[0]);
 
-	const iMapScale = tweened(153, { duration: ZOOM_DURATION, easing: cubicInOut });
+	const iMapScale = tweened(DEFAULT_MAP_SCALE, { duration: ZOOM_DURATION, easing: cubicInOut });
 	const iMapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: ZOOM_DURATION, easing: cubicInOut });
 
 	const squads = $derived(allSquads[selectedYear]);

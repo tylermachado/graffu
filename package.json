@@ -13,6 +13,7 @@
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
 		"copy": "node scripts/csv-to-steps-json.js",
+		"slim-data": "node scripts/slim-squads.js",
 		"fetch-data": "node scripts/fetch-data.js",
 		"scrape-wiki": "node scripts/scrape-wiki.js"
 	},

@@ -1,6 +1,9 @@
-import squads from '../data/2022/squads.json';
+import squadClubNations from '../data/squad-club-nations.json';
 import results from '../data/2022/results.json';
 import teams from '../data/teams.json';
+
+// Only the 2022 slice is needed here; slimmed to the used `club_nation` field.
+const squads = squadClubNations['2022'];
 
 /** @type {Record<string, string>} */
 const resultToSquadName = { USA: 'United States' };
