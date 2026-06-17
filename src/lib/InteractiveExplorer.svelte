@@ -6,6 +6,7 @@
 	import { MAP_WIDTH, MAP_HEIGHT, DEFAULT_MAP_SCALE, getZoomToFit } from '$lib/mapZoom.js';
 	import { getSquadClubNationStats } from '$lib/getSquadClubNationStats.js';
 	import { getConfederationColor } from '$lib/getConfederationColor.js';
+	import { flagFor } from '$lib/nameToFlag.js';
 	import { tweened } from 'svelte/motion';
 	import { cubicInOut } from 'svelte/easing';
 
@@ -62,7 +63,7 @@
 		<span class="heading-text">Explore the</span>
 		<select class="heading-select" bind:value={selectedNation}>
 			{#each nations as nation (nation)}
-				<option value={nation}>{nation}</option>
+				<option value={nation}>{flagFor(nation)} {nation}</option>
 			{/each}
 		</select>
 		<span class="heading-text">squad at the</span>

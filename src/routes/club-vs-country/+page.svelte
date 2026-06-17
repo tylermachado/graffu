@@ -137,9 +137,25 @@
 
 <!-- ── Hero: combined flow map with overlaid story header ──────────────── -->
 <section class="hero-section">
-	<div class="hero-map">
-		<WorldMap />
-		<CombinedFlowLayer flows={combinedFlows} animate={true} />
+	<div class="hero-map-wrap">
+		<div class="hero-map">
+			<WorldMap />
+			<CombinedFlowLayer flows={combinedFlows} animate={true} />
+		</div>
+		<div class="hero-legend">
+			<div class="hero-legend-dots">
+				{#each confederations as confed (confed.confederation)}
+					<span class="legend-item">
+						<span class="legend-dot" style="background: {confed.color};"></span>
+						{confed.confederation}
+					</span>
+				{/each}
+			</div>
+			<p class="combined-flow-desc">
+				Player flows from national squad to club nation, aggregated across all World Cup tournaments 1994–2026.
+				Arcs colored by source confederation. Filled circles = domestic retention.
+			</p>
+		</div>
 	</div>
 	<header class="story-header">
 		<p class="story-eyebrow">African Football at the World Cup</p>
@@ -149,22 +165,6 @@
 		</p>
 	</header>
 </section>
-
-<!-- ── Flow legend + description ─────────────────────────────────────────── -->
-<div class="flow-meta">
-	<p class="combined-flow-desc">
-		Player flows from national squad to club nation, aggregated across all World Cup tournaments 1994–2026.
-		Arcs colored by source confederation. Filled circles = domestic retention.
-	</p>
-	<div class="combined-flow-legend">
-		{#each confederations as confed (confed.confederation)}
-			<span class="legend-item">
-				<span class="legend-dot" style="background: {confed.color};"></span>
-				{confed.confederation}
-			</span>
-		{/each}
-	</div>
-</div>
 
 <!-- ── Intro ────────────────────────────────────────────────────────────── -->
 {#if introStep}
@@ -428,10 +428,17 @@
 	/* ── Hero section ──────────────────────────────────────────────────────── */
 
 	.hero-section {
+		width: 100%;
+		background: #f5f4f0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.hero-map-wrap {
 		position: relative;
 		width: 100%;
 		overflow: hidden;
-		background: #f5f4f0;
+		order: 2;
 	}
 
 	.hero-map {
@@ -442,13 +449,52 @@
 	/* ── Story header ──────────────────────────────────────────────────────── */
 
 	.story-header {
-		position: absolute;
-		right: 0;
-		bottom: 25px;
-		max-width: 600px;
-		padding: 1rem 1rem;
-		background: rgba(245, 244, 240, 0.78);
-		border-radius: 4px;
+		order: 1;
+		padding: 1rem 1rem 1.25rem;
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+	/* ── Hero legend ────────────────────────────────────────────────────────── */
+
+	.hero-legend {
+		order: 3;
+		padding: 0.75rem 1rem 1rem;
+		border-bottom: 1px solid #e0e0e0;
+	}
+
+	.hero-legend-dots {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem 1.25rem;
+		margin-bottom: 0.4rem;
+	}
+
+	@media (min-width: 769px) {
+		.hero-section {
+			display: block;
+		}
+
+		.story-header {
+			border-bottom: none;
+			padding: 1rem 1.25rem 1.5rem;
+			margin-left: auto;
+			max-width: 54%;
+			margin-top: -5rem;
+			position: relative;
+			z-index: 1;
+		}
+
+		.hero-legend {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			max-width: 38%;
+			padding: 0.6rem 1rem 0.5rem;
+			background: rgba(245, 244, 240, 0.85);
+			border-radius: 0 4px 0 0;
+			border-bottom: none;
+			order: unset;
+		}
 	}
 
 	.story-eyebrow {
@@ -461,7 +507,7 @@
 	}
 
 	.story-headline {
-		font-size: clamp(2.25rem, 5vw, 3.5rem);
+		font-size: clamp(2.5rem, 5.5vw, 4.25rem);
 		letter-spacing: -0.04em;
 		font-weight: 400;
 		line-height: 1.05;
@@ -654,22 +700,6 @@
 		vertical-align: super;
 		color: #999;
 		font-weight: 600;
-	}
-
-	/* ── Flow meta (legend + description below hero) ────────────────────────── */
-
-	.flow-meta {
-		max-width: 960px;
-		margin: 0 auto;
-		padding: 1.25rem 2rem 2rem;
-		border-bottom: 1px solid #e0e0e0;
-	}
-
-	.combined-flow-legend {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75rem 1.5rem;
-		margin-bottom: 0.75rem;
 	}
 
 	.combined-flow-desc {

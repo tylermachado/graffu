@@ -42,11 +42,15 @@
 <div class="snap-container">
 
 	<!-- Page 1 — Club vs Country -->
-	<a href={resolve('/club-vs-country')} class="page page--story" style="background-image: url({clubVsCountryImg})">
-		<div class="page-content">
-			<h1>Club vs Country</h1>
-		</div>
-	</a>
+	<div class="page page--story">
+		<a href={resolve('/club-vs-country')} class="story-card">
+			<img src={clubVsCountryImg} alt="Club vs Country" class="story-card__img" />
+			<div class="story-card__body">
+				<h1 class="story-card__title">Club vs Country</h1>
+				<p class="story-card__dek">Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage.</p>
+			</div>
+		</a>
+	</div>
 
 </div>
 
@@ -67,56 +71,62 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 2rem;
+		padding: 3.5rem 1rem 1rem;
 		box-sizing: border-box;
 	}
 
 	.page--intro  { background: #e8e6e0; }
-	.page--story  { background: #f5f4f0; background-size: cover; background-position: center; text-decoration: none; color: inherit; }
+	.page--story  { background: #f5f4f0; }
 	.page--next   { background: #edecea; }
 
-	.page-content {
-		max-width: 560px;
+	.story-card {
+		display: flex;
+		flex-direction: column;
 		width: 100%;
+		height: 100%;
+		border: 1.5px solid #d0cec9;
+		border-radius: 12px;
+		overflow: hidden;
+		text-decoration: none;
+		color: inherit;
+		background: #fff;
+		transition: border-color 0.15s, box-shadow 0.15s;
 	}
 
-	.eyebrow {
-		font-size: 0.75rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: #999;
-		margin: 0 0 0.75rem;
+	.story-card:hover {
+		border-color: #aaa;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 	}
 
-	h1 {
-		font-size: clamp(2.5rem, 6vw, 4rem);
+	.story-card__img {
+		display: block;
+		width: 100%;
+		flex: 1 1 0;
+		min-height: 0;
+		object-fit: cover;
+	}
+
+	.story-card__body {
+		display: flex;
+		gap: 2rem;
+		align-items: flex-start;
+		padding: 1.25rem 1.5rem 1.5rem;
+	}
+
+	.story-card__title {
+		flex: 0 0 auto;
+		font-size: clamp(3.5rem, 5vw, 4rem);
 		font-weight: 800;
-		line-height: 1.05;
-		margin: 0 0 1.25rem;
+		line-height: 1.1;
+		margin: 0;
 		color: #111;
 	}
 
-	.intro {
-		font-size: 1.1rem;
-		line-height: 1.65;
-		color: #444;
-		margin: 0 0 2rem;
-	}
-
-	.cta {
-		display: inline-block;
-		padding: 0.7rem 1.5rem;
-		background: #111;
-		color: #fff;
-		text-decoration: none;
-		border-radius: 4px;
-		font-size: 0.95rem;
-		font-weight: 600;
-		transition: background 0.15s;
-	}
-
-	.cta:hover {
-		background: #333;
+	.story-card__dek {
+		flex: 1 1 0;
+		font-size: 1.25rem;
+		line-height: 1.6;
+		color: #555;
+		margin: 0;
 	}
 </style>
