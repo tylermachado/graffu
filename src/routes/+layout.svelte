@@ -74,7 +74,7 @@
 	<a href={resolve('/')} class="site-name">GRAFFU</a>
 	<nav>
 		<a href={resolve('/')}>Home</a>
-		<a href={resolve('/story')}>Club vs Country</a>
+		<a href={resolve('/club-vs-country')}>Club vs Country</a>
 	</nav>
 </header>
 

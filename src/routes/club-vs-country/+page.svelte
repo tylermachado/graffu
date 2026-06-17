@@ -92,7 +92,7 @@
 	const pageTitle = 'Club vs Country — GRAFFU';
 	const pageDescription =
 		'Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage. An interactive visual essay.';
-	const canonical = `${SITE_URL}/story`;
+	const canonical = `${SITE_URL}/club-vs-country`;
 	const ogImage = `${SITE_URL}/og-club-vs-country.jpg`;
 
 	// Escape `<` so the serialized data can never break out of the <script> tag.

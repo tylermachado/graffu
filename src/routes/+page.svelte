@@ -52,7 +52,7 @@
 	</section>
 
 	<!-- Page 2 — Club vs Country -->
-	<a href={resolve('/story')} class="page page--story" style="background-image: url({clubVsCountryImg})">
+	<a href={resolve('/club-vs-country')} class="page page--story" style="background-image: url({clubVsCountryImg})">
 		<div class="page-content">
 			<h1>Club vs Country</h1>
 		</div>
