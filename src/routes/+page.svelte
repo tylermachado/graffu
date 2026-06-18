@@ -3,8 +3,8 @@
 	import clubVsCountryImg from '$lib/assets/story-screenshots/club-vs-country.webp';
 	import { SITE_URL } from '$lib/constants.js';
 
-	const title = 'GRAFFU — Visual essays that simply explain data';
-	const description = 'Visual essays that simply explain data.';
+	const title = 'GRAFFU — Visual stories that simply explain data';
+	const description = 'Visual stories that simply explain data.';
 	const canonical = `${SITE_URL}/`;
 	const ogImage = `${SITE_URL}/og-club-vs-country.jpg`;
 
@@ -128,5 +128,22 @@
 		line-height: 1.6;
 		color: #555;
 		margin: 0;
+	}
+
+	@media (max-width: 600px) {
+		.story-card__body {
+			flex-direction: column;
+			gap: 0.75rem;
+			padding: 1rem 1.25rem 1.25rem;
+		}
+
+		.story-card__title {
+			font-size: 2rem;
+		}
+
+		.story-card__dek {
+			font-size: 1rem;
+			line-height: 1.5;
+		}
 	}
 </style>
