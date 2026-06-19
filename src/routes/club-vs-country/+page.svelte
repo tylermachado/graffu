@@ -62,9 +62,27 @@
 	const mapScale = tweened(DEFAULT_MAP_SCALE, { duration: ZOOM_DURATION, easing: cubicInOut });
 	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: ZOOM_DURATION, easing: cubicInOut });
 
+	// On mobile (≤768px), the scrolly map is rendered as a 60vh-tall, center-cropped SVG
+	// whose element width is 60vh × (960/500). Only the central ~40% of the SVG x-axis is
+	// visible. We track the viewport so getZoomToFit can constrain the bbox to that window.
+	let windowWidth = $state(typeof window !== 'undefined' ? window.innerWidth : MAP_WIDTH);
+	let windowHeight = $state(typeof window !== 'undefined' ? window.innerHeight : MAP_HEIGHT);
+	$effect(() => {
+		const onResize = () => { windowWidth = window.innerWidth; windowHeight = window.innerHeight; };
+		window.addEventListener('resize', onResize);
+		return () => window.removeEventListener('resize', onResize);
+	});
+	// Visible SVG x-units on mobile: viewportWidth / (svgElementWidth / MAP_WIDTH)
+	// where svgElementWidth = 0.6 * windowHeight * MAP_WIDTH / MAP_HEIGHT.
+	const scrollyFitWidth = $derived(
+		windowWidth <= 768
+			? Math.min(MAP_WIDTH, windowWidth * MAP_HEIGHT / (0.6 * windowHeight))
+			: MAP_WIDTH
+	);
+
 	$effect(() => {
 		const players = scrollySquads[scrollyNation] ?? [];
-		const target = getZoomToFit(scrollyNation, players);
+		const target = getZoomToFit(scrollyNation, players, { fitWidth: scrollyFitWidth });
 		mapScale.set(target.scale, zoomTween());
 		mapTranslate.set(target.translate, zoomTween());
 	});

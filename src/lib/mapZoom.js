@@ -22,12 +22,16 @@ const _featureById = new Map(
  * Returns the scale and translate needed to show `nationName` and all its club-nation
  * destinations centered in the viewport. Falls back to the default world view when no
  * nation is active — or, when `requirePlayers` is set, when the nation has no players.
+ *
+ * `fitWidth` constrains the horizontal extent used for fitting (in SVG coordinate units).
+ * On mobile, pass the actual visible SVG width so the bounding box fits within the
+ * center-cropped portion of the map rather than the full 960-unit SVG space.
  * @param {string} nationName
  * @param {Array<{ club_nation: string }>} players
- * @param {{ requirePlayers?: boolean }} [options]
+ * @param {{ requirePlayers?: boolean, fitWidth?: number }} [options]
  * @returns {{ scale: number, translate: [number, number] }}
  */
-export function getZoomToFit(nationName, players = [], { requirePlayers = false } = {}) {
+export function getZoomToFit(nationName, players = [], { requirePlayers = false, fitWidth = MAP_WIDTH } = {}) {
 	const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
 	if (!nationName || (requirePlayers && !players?.length)) {
 		return { scale: DEFAULT_MAP_SCALE, translate: DEFAULT_TRANSLATE };
@@ -48,8 +52,18 @@ export function getZoomToFit(nationName, players = [], { requirePlayers = false 
 
 	if (!features.length) return { scale: DEFAULT_MAP_SCALE, translate: DEFAULT_TRANSLATE };
 
+	// Center the bounding box at x = MAP_WIDTH/2 but constrain it to fitWidth units wide.
+	// When fitWidth < MAP_WIDTH (mobile), this keeps the entire bbox within the visible
+	// center-cropped portion of the SVG instead of letting it spill into the clipped edges.
+	const halfFitWidth = Math.min(fitWidth, MAP_WIDTH) / 2;
 	const collection = { type: 'FeatureCollection', features };
-	const proj = geoConicConformal().fitSize([MAP_WIDTH, MAP_HEIGHT], /** @type {any} */ (collection));
+	const proj = geoConicConformal().fitExtent(
+		[
+			[MAP_WIDTH / 2 - halfFitWidth, 0],
+			[MAP_WIDTH / 2 + halfFitWidth, MAP_HEIGHT]
+		],
+		/** @type {any} */ (collection)
+	);
 	const targetScale = proj.scale() * 0.97;
 	const targetTranslate = /** @type {[number, number]} */ (proj.translate());
 	return { scale: targetScale, translate: targetTranslate };
