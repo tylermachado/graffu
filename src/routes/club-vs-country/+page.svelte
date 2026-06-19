@@ -62,27 +62,30 @@
 	const mapScale = tweened(DEFAULT_MAP_SCALE, { duration: ZOOM_DURATION, easing: cubicInOut });
 	const mapTranslate = tweened(/** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]), { duration: ZOOM_DURATION, easing: cubicInOut });
 
-	// On mobile (≤768px), the scrolly map is rendered as a 60vh-tall, center-cropped SVG
-	// whose element width is 60vh × (960/500). Only the central ~40% of the SVG x-axis is
-	// visible. We track the viewport so getZoomToFit can constrain the bbox to that window.
-	let windowWidth = $state(typeof window !== 'undefined' ? window.innerWidth : MAP_WIDTH);
-	let windowHeight = $state(typeof window !== 'undefined' ? window.innerHeight : MAP_HEIGHT);
-	$effect(() => {
-		const onResize = () => { windowWidth = window.innerWidth; windowHeight = window.innerHeight; };
-		window.addEventListener('resize', onResize);
-		return () => window.removeEventListener('resize', onResize);
-	});
-	// Visible SVG x-units on mobile: viewportWidth / (svgElementWidth / MAP_WIDTH)
-	// where svgElementWidth = 0.6 * windowHeight * MAP_WIDTH / MAP_HEIGHT.
-	const scrollyFitWidth = $derived(
-		windowWidth <= 768
-			? Math.min(MAP_WIDTH, windowWidth * MAP_HEIGHT / (0.6 * windowHeight))
-			: MAP_WIDTH
+	// Read the map container's actual rendered size so we can tell getZoomToFit exactly
+	// how much of the SVG coordinate space is visible (the scrolly map is center-cropped
+	// on mobile, so the SVG element is wider than the container).
+	let mapContainerWidth = $state(0);
+	let mapContainerHeight = $state(0);
+
+	// When the SVG element is wider than the container (mobile center-crop), only a
+	// central strip of the 960-unit SVG x-axis is visible. Visible width in SVG units =
+	// containerWidth / (svgElementWidth / MAP_WIDTH) = containerWidth * MAP_HEIGHT / containerHeight.
+	// On desktop the SVG fits fully, so fitWidth = MAP_WIDTH and we shift right to 2/3.
+	const scrollyIsCropped = $derived(
+		mapContainerWidth > 0 && mapContainerHeight > 0 &&
+		mapContainerWidth < mapContainerHeight * MAP_WIDTH / MAP_HEIGHT
 	);
+	const scrollyFitWidth = $derived(
+		scrollyIsCropped
+			? mapContainerWidth * MAP_HEIGHT / mapContainerHeight
+			: MAP_WIDTH * 2 / 3
+	);
+	const scrollyCenterX = $derived(scrollyIsCropped ? MAP_WIDTH / 2 : MAP_WIDTH * 2 / 3);
 
 	$effect(() => {
 		const players = scrollySquads[scrollyNation] ?? [];
-		const target = getZoomToFit(scrollyNation, players, { fitWidth: scrollyFitWidth });
+		const target = getZoomToFit(scrollyNation, players, { fitWidth: scrollyFitWidth, centerX: scrollyCenterX });
 		mapScale.set(target.scale, zoomTween());
 		mapTranslate.set(target.translate, zoomTween());
 	});
@@ -235,7 +238,7 @@
 	<div class="sticky-vis">
 		<div class="sticky-layout">
 			<div class="sticky-margin"></div>
-			<div class="map-container" style="position: relative;">
+			<div class="map-container" style="position: relative;" bind:clientWidth={mapContainerWidth} bind:clientHeight={mapContainerHeight}>
 				<WorldMap scale={$mapScale} translate={$mapTranslate} />
 				{#if scrollyNation}
 					<FlowLayer squads={scrollySquads} nation={scrollyNation} scale={$mapScale} translate={$mapTranslate} />
