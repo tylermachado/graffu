@@ -133,6 +133,17 @@
 			text: 'Squad data compiled from FIFA official World Cup squad lists and Wikipedia tournament records, 1994–2026. Domestic retention rate is defined as the share of a squad’s players based at clubs in their home country at the time of each tournament.'
 		},
 	];
+
+	const CREDITS = [
+		{
+			id: 1,
+			text: 'Founder/editor: Femi Adeyinka'
+		},
+		{
+			id: 2,
+			text: 'Data analysis/design/development: Tyler Machado'
+		}
+	];
 </script>
 
 <svelte:head>
@@ -291,6 +302,12 @@
 	<ol class="methodology-list">
 		{#each FOOTNOTES as note (note.id)}
 			<li id="fn-{note.id}">{note.text}</li>
+		{/each}
+	</ol>
+	<h3 class="methodology-heading">Credits</h3>
+	<ol class="methodology-list">
+		{#each CREDITS as credit (credit.id)}
+			<li>{credit.text}</li>
 		{/each}
 	</ol>
 </section>
