@@ -190,7 +190,7 @@
 		</div>
 	</div>
 	<header class="story-header">
-		<p class="story-eyebrow">African Football at the World Cup</p>
+		<p class="story-eyebrow hidden md:block">African Football at the World Cup</p>
 		<h1 class="story-headline">Club vs Country</h1>
 		<p class="story-deck">
 			Since 1994, African footballers have become the world’s most exported talent — yet the clubs and leagues that develop them have barely registered on football’s biggest stage.
@@ -209,7 +209,7 @@
 			{/each}
 		</div>
 		<aside class="prose-infobox">
-			<Infobox title="">
+			<Infobox title="Basics of soccer squads">
 				<p>In international soccer, 11 players are on the pitch at any given time, but each nation in the World Cup has 26 players on its squad in total (up from 22 or 23 in previous years).</p>
 				<p>The stars of global soccer often play for two teams simultaneously; they represent their country’s national team in international competitions like the World Cup, but they spend most of the year with, and make most of their salaries from, club teams that could be based in their home country or anywhere else — clubs like Arsenal in the English Premier League, Barcelona in Spain's La Liga, Orlando Pirates in South Africa's Premier Soccer League and so on.</p>
 				<p>The 2026 tournament is the first to feature 48 teams competing, up from 32 in other years since the 1990s.</p>
@@ -230,7 +230,7 @@
 		</p>
 	</div>
 	<aside class="prose-infobox">
-			<Infobox title="">
+			<Infobox title="Governing bodies and acronyms">
 				<p>Every continent has a "confederation" that governs football in that region, although some countries choose to play in a geographically different confederation (e.g. Australia in AFC, Israel in UEFA).</p>
 				<ul>
 					<li><strong>UEFA</strong> — Europe</li>
@@ -449,6 +449,15 @@
 			padding: 0.75rem 1rem;
 			box-shadow: none;
 		}
+
+		/* Collapse the gap between the copy section and the scrolly part */
+		.prose-with-infobox:has(+ .scrolly-outer) {
+			padding-bottom: 0;
+		}
+
+		.scrolly-outer {
+			padding-top: 0;
+		}
 	}
 
 	@media (min-width: 1100px) {
@@ -577,13 +586,13 @@
 		max-width: 680px;
 		margin: 0 auto;
 		padding: 3rem 2rem;
-		font-size: 1.05rem;
 		line-height: 1.7;
 		color: #222;
 	}
 
 	.prose-section p {
 		margin: 0 0 1.25rem;
+		font-size: 0.95rem;
 	}
 
 	.prose-section p:last-child {
