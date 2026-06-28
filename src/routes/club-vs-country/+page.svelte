@@ -218,15 +218,11 @@
 	</section>
 {/if}
 
-<div class="charts-row">
-	<RetentionOverTime />
-</div>
-
 <!-- ── Explanation section ───────────────────────────────────────────────── -->
 <section class="prose-section prose-with-infobox">
 	<div class="prose-copy">
 		<p>
-			In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart above. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move. So when you see a larger circle over a country, that means more of that nation's squad is playing domestically; when you see more lines going elsewehre, that means more of that nation's players play for clubs abroad.
+			In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart below. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move. So when you see a larger circle over a country, that means more of that nation's squad is playing domestically; when you see more lines going elsewehre, that means more of that nation's players play for clubs abroad.
 		</p>
 	</div>
 	<aside class="prose-infobox">
@@ -282,6 +278,10 @@
 		{/each}
 	</section>
 {/if}
+
+<div class="charts-row">
+	<RetentionOverTime />
+</div>
 
 <div class="charts-row">
 	<ConfederationShareOverTime />
@@ -441,13 +441,14 @@
 
 		.step {
 			align-items: flex-start;
-			padding: 0;
+			padding: 0 1rem;
 		}
 
 		.step-card {
 			max-width: 100%;
 			padding: 0.75rem 1rem;
 			box-shadow: none;
+			border: 1px solid #e0e0e0;
 		}
 
 		/* Collapse the gap between the copy section and the scrolly part */
@@ -597,6 +598,10 @@
 
 	.prose-section p:last-child {
 		margin-bottom: 0;
+	}
+
+	.prose-section + .prose-section {
+		padding-top: 0;
 	}
 
 	.prose-with-infobox {

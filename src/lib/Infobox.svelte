@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	/** @type {{
 		title?: string;
 		intro?: string;
@@ -17,85 +15,46 @@
 		],
 		children
 	} = $props();
-
-	let isMobile = $state(false);
-
-	onMount(() => {
-		const mediaQuery = window.matchMedia('(max-width: 768px)');
-		isMobile = mediaQuery.matches;
-
-		const handleChange = (e: MediaQueryListEvent) => {
-			isMobile = e.matches;
-		};
-
-		mediaQuery.addEventListener('change', handleChange);
-		return () => mediaQuery.removeEventListener('change', handleChange);
-	});
 </script>
 
-{#if isMobile}
-	<details class="infobox infobox-collapsible">
-		<summary>
-			<div class="infobox-header">
-				<div class="infobox-title-group">
-					<svg class="infobox-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-						<path
-							d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
-						/>
-					</svg>
-					<span class="infobox-kicker">{title}</span>
-				</div>
-				<svg
-					class="infobox-toggle"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					aria-hidden="true"
-				>
-					<line x1="12" y1="5" x2="12" y2="19"></line>
-					<line x1="5" y1="12" x2="19" y2="12"></line>
+<details class="infobox">
+	<summary>
+		<div class="infobox-header">
+			<div class="infobox-title-group">
+				<svg class="infobox-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+					<path
+						d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
+					/>
 				</svg>
+				<span class="infobox-kicker">{title}</span>
 			</div>
-		</summary>
-		<div class="infobox-body">
-			{#if children}
-				{@render children()}
-			{:else}
-				<p>{intro}</p>
-				<ul>
-					{#each items as item}
-						<li>{item}</li>
-					{/each}
-				</ul>
-			{/if}
-		</div>
-	</details>
-{:else}
-	<aside class="infobox infobox-static">
-		<div class="infobox-title-group">
-			<svg class="infobox-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-				<path
-					d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"
-				/>
+			<svg
+				class="infobox-toggle"
+				viewBox="0 0 24 24"
+				fill="none"
+				stroke="currentColor"
+				stroke-width="2"
+				stroke-linecap="round"
+				aria-hidden="true"
+			>
+				<line x1="12" y1="5" x2="12" y2="19"></line>
+				<line x1="5" y1="12" x2="19" y2="12"></line>
 			</svg>
-			<p class="infobox-kicker">{title}</p>
 		</div>
-		<div class="infobox-body">
-			{#if children}
-				{@render children()}
-			{:else}
-				<p>{intro}</p>
-				<ul>
-					{#each items as item}
-						<li>{item}</li>
-					{/each}
-				</ul>
-			{/if}
-		</div>
-	</aside>
-{/if}
+	</summary>
+	<div class="infobox-body">
+		{#if children}
+			{@render children()}
+		{:else}
+			<p>{intro}</p>
+			<ul>
+				{#each items as item (item)}
+					<li>{item}</li>
+				{/each}
+			</ul>
+		{/if}
+	</div>
+</details>
 
 <style>
 	.infobox {
@@ -103,14 +62,6 @@
 		border: 1px solid rgba(17, 17, 17, 0.1);
 		box-shadow: 0 16px 40px rgba(17, 17, 17, 0.08);
 		color: #1b1b1b;
-	}
-
-	.infobox-static {
-		padding: 1rem;
-		border-radius: 10px;
-	}
-
-	.infobox-collapsible {
 		border-radius: 12px;
 		overflow: clip;
 	}
@@ -135,7 +86,8 @@
 		letter-spacing: -0.05em;
 		text-transform: uppercase;
 		color: var(--color-cream-900);
-		margin: 0 0 0.35rem;
+		margin: 0;
+		line-height: 1;
 	}
 
 	.infobox-header {
@@ -150,11 +102,6 @@
 		align-items: center;
 		gap: 0.5rem;
 		min-width: 0;
-	}
-
-	.infobox-title-group .infobox-kicker {
-		margin: 0;
-		line-height: 1;
 	}
 
 	.infobox-icon {
@@ -180,10 +127,6 @@
 
 	.infobox-body {
 		padding: 0 1rem 1rem;
-	}
-
-	.infobox-static .infobox-body {
-		padding: 0;
 	}
 
 	.infobox-body p,
