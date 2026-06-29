@@ -37,6 +37,18 @@
 	// ── Scrollytelling ─────────────────────────────────────────────────────────
 
 	let activeStep = $state(0);
+	let scrollySectionEl = $state(/** @type {HTMLElement | null} */ (null));
+	let scrollyVisible = $state(false);
+
+	$effect(() => {
+		if (!scrollySectionEl) return;
+		const obs = new IntersectionObserver(
+			([entry]) => { scrollyVisible = entry.isIntersecting; },
+			{ threshold: 0 }
+		);
+		obs.observe(scrollySectionEl);
+		return () => obs.disconnect();
+	});
 
 	const currentScrollyStep = $derived(scrollySteps[activeStep] ?? scrollySteps[0]);
 	const scrollyYear = $derived(currentScrollyStep.year ?? years[0]);
@@ -227,18 +239,8 @@
 	</section>
 {/if}
 
-<!-- ── Explanation section ───────────────────────────────────────────────── -->
-<section class="prose-section">
-	<ul class="map-legend">
-		<li><strong>Filled circles:</strong> players who remain in their home country’s domestic leagues ("domestic retention").</li>
-		<li><strong>Curved arc lines:</strong> players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates.</li>
-		<li><strong>Thicker the arc:</strong> more players have moved to non-domestic clubs.</li>
-		<li><strong>Larger circle over a country:</strong> more of that nation’s squad is playing domestically.</li>
-	</ul>
-</section>
-
 <!-- ── Scrollytelling section ────────────────────────────────────────────── -->
-<section class="scrolly-outer">
+<section class="scrolly-outer" bind:this={scrollySectionEl}>
 	<div class="sticky-vis">
 		<div class="sticky-layout">
 			<div class="sticky-margin"></div>
@@ -265,6 +267,27 @@
 		</Scrolly>
 	</div>
 </section>
+
+<details class="map-legend-accordion" class:scrolly-active={scrollyVisible}>
+	<summary>
+		<div class="mla-header">
+			<svg class="mla-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+			</svg>
+			<span class="mla-title">Map key</span>
+		</div>
+		<svg class="mla-toggle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+			<line x1="12" y1="5" x2="12" y2="19"></line>
+			<line x1="5" y1="12" x2="19" y2="12"></line>
+		</svg>
+	</summary>
+	<ul class="mla-body">
+		<li><strong>Filled circles:</strong> players who remain in their home country's domestic leagues ("domestic retention").</li>
+		<li><strong>Curved arc lines:</strong> players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates.</li>
+		<li><strong>Thicker the arc:</strong> more players have moved to non-domestic clubs.</li>
+		<li><strong>Larger circle over a country:</strong> more of that nation's squad is playing domestically.</li>
+	</ul>
+</details>
 
 <!-- ── Outro ────────────────────────────────────────────────────────────── -->
 {#if outroStep}
@@ -592,10 +615,6 @@
 		margin-bottom: 0;
 	}
 
-	.prose-section + .prose-section {
-		padding-top: 0;
-	}
-
 	.prose-with-infobox {
 		display: grid;
 		gap: 1.5rem;
@@ -609,10 +628,104 @@
 		width: 100%;
 	}
 
+	/* ── Map legend accordion ───────────────────────────────────────────────── */
+
+	.map-legend-accordion {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: rgba(249, 247, 240, 0.96);
+		border: 1px solid rgba(17, 17, 17, 0.1);
+		border-bottom: none;
+		box-shadow: 0 -4px 20px rgba(17, 17, 17, 0.08);
+		border-radius: 12px 12px 0 0;
+		overflow: clip;
+		z-index: 9999;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.2s ease;
+	}
+
+	.map-legend-accordion.scrolly-active {
+		opacity: 1;
+		pointer-events: auto;
+	}
+
 	@media (min-width: 769px) {
-		.prose-section + .scrolly-outer {
-			margin-top: -2rem;
+		.map-legend-accordion {
+			bottom: 1.5rem;
+			right: 1.5rem;
+			left: auto;
+			width: 280px;
+			border: 1px solid rgba(17, 17, 17, 0.1);
+			box-shadow: 0 8px 32px rgba(17, 17, 17, 0.1);
+			border-radius: 12px;
 		}
+	}
+
+	.map-legend-accordion summary {
+		list-style: none;
+		cursor: pointer;
+		padding: 0.85rem 1.1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+	}
+
+	.map-legend-accordion summary::-webkit-details-marker {
+		display: none;
+	}
+
+	.mla-header {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.mla-icon {
+		width: 1.1rem;
+		height: 1.1rem;
+		flex-shrink: 0;
+		color: var(--color-cream-900);
+		opacity: 0.85;
+	}
+
+	.mla-title {
+		font-family: var(--font-display);
+		font-size: 1rem;
+		font-weight: 400;
+		letter-spacing: -0.05em;
+		text-transform: uppercase;
+		color: var(--color-cream-900);
+		line-height: 1;
+	}
+
+	.mla-toggle {
+		width: 1.1rem;
+		height: 1.1rem;
+		flex-shrink: 0;
+		color: var(--color-cream-900);
+		opacity: 0.7;
+		transition: transform 0.2s ease;
+	}
+
+	.map-legend-accordion[open] .mla-toggle {
+		transform: rotate(45deg);
+	}
+
+	.mla-body {
+		margin: 0;
+		padding: 0 1.1rem 1rem 1.75rem;
+		display: grid;
+		gap: 0.55rem;
+	}
+
+	.mla-body li {
+		font-size: 0.85rem;
+		line-height: 1.5;
+		color: #1b1b1b;
 	}
 
 	@media (min-width: 1100px) {
