@@ -97,7 +97,7 @@
 
 	$effect(() => {
 		const players = scrollySquads[scrollyNation] ?? [];
-		const target = getZoomToFit(scrollyNation, players, { fitWidth: scrollyFitWidth, centerX: scrollyCenterX });
+		const target = getZoomToFit(scrollyNation, players, { fitWidth: scrollyFitWidth, centerX: scrollyCenterX, bottomPad: scrollyIsCropped ? 60 : 0 });
 		mapScale.set(target.scale, zoomTween());
 		mapTranslate.set(target.translate, zoomTween());
 	});

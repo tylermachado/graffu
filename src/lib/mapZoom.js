@@ -28,10 +28,10 @@ const _featureById = new Map(
  * On desktop, shift right by using centerX=640 with fitWidth=640 (right two-thirds).
  * @param {string} nationName
  * @param {Array<{ club_nation: string }>} players
- * @param {{ requirePlayers?: boolean, fitWidth?: number, centerX?: number }} [options]
+ * @param {{ requirePlayers?: boolean, fitWidth?: number, centerX?: number, bottomPad?: number }} [options]
  * @returns {{ scale: number, translate: [number, number] }}
  */
-export function getZoomToFit(nationName, players = [], { requirePlayers = false, fitWidth = MAP_WIDTH, centerX = MAP_WIDTH / 2 } = {}) {
+export function getZoomToFit(nationName, players = [], { requirePlayers = false, fitWidth = MAP_WIDTH, centerX = MAP_WIDTH / 2, bottomPad = 0 } = {}) {
 	const DEFAULT_TRANSLATE = /** @type {[number, number]} */ ([MAP_WIDTH / 2, MAP_HEIGHT / 2]);
 	if (!nationName || (requirePlayers && !players?.length)) {
 		return { scale: DEFAULT_MAP_SCALE, translate: DEFAULT_TRANSLATE };
@@ -58,7 +58,7 @@ export function getZoomToFit(nationName, players = [], { requirePlayers = false,
 	const proj = geoConicConformal().fitExtent(
 		[
 			[centerX - halfFitWidth, 0],
-			[centerX + halfFitWidth, MAP_HEIGHT]
+			[centerX + halfFitWidth, MAP_HEIGHT - bottomPad]
 		],
 		/** @type {any} */ (collection)
 	);
