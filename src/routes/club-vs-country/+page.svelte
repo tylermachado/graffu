@@ -211,22 +211,8 @@
 		<aside class="prose-infobox">
 			<Infobox title="Basics of soccer squads">
 				<p>In international soccer, 11 players are on the pitch at any given time, but each nation in the World Cup has 26 players on its squad in total (up from 22 or 23 in previous years).</p>
-				<p>The stars of global soccer often play for two teams simultaneously; they represent their country’s national team in international competitions like the World Cup, but they spend most of the year with, and make most of their salaries from, club teams that could be based in their home country or anywhere else — clubs like Arsenal in the English Premier League, Barcelona in Spain's La Liga, Orlando Pirates in South Africa's Premier Soccer League and so on.</p>
+				<p>The stars of global soccer often play for two teams simultaneously; they represent their country’s national team in international competitions like the World Cup, but they spend most of the year with, and make most of their salaries from, club teams that could be based in their home country or anywhere else — clubs like Arsenal in the English Premier League, Barcelona in Spain’s La Liga, Orlando Pirates in South Africa’s Premier Soccer League and so on.</p>
 				<p>The 2026 tournament is the first to feature 48 teams competing, up from 32 in other years since the 1990s.</p>
-			</Infobox>
-		</aside>
-	</section>
-{/if}
-
-<!-- ── Explanation section ───────────────────────────────────────────────── -->
-<section class="prose-section prose-with-infobox">
-	<div class="prose-copy">
-		<p>
-			In the maps that follow, <strong>filled circles</strong> represent players who remain in their home country's domestic leagues — the "domestic retention" you see in the line chart below. <strong>Curved arc lines</strong> represent players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates. The thicker the arc, the more players have made that particular move. So when you see a larger circle over a country, that means more of that nation's squad is playing domestically; when you see more lines going elsewehre, that means more of that nation's players play for clubs abroad.
-		</p>
-	</div>
-	<aside class="prose-infobox">
-			<Infobox title="Governing bodies and acronyms">
 				<p>Every continent has a "confederation" that governs football in that region, although some countries choose to play in a geographically different confederation (e.g. Australia in AFC, Israel in UEFA).</p>
 				<ul>
 					<li><strong>UEFA</strong> — Europe</li>
@@ -237,7 +223,18 @@
 					<li><strong>OFC</strong> — Oceania (mostly island nations in the Pacific)</li>
 				</ul>
 			</Infobox>
-	</aside>
+		</aside>
+	</section>
+{/if}
+
+<!-- ── Explanation section ───────────────────────────────────────────────── -->
+<section class="prose-section">
+	<ul class="map-legend">
+		<li><strong>Filled circles:</strong> players who remain in their home country’s domestic leagues ("domestic retention").</li>
+		<li><strong>Curved arc lines:</strong> players who have moved abroad to play in foreign leagues, with the destination country indicated by where the arc terminates.</li>
+		<li><strong>Thicker the arc:</strong> more players have moved to non-domestic clubs.</li>
+		<li><strong>Larger circle over a country:</strong> more of that nation’s squad is playing domestically.</li>
+	</ul>
 </section>
 
 <!-- ── Scrollytelling section ────────────────────────────────────────────── -->
@@ -451,11 +448,6 @@
 			border: 1px solid #e0e0e0;
 		}
 
-		/* Collapse the gap between the copy section and the scrolly part */
-		.prose-with-infobox:has(+ .scrolly-outer) {
-			padding-bottom: 0;
-		}
-
 		.scrolly-outer {
 			padding-top: 0;
 		}
@@ -615,6 +607,12 @@
 
 	.prose-infobox {
 		width: 100%;
+	}
+
+	@media (min-width: 769px) {
+		.prose-section + .scrolly-outer {
+			margin-top: -2rem;
+		}
 	}
 
 	@media (min-width: 1100px) {
